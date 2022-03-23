@@ -1,16 +1,17 @@
-# Welcome to your Jupyter Book
+# Hello 👋
 
-This is a small sample book to give you a feel for how book content is
-structured.
+Welcome to my knowledge hub!
 
-:::{note}
-Here is a note!
-:::
+It contains
+* past articles around machine learning and data science and
+* reviews of helpful resources and learning frameworks
 
-And here is a code block:
+The goal of this knowledge hub is to share what I have learned and
+empower people to * tell great data stories that connect with non-technical audiences*
 
-```
-e = mc^2
-```
+Click on any of the images to pick an area of exploration:
 
-Check out the content pages bundled with this sample book to see more.
+|  ![Computer Vision](./images/computer-vision.svg)  |  ![Natural Language Processing](./images/NLP-chatbot.svg)  |
+|:--------------------------------------------------:|:----------------------------------------------------------:|
+|                  Computer Vision                   |                      Machine Learning                      |
+
