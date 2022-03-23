@@ -9,7 +9,7 @@ empower people to * tell great data stories that connect with non-technical audi
 
 Click on any of the images to pick an area of exploration:
 
-| $~~$                                             | $~~$                                                     |
+| $$~~$$                                           | $~~$                                                     |
 |--------------------------------------------------|----------------------------------------------------------|
 | ![Computer Vision](./images/computer-vision.svg) | ![Natural Language Processing](./images/NLP-chatbot.svg) |
 
