@@ -11,3 +11,4 @@ book/_build/.doctrees/markdown.doctree
 book/_build/.doctrees/notebooks.doctree
 .idea/workspace.xml
 book/_build/html/.buildinfo
+book/_build/html/_images/computer-vision.svg
