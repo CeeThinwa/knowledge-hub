@@ -5,3 +5,4 @@
 .idea/modules.xml
 .idea/vcs.xml
 book/_build/.doctrees/environment.pickle
+book/_build/.doctrees/glue_cache.json
