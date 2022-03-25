@@ -409,7 +409,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="python-packages-functions">
 <h3>Python Packages &amp; Functions<a class="headerlink" href="#python-packages-functions" title="Permalink to this headline">¶</a></h3>
 <p>Here we upload all the Python packages and datasets required for analysis.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Packages</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -436,7 +436,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;loan_data&#39;</span><span class="p">:</span><span class="n">loan_data</span><span class="p">,</span> <span class="s1">&#39;location_data&#39;</span><span class="p">:</span><span class="n">location_data</span><span class="p">,</span>
        <span class="s1">&#39;loan_themes&#39;</span><span class="p">:</span><span class="n">loan_themes</span><span class="p">,</span> <span class="s1">&#39;regional_lts&#39;</span><span class="p">:</span><span class="n">regional_lts</span><span class="p">}</span>
@@ -542,7 +542,7 @@ regional_lts shape: (15736, 21)
 <h4>2. Supplementary Data<a class="headerlink" href="#supplementary-data" title="Permalink to this headline">¶</a></h4>
 <p>In this section, we aim to gather the following data from the World Bank:</p>
 <p><a class="reference external" href="https://www.quora.com/What-does-per-capita-expenditure-mean?share=1">Per Capita Expenditure (PCE)</a> for each country - this is the total market value of all purchases in a country divided by that country’s total population (data: <a class="reference external" href="https://bit.ly/3blw0be">https://bit.ly/3blw0be</a>)</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PCE_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//csvs//kiva-project//PCE data.csv&#39;</span><span class="p">)</span>
 
@@ -556,7 +556,7 @@ regional_lts shape: (15736, 21)
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add this dataset to the dictionary</span>
 <span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;PCE_data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">PCE_data</span>
@@ -574,7 +574,7 @@ regional_lts shape: (15736, 21)
 </div>
 <div class="section" id="data-summary">
 <h4>Data Summary<a class="headerlink" href="#data-summary" title="Permalink to this headline">¶</a></h4>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">dfs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="c1"># 1. Get the summary table</span>
@@ -1611,7 +1611,7 @@ Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdo
 <div class="section" id="the-impact-of-kiva-donors">
 <h4>The impact of KIVA donors<a class="headerlink" href="#the-impact-of-kiva-donors" title="Permalink to this headline">¶</a></h4>
 <p>In this section, we seek to explore the data to answer certain questions around KIVA donor contributions</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. How much of the total loan amount has Kiva financed?</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
@@ -1640,7 +1640,7 @@ Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdo
 <img alt="_images/kiva_15_1.png" src="_images/kiva_15_1.png" />
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. How much money have Kiva donors contributed over time?</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;DAILY CONTRIBUTIONS OF KIVA DONORS AS A COLLECTIVE&#39;</span><span class="p">)</span>
