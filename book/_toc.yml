@@ -7,4 +7,6 @@ chapters:
 - file: computer-vision
 - file: nlp
 - file: data-storytelling
+  sections:
+    - file: kiva
 - file: data-pipelining
