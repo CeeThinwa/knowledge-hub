@@ -259,6 +259,28 @@ const thebe_selector_output = ".output, .cell_output"
        1. Original Data
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#supplementary-data">
+       2. Supplementary Data
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-summary">
+       Data Summary
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploratory-data-analysis">
+     Exploratory Data Analysis
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-impact-of-kiva-donors">
+       The impact of KIVA donors
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
@@ -325,6 +347,28 @@ const thebe_selector_output = ".output, .cell_output"
        1. Original Data
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#supplementary-data">
+       2. Supplementary Data
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-summary">
+       Data Summary
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploratory-data-analysis">
+     Exploratory Data Analysis
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-impact-of-kiva-donors">
+       The impact of KIVA donors
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
@@ -364,6 +408,7 @@ const thebe_selector_output = ".output, .cell_output"
 <h2>SOLUTION:<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="python-packages-functions">
 <h3>Python Packages &amp; Functions<a class="headerlink" href="#python-packages-functions" title="Permalink to this headline">¶</a></h3>
+<p>Here we upload all the Python packages and datasets required for analysis.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Packages</span>
@@ -379,37 +424,1262 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="data">
 <h3>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h3>
-<p>Here we upload all the Python packages and datasets required for analysis</p>
 <div class="section" id="original-data">
 <h4>1. Original Data<a class="headerlink" href="#original-data" title="Permalink to this headline">¶</a></h4>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Original Data</span>
-<span class="n">loan_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//csvs//kiva-project//kiva_loans.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loan_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//csvs//kiva-project//kiva_loans.csv&#39;</span><span class="p">)</span>
 <span class="n">location_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//csvs//kiva-project//kiva_mpi_region_locations.csv&#39;</span><span class="p">)</span>
 <span class="n">loan_themes</span>  <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//csvs//kiva-project//loan_theme_ids.csv&#39;</span><span class="p">)</span>
 <span class="n">regional_lts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//csvs//kiva-project//loan_themes_by_region.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;loan_data&#39;</span><span class="p">:</span><span class="n">loan_data</span><span class="p">,</span> <span class="s1">&#39;location_data&#39;</span><span class="p">:</span><span class="n">location_data</span><span class="p">,</span>
+       <span class="s1">&#39;loan_themes&#39;</span><span class="p">:</span><span class="n">loan_themes</span><span class="p">,</span> <span class="s1">&#39;regional_lts&#39;</span><span class="p">:</span><span class="n">regional_lts</span><span class="p">}</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;loan_data shape:&#39;</span><span class="p">,</span><span class="n">loan_data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;location_data shape:&#39;</span><span class="p">,</span><span class="n">location_data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;loan_themes shape:&#39;</span><span class="p">,</span><span class="n">loan_themes</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;regional_lts shape:&#39;</span><span class="p">,</span><span class="n">regional_lts</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">dfs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="o">+</span><span class="s1">&#39; shape:&#39;</span><span class="p">),</span> <span class="n">val</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>loan_data shape: (671205, 20)
-
 location_data shape: (2772, 9)
-
 loan_themes shape: (779092, 4)
-
 regional_lts shape: (15736, 21)
 </pre></div>
 </div>
+</div>
+</div>
+<br>
+<p><u><strong>Descriptions of the original datasets</strong></u></p>
+<p>There are four data sources provided by Kiva:</p>
+<ul class="simple">
+<li><p><em><strong>loan_data</strong></em></p>
+<ol class="simple">
+<li><p><strong>id</strong> - Unique ID for loan</p></li>
+<li><p><strong>funded_amount</strong> - The amount disbursed by Kiva to the field agent (USD)</p></li>
+<li><p><strong>loan_amount</strong> - The amount disbursed by the field agent to the borrower (USD)</p></li>
+<li><p><strong>activity</strong> - More granular category</p></li>
+<li><p><strong>sector</strong> - High level category</p></li>
+<li><p><strong>use</strong> - Exact usage of loan amount</p></li>
+<li><p><strong>country_code</strong> - ISO country code of country in which loan was disbursed</p></li>
+<li><p><strong>country</strong> - Full country name of country in which loan was disbursed</p></li>
+<li><p><strong>region</strong> - Full region name within the country</p></li>
+<li><p><strong>currency</strong> - The currency in which the loan was disbursed</p></li>
+<li><p><strong>partner_id</strong> - ID of partner organization</p></li>
+<li><p><strong>posted_time</strong> - The time at which the loan is posted on Kiva by the field agent</p></li>
+<li><p><strong>disbursed_time</strong> - The time at which the loan is disbursed by the field agent to the borrower</p></li>
+<li><p><strong>funded_time</strong> - The time at which the loan posted to Kiva gets funded by lenders completely</p></li>
+<li><p><strong>term_in_months</strong> - The duration for which the loan was disbursed in months</p></li>
+<li><p><strong>lender_count</strong> - The total number of lenders that contributed to this loan</p></li>
+<li><p><strong>tags</strong></p></li>
+<li><p><strong>borrower_genders</strong> - Comma separated M,F letters, where each instance represents a single male/female in the group</p></li>
+<li><p><strong>repayment_interval</strong></p></li>
+<li><p><strong>date</strong></p></li>
+</ol>
+</li>
+</ul>
+<ul class="simple">
+<li><p><em><strong>location_data</strong></em></p>
+<ol class="simple">
+<li><p><strong>LocationName</strong> - region, country</p></li>
+<li><p><strong>ISO</strong> - some sort of unique abbreviation for country</p></li>
+<li><p><strong>country</strong> - country</p></li>
+<li><p><strong>region</strong> - region within country</p></li>
+<li><p><strong>world_region</strong> - parts of the world</p></li>
+<li><p><strong>MPI</strong> - multidimensional poverty index</p></li>
+<li><p><strong>geo</strong> - (latitude, longitude)</p></li>
+<li><p><strong>lat</strong> - latitude</p></li>
+<li><p><strong>lon</strong> - longitude</p></li>
+</ol>
+</li>
+</ul>
+<ul class="simple">
+<li><p><em><strong>loan_themes</strong></em></p>
+<ol class="simple">
+<li><p><strong>id</strong> - Unique ID for loan (Loan ID)</p></li>
+<li><p><strong>Loan Theme ID</strong> - ID for Loan Theme</p></li>
+<li><p><strong>Loan Theme Type</strong> - Category name of type of loan</p></li>
+<li><p><strong>Partner ID</strong></p></li>
+</ol>
+</li>
+</ul>
+<ul class="simple">
+<li><p><em><strong>regional_lts</strong></em></p>
+<ol class="simple">
+<li><p><strong>Partner ID</strong></p></li>
+<li><p><strong>Field Partner Name</strong></p></li>
+<li><p><strong>sector</strong></p></li>
+<li><p><strong>Loan Theme ID</strong></p></li>
+<li><p><strong>Loan Theme Type</strong></p></li>
+<li><p><strong>country</strong></p></li>
+<li><p><strong>forkiva</strong></p></li>
+<li><p><strong>region</strong></p></li>
+<li><p><strong>geocode_old</strong></p></li>
+<li><p><strong>ISO</strong></p></li>
+<li><p><strong>number</strong></p></li>
+<li><p><strong>amount</strong></p></li>
+<li><p><strong>LocationName</strong></p></li>
+<li><p><strong>geocode</strong></p></li>
+<li><p><strong>names</strong></p></li>
+<li><p><strong>geo</strong></p></li>
+<li><p><strong>lat</strong></p></li>
+<li><p><strong>lon</strong></p></li>
+<li><p><strong>mpi_region</strong></p></li>
+<li><p><strong>mpi_geo</strong></p></li>
+<li><p><strong>rural_pct</strong></p></li>
+</ol>
+</li>
+</ul>
+<br>
+</div>
+<div class="section" id="supplementary-data">
+<h4>2. Supplementary Data<a class="headerlink" href="#supplementary-data" title="Permalink to this headline">¶</a></h4>
+<p>In this section, we aim to gather the following data from the World Bank:</p>
+<p><a class="reference external" href="https://www.quora.com/What-does-per-capita-expenditure-mean?share=1">Per Capita Expenditure (PCE)</a> for each country - this is the total market value of all purchases in a country divided by that country’s total population (data: <a class="reference external" href="https://bit.ly/3blw0be">https://bit.ly/3blw0be</a>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PCE_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//csvs//kiva-project//PCE data.csv&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;PCE data shape:&#39;</span><span class="p">,</span><span class="n">PCE_data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PCE data shape: (178, 62)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add this dataset to the dictionary</span>
+<span class="n">dfs</span><span class="p">[</span><span class="s1">&#39;PCE_data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">PCE_data</span>
+<span class="n">dfs</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;loan_data&#39;, &#39;location_data&#39;, &#39;loan_themes&#39;, &#39;regional_lts&#39;, &#39;PCE_data&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+</div>
+<div class="section" id="data-summary">
+<h4>Data Summary<a class="headerlink" href="#data-summary" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">dfs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="c1"># 1. Get the summary table</span>
+    <span class="n">num_summary</span> <span class="o">=</span> <span class="n">val</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+    <span class="n">cat_summary</span> <span class="o">=</span> <span class="n">val</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">val</span><span class="o">.</span><span class="n">dtypes</span><span class="o">==</span><span class="n">np</span><span class="o">.</span><span class="n">object</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;O&#39;</span><span class="p">])</span>
+    <span class="c1"># 2. Display it</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">SUMMARY STATISTICS WITHOUT AGGREGATION: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">),</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">num_summary</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">cat_summary</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\ipykernel_launcher.py:4: DeprecationWarning: `np.object` is a deprecated alias for the builtin `object`. To silence this warning, use `object` by itself. Doing this will not modify any behavior and is safe. 
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  after removing the cwd from sys.path.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: loan_data 
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>funded_amount</th>
+      <th>loan_amount</th>
+      <th>partner_id</th>
+      <th>term_in_months</th>
+      <th>lender_count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>6.712050e+05</td>
+      <td>671205.000000</td>
+      <td>671205.000000</td>
+      <td>657698.000000</td>
+      <td>671205.000000</td>
+      <td>671205.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>9.932486e+05</td>
+      <td>785.995061</td>
+      <td>842.397107</td>
+      <td>178.199616</td>
+      <td>13.739022</td>
+      <td>20.590922</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>1.966113e+05</td>
+      <td>1130.398941</td>
+      <td>1198.660073</td>
+      <td>94.247581</td>
+      <td>8.598919</td>
+      <td>28.459551</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>6.530470e+05</td>
+      <td>0.000000</td>
+      <td>25.000000</td>
+      <td>9.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>8.230720e+05</td>
+      <td>250.000000</td>
+      <td>275.000000</td>
+      <td>126.000000</td>
+      <td>8.000000</td>
+      <td>7.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>9.927800e+05</td>
+      <td>450.000000</td>
+      <td>500.000000</td>
+      <td>145.000000</td>
+      <td>13.000000</td>
+      <td>13.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>1.163653e+06</td>
+      <td>900.000000</td>
+      <td>1000.000000</td>
+      <td>204.000000</td>
+      <td>14.000000</td>
+      <td>24.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>1.340339e+06</td>
+      <td>100000.000000</td>
+      <td>100000.000000</td>
+      <td>536.000000</td>
+      <td>158.000000</td>
+      <td>2986.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>activity</th>
+      <th>sector</th>
+      <th>use</th>
+      <th>country_code</th>
+      <th>country</th>
+      <th>region</th>
+      <th>currency</th>
+      <th>posted_time</th>
+      <th>disbursed_time</th>
+      <th>funded_time</th>
+      <th>tags</th>
+      <th>borrower_genders</th>
+      <th>repayment_interval</th>
+      <th>date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>671205</td>
+      <td>671205</td>
+      <td>666973</td>
+      <td>671197</td>
+      <td>671205</td>
+      <td>614405</td>
+      <td>671205</td>
+      <td>671205</td>
+      <td>668809</td>
+      <td>622874</td>
+      <td>499789</td>
+      <td>666984</td>
+      <td>671205</td>
+      <td>671205</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>163</td>
+      <td>15</td>
+      <td>424912</td>
+      <td>86</td>
+      <td>87</td>
+      <td>12695</td>
+      <td>67</td>
+      <td>667399</td>
+      <td>5719</td>
+      <td>498007</td>
+      <td>86719</td>
+      <td>11298</td>
+      <td>4</td>
+      <td>1298</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>Farming</td>
+      <td>Agriculture</td>
+      <td>to buy a water filter to provide safe drinking...</td>
+      <td>PH</td>
+      <td>Philippines</td>
+      <td>Kaduna</td>
+      <td>PHP</td>
+      <td>2017-05-15 00:00:00+00:00</td>
+      <td>2017-02-01 08:00:00+00:00</td>
+      <td>2016-09-21 13:03:24+00:00</td>
+      <td>user_favorite</td>
+      <td>female</td>
+      <td>monthly</td>
+      <td>2017-03-20</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>72955</td>
+      <td>180302</td>
+      <td>5217</td>
+      <td>160441</td>
+      <td>160441</td>
+      <td>10000</td>
+      <td>160440</td>
+      <td>25</td>
+      <td>2800</td>
+      <td>33</td>
+      <td>27088</td>
+      <td>426502</td>
+      <td>342717</td>
+      <td>1308</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: location_data 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\ipykernel_launcher.py:4: DeprecationWarning: `np.object` is a deprecated alias for the builtin `object`. To silence this warning, use `object` by itself. Doing this will not modify any behavior and is safe. 
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  after removing the cwd from sys.path.
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MPI</th>
+      <th>lat</th>
+      <th>lon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>984.000000</td>
+      <td>892.000000</td>
+      <td>892.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>0.211330</td>
+      <td>9.169710</td>
+      <td>16.635888</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>0.183621</td>
+      <td>16.484531</td>
+      <td>61.234566</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.000000</td>
+      <td>-34.947896</td>
+      <td>-122.747131</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>0.053000</td>
+      <td>-1.027901</td>
+      <td>-12.819854</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>0.155000</td>
+      <td>11.211379</td>
+      <td>26.419389</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>0.341500</td>
+      <td>18.084292</td>
+      <td>47.019436</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>0.744000</td>
+      <td>49.264748</td>
+      <td>138.581284</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>LocationName</th>
+      <th>ISO</th>
+      <th>country</th>
+      <th>region</th>
+      <th>world_region</th>
+      <th>geo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>984</td>
+      <td>1008</td>
+      <td>1008</td>
+      <td>984</td>
+      <td>1008</td>
+      <td>2772</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>984</td>
+      <td>102</td>
+      <td>102</td>
+      <td>928</td>
+      <td>6</td>
+      <td>881</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>Badakhshan, Afghanistan</td>
+      <td>NGA</td>
+      <td>Nigeria</td>
+      <td>Central</td>
+      <td>Sub-Saharan Africa</td>
+      <td>(1000.0, 1000.0)</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>1</td>
+      <td>37</td>
+      <td>37</td>
+      <td>8</td>
+      <td>432</td>
+      <td>1880</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\ipykernel_launcher.py:4: DeprecationWarning: `np.object` is a deprecated alias for the builtin `object`. To silence this warning, use `object` by itself. Doing this will not modify any behavior and is safe. 
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  after removing the cwd from sys.path.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: loan_themes 
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>Partner ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>7.790920e+05</td>
+      <td>764279.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>1.047475e+06</td>
+      <td>180.825840</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>2.282538e+05</td>
+      <td>97.914029</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>6.386310e+05</td>
+      <td>9.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>8.499768e+05</td>
+      <td>126.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>1.046528e+06</td>
+      <td>145.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>1.244768e+06</td>
+      <td>204.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>1.444243e+06</td>
+      <td>557.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Loan Theme ID</th>
+      <th>Loan Theme Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>764279</td>
+      <td>764279</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>956</td>
+      <td>203</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>a1050000000wf0q</td>
+      <td>General</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>110264</td>
+      <td>380693</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: regional_lts 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\ipykernel_launcher.py:4: DeprecationWarning: `np.object` is a deprecated alias for the builtin `object`. To silence this warning, use `object` by itself. Doing this will not modify any behavior and is safe. 
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  after removing the cwd from sys.path.
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Partner ID</th>
+      <th>number</th>
+      <th>amount</th>
+      <th>lat</th>
+      <th>lon</th>
+      <th>rural_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>15736.000000</td>
+      <td>15736.000000</td>
+      <td>1.573600e+04</td>
+      <td>13662.000000</td>
+      <td>13662.000000</td>
+      <td>14344.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>191.376144</td>
+      <td>53.628432</td>
+      <td>2.003991e+04</td>
+      <td>14.328878</td>
+      <td>29.433569</td>
+      <td>68.084635</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>118.705003</td>
+      <td>403.079799</td>
+      <td>9.636941e+04</td>
+      <td>16.757689</td>
+      <td>83.255739</td>
+      <td>26.550064</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>9.000000</td>
+      <td>1.000000</td>
+      <td>2.500000e+01</td>
+      <td>-34.610548</td>
+      <td>-172.790661</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>123.000000</td>
+      <td>1.000000</td>
+      <td>9.500000e+02</td>
+      <td>6.266728</td>
+      <td>-71.967463</td>
+      <td>60.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>154.000000</td>
+      <td>4.000000</td>
+      <td>2.600000e+03</td>
+      <td>13.484101</td>
+      <td>41.899993</td>
+      <td>73.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>217.000000</td>
+      <td>15.000000</td>
+      <td>8.750000e+03</td>
+      <td>22.189940</td>
+      <td>106.677321</td>
+      <td>85.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>545.000000</td>
+      <td>22538.000000</td>
+      <td>4.929900e+06</td>
+      <td>51.314017</td>
+      <td>159.972900</td>
+      <td>100.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Field Partner Name</th>
+      <th>sector</th>
+      <th>Loan Theme ID</th>
+      <th>Loan Theme Type</th>
+      <th>country</th>
+      <th>forkiva</th>
+      <th>region</th>
+      <th>geocode_old</th>
+      <th>ISO</th>
+      <th>LocationName</th>
+      <th>geocode</th>
+      <th>names</th>
+      <th>geo</th>
+      <th>mpi_region</th>
+      <th>mpi_geo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>15736</td>
+      <td>15736</td>
+      <td>15736</td>
+      <td>15736</td>
+      <td>15736</td>
+      <td>15736</td>
+      <td>15736</td>
+      <td>1200</td>
+      <td>15722</td>
+      <td>15736</td>
+      <td>13662</td>
+      <td>13661</td>
+      <td>15736</td>
+      <td>15722</td>
+      <td>9671</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>302</td>
+      <td>11</td>
+      <td>718</td>
+      <td>170</td>
+      <td>79</td>
+      <td>2</td>
+      <td>9526</td>
+      <td>340</td>
+      <td>77</td>
+      <td>9561</td>
+      <td>6557</td>
+      <td>6275</td>
+      <td>6558</td>
+      <td>392</td>
+      <td>335</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>Alalay sa Kaunlaran (ASKI)</td>
+      <td>General Financial Inclusion</td>
+      <td>a1050000000wf0V</td>
+      <td>General</td>
+      <td>Philippines</td>
+      <td>No</td>
+      <td>Chouf</td>
+      <td>(-1.2833333, 36.8166667)</td>
+      <td>PHL</td>
+      <td>Chouf, Lebanon</td>
+      <td>[(19.7126764, 105.8393447)]</td>
+      <td>Philippines</td>
+      <td>(1000.0, 1000.0)</td>
+      <td>Northern Mindanao, Philippines</td>
+      <td>(8.020163499999999, 124.6856509)</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>1207</td>
+      <td>13679</td>
+      <td>1152</td>
+      <td>5661</td>
+      <td>3467</td>
+      <td>13211</td>
+      <td>25</td>
+      <td>20</td>
+      <td>3467</td>
+      <td>25</td>
+      <td>43</td>
+      <td>137</td>
+      <td>2074</td>
+      <td>1174</td>
+      <td>1174</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: PCE_data 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\ipykernel_launcher.py:4: DeprecationWarning: `np.object` is a deprecated alias for the builtin `object`. To silence this warning, use `object` by itself. Doing this will not modify any behavior and is safe. 
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  after removing the cwd from sys.path.
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>1960</th>
+      <th>1961</th>
+      <th>1962</th>
+      <th>1963</th>
+      <th>1964</th>
+      <th>1965</th>
+      <th>1966</th>
+      <th>1967</th>
+      <th>1968</th>
+      <th>1969</th>
+      <th>...</th>
+      <th>2010</th>
+      <th>2011</th>
+      <th>2012</th>
+      <th>2013</th>
+      <th>2014</th>
+      <th>2015</th>
+      <th>2016</th>
+      <th>2017</th>
+      <th>2018</th>
+      <th>Unnamed: 60</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>42.000000</td>
+      <td>43.000000</td>
+      <td>44.000000</td>
+      <td>44.000000</td>
+      <td>46.000000</td>
+      <td>49.000000</td>
+      <td>50.000000</td>
+      <td>51.000000</td>
+      <td>51.000000</td>
+      <td>52.000000</td>
+      <td>...</td>
+      <td>178.000000</td>
+      <td>165.000000</td>
+      <td>164.000000</td>
+      <td>163.000000</td>
+      <td>161.000000</td>
+      <td>159.000000</td>
+      <td>158.000000</td>
+      <td>156.000000</td>
+      <td>147.000000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>1809.494762</td>
+      <td>1847.716977</td>
+      <td>1877.875227</td>
+      <td>1940.011136</td>
+      <td>2015.650652</td>
+      <td>2010.033673</td>
+      <td>2288.681000</td>
+      <td>2320.084902</td>
+      <td>2392.880000</td>
+      <td>2671.819423</td>
+      <td>...</td>
+      <td>7432.308315</td>
+      <td>7394.381152</td>
+      <td>7501.210305</td>
+      <td>7620.346564</td>
+      <td>7789.201615</td>
+      <td>7952.960314</td>
+      <td>8114.411582</td>
+      <td>8357.417692</td>
+      <td>8682.582653</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>2328.596444</td>
+      <td>2368.869204</td>
+      <td>2396.605752</td>
+      <td>2484.395372</td>
+      <td>2564.813108</td>
+      <td>2590.874723</td>
+      <td>3100.951093</td>
+      <td>3202.102899</td>
+      <td>3313.045327</td>
+      <td>3692.897134</td>
+      <td>...</td>
+      <td>9241.753759</td>
+      <td>8860.780457</td>
+      <td>8887.466955</td>
+      <td>8930.195998</td>
+      <td>9055.941821</td>
+      <td>9209.450015</td>
+      <td>9352.514087</td>
+      <td>9508.928613</td>
+      <td>9765.671221</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>5.400000</td>
+      <td>5.460000</td>
+      <td>6.260000</td>
+      <td>7.100000</td>
+      <td>7.600000</td>
+      <td>7.830000</td>
+      <td>8.960000</td>
+      <td>8.720000</td>
+      <td>8.820000</td>
+      <td>9.000000</td>
+      <td>...</td>
+      <td>189.820000</td>
+      <td>198.280000</td>
+      <td>199.700000</td>
+      <td>213.930000</td>
+      <td>215.140000</td>
+      <td>204.180000</td>
+      <td>194.430000</td>
+      <td>188.640000</td>
+      <td>189.160000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>638.492500</td>
+      <td>615.280000</td>
+      <td>586.805000</td>
+      <td>615.527500</td>
+      <td>574.932500</td>
+      <td>524.920000</td>
+      <td>570.900000</td>
+      <td>577.155000</td>
+      <td>583.605000</td>
+      <td>581.315000</td>
+      <td>...</td>
+      <td>1038.437500</td>
+      <td>1071.930000</td>
+      <td>1175.210000</td>
+      <td>1257.215000</td>
+      <td>1326.620000</td>
+      <td>1312.475000</td>
+      <td>1439.117500</td>
+      <td>1523.852500</td>
+      <td>1552.660000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>947.700000</td>
+      <td>958.810000</td>
+      <td>1090.455000</td>
+      <td>1131.675000</td>
+      <td>1166.285000</td>
+      <td>1056.250000</td>
+      <td>1181.270000</td>
+      <td>1233.510000</td>
+      <td>1212.540000</td>
+      <td>1266.920000</td>
+      <td>...</td>
+      <td>3180.270000</td>
+      <td>3264.480000</td>
+      <td>3280.025000</td>
+      <td>3569.600000</td>
+      <td>3813.130000</td>
+      <td>3945.950000</td>
+      <td>4085.135000</td>
+      <td>4403.790000</td>
+      <td>4579.960000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>2022.472500</td>
+      <td>2058.570000</td>
+      <td>2096.865000</td>
+      <td>2161.477500</td>
+      <td>2315.760000</td>
+      <td>2330.140000</td>
+      <td>2511.492500</td>
+      <td>2537.875000</td>
+      <td>2602.420000</td>
+      <td>2824.700000</td>
+      <td>...</td>
+      <td>9308.487500</td>
+      <td>8833.490000</td>
+      <td>9080.125000</td>
+      <td>9492.310000</td>
+      <td>9691.510000</td>
+      <td>10008.145000</td>
+      <td>10458.250000</td>
+      <td>10925.800000</td>
+      <td>11395.550000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>10350.000000</td>
+      <td>10847.400000</td>
+      <td>11143.700000</td>
+      <td>11568.600000</td>
+      <td>11941.800000</td>
+      <td>12326.700000</td>
+      <td>13818.600000</td>
+      <td>14632.700000</td>
+      <td>15066.200000</td>
+      <td>15839.300000</td>
+      <td>...</td>
+      <td>48546.600000</td>
+      <td>40030.900000</td>
+      <td>40534.200000</td>
+      <td>41121.300000</td>
+      <td>41139.500000</td>
+      <td>41384.100000</td>
+      <td>41516.800000</td>
+      <td>41636.300000</td>
+      <td>41717.200000</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>8 rows × 60 columns</p>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>region</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>178</td>
+      <td>178</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>178</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>American Samoa</td>
+      <td>Other High Income</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>1</td>
+      <td>44</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exploratory-data-analysis">
+<h3>Exploratory Data Analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="the-impact-of-kiva-donors">
+<h4>The impact of KIVA donors<a class="headerlink" href="#the-impact-of-kiva-donors" title="Permalink to this headline">¶</a></h4>
+<p>In this section, we seek to explore the data to answer certain questions around KIVA donor contributions</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. How much of the total loan amount has Kiva financed?</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># 1. Calculate the percentage of loan requests that have been funded</span>
+<span class="n">percentage1</span> <span class="o">=</span> <span class="p">(</span><span class="n">loan_data</span><span class="o">.</span><span class="n">funded_amount</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="n">loan_data</span><span class="o">.</span><span class="n">loan_amount</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">percentage1</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">percentage1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># 2. Display the result</span>
+<span class="n">status</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Financed by KIVA&#39;</span><span class="p">,</span><span class="s1">&#39;Not financed by KIVA&#39;</span><span class="p">]</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="n">percentage1</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="o">-</span><span class="n">percentage1</span><span class="p">)]</span>
+
+<span class="n">fig1</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">status</span><span class="p">,</span>
+        <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.2f%%</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>  <span class="c1"># Equal aspect ratio ensures that pie is drawn as a circle.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1. How much of the total loan amount has Kiva financed?
+</pre></div>
+</div>
+<img alt="_images/kiva_15_1.png" src="_images/kiva_15_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. How much money have Kiva donors contributed over time?</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;DAILY CONTRIBUTIONS OF KIVA DONORS AS A COLLECTIVE&#39;</span><span class="p">)</span>
+<span class="c1"># convert datetime values to appropriate formats</span>
+<span class="n">loan_data</span><span class="p">[</span><span class="s1">&#39;posted_time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">loan_data</span><span class="p">[</span><span class="s1">&#39;posted_time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;datetime64&#39;</span><span class="p">)</span>
+<span class="n">loan_data</span><span class="p">[</span><span class="s1">&#39;disbursed_time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">loan_data</span><span class="p">[</span><span class="s1">&#39;disbursed_time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;datetime64&#39;</span><span class="p">)</span>
+<span class="n">loan_data</span><span class="p">[</span><span class="s1">&#39;funded_time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">loan_data</span><span class="p">[</span><span class="s1">&#39;funded_time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;datetime64&#39;</span><span class="p">)</span>
+
+<span class="c1"># pick out dates</span>
+<span class="n">loan_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;disbursement_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">loan_data</span><span class="p">[</span><span class="s1">&#39;disbursed_time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span>
+
+<span class="c1"># create a pivot-table</span>
+<span class="n">tab1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">loan_data</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;funded_amount&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;disbursement_date&#39;</span><span class="p">],</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+
+<span class="c1"># plot this table</span>
+<span class="kn">from</span> <span class="nn">pandas.plotting</span> <span class="kn">import</span> <span class="n">register_matplotlib_converters</span>
+<span class="n">register_matplotlib_converters</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tab1</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">tab1</span><span class="p">[</span><span class="s1">&#39;funded_amount&#39;</span><span class="p">])</span>
+
+<span class="c1"># rotate and align the tick labels so they look better</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+
+<span class="c1"># declare the title and show the completed graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Dates&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Funded amount (in million USD)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2. How much money have Kiva donors contributed over time?
+
+
+ DAILY CONTRIBUTIONS OF KIVA DONORS AS A COLLECTIVE
+</pre></div>
+</div>
+<img alt="_images/kiva_16_1.png" src="_images/kiva_16_1.png" />
 </div>
 </div>
 </div>
