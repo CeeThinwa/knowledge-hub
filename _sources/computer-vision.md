@@ -1,2 +1,2 @@
-(computer-vision)=
+(cv)=
 # Welcome to Computer Vision!
