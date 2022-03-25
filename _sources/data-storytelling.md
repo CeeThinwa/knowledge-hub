@@ -1,2 +1,2 @@
 (data-storytelling)=
-# Welcome to data storytelling!
+# Welcome to Data Storytelling!
