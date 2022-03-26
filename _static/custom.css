@@ -29,6 +29,7 @@ body, .row, .dropdown-buttons {background-color: #fffbf2;}
 /* Making admonitions stand out */
 .admonition {background-color: #fff;}
 
-.highlight {
-    background-color: transparent;
+/* Change background of code background*/
+.highlight-default notranslate {
+    background-color: white;
     }
