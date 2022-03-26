@@ -45,6 +45,11 @@ book/_build/html/_static/js/index.be7d3bbb2ef33a8344ce.js
 book/_build/html/_static/language_data.js
 book/_build/html/_static/logo.png
 book/_build/.doctrees/computer-vision.doctree
+book/_build/.doctrees/data-pipelining.doctree
+book/_build/.doctrees/data-storytelling.doctree
+book/_build/.doctrees/kiva.doctree
+book/_build/.doctrees/nlp.doctree
+book/_build/.doctrees/notebooks/kiva.doctree
 book/_build/html/_images/data-pipelining.svg
 book/_build/html/_images/data-storytelling.svg
 book/_build/html/_sources/computer-vision.md
@@ -111,8 +116,3 @@ book/_build/html/_sources/kiva.ipynb
 book/_build/html/_images/kiva_16_1.png
 book/_build/html/_images/kiva_15_1.png
 book/.ipynb_checkpoints/kiva-checkpoint.ipynb
-book/_build/.doctrees/data-pipelining.doctree
-book/_build/.doctrees/data-storytelling.doctree
-book/_build/.doctrees/kiva.doctree
-book/_build/.doctrees/nlp.doctree
-book/_build/.doctrees/notebooks/kiva.doctree
