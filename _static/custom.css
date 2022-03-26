@@ -29,7 +29,7 @@ body, .row, .dropdown-buttons {background-color: #fffbf2;}
 /* Making admonitions stand out */
 .admonition {background-color: #fff;}
 
-/* Change background of code background*/
+/* Change background of code background */
 .highlight pre {
-    background-color: white;
+    background-color: #cbcce7;
     }
