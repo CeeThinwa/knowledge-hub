@@ -30,6 +30,6 @@ body, .row, .dropdown-buttons {background-color: #fffbf2;}
 .admonition {background-color: #fff;}
 
 /* Change background of code background*/
-.highlight-default notranslate {
+.highlight {
     background-color: white;
     }
