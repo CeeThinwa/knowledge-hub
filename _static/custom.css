@@ -31,5 +31,5 @@ body, .row, .dropdown-buttons {background-color: #fffbf2;}
 
 /* Change background of code and code-output background */
 .highlight pre {
-    background-color: transparent;
+    background-color: #fffbf2;
     }
