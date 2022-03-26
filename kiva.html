@@ -420,78 +420,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_18220</span>\<span class="mf">261066939.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">mdates</span>
-
-<span class="ne">c</span>:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\matplotlib\pyplot.py in &lt;module&gt;
-<span class="g g-Whitespace">     </span><span class="mi">50</span> <span class="kn">import</span> <span class="nn">matplotlib.image</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">_api</span>
-<span class="ne">---&gt; </span><span class="mi">52</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcsetup</span><span class="p">,</span> <span class="n">style</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">_pylab_helpers</span><span class="p">,</span> <span class="n">interactive</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cbook</span>
-
-<span class="ne">c</span>:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\matplotlib\style\__init__.py in &lt;module&gt;
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">.core</span> <span class="kn">import</span> <span class="n">use</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">available</span><span class="p">,</span> <span class="n">library</span><span class="p">,</span> <span class="n">reload_library</span>
-
-<span class="ne">c</span>:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\matplotlib\style\core.py in &lt;module&gt;
-<span class="g g-Whitespace">    </span><span class="mi">219</span> <span class="c1"># Load style library</span>
-<span class="g g-Whitespace">    </span><span class="mi">220</span> <span class="c1"># ==================</span>
-<span class="ne">--&gt; </span><span class="mi">221</span> <span class="n">_base_library</span> <span class="o">=</span> <span class="n">read_style_directory</span><span class="p">(</span><span class="n">BASE_LIBRARY_PATH</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">222</span> <span class="n">library</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">223</span> <span class="n">available</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="nn">c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\matplotlib\style\core.py</span> in <span class="ni">read_style_directory</span><span class="nt">(style_dir)</span>
-<span class="g g-Whitespace">    </span><span class="mi">197</span>         <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">(</span><span class="n">record</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">as</span> <span class="n">warns</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">198</span>             <span class="n">styles</span><span class="p">[</span><span class="n">path</span><span class="o">.</span><span class="n">stem</span><span class="p">]</span> <span class="o">=</span> <span class="n">rc_params_from_file</span><span class="p">(</span>
-<span class="ne">--&gt; </span><span class="mi">199</span>                 <span class="n">path</span><span class="p">,</span> <span class="n">use_default_template</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">200</span>         <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">warns</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span>             <span class="n">_log</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;In </span><span class="si">%s</span><span class="s1">: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">w</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
-
-<span class="nn">c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\matplotlib\__init__.py</span> in <span class="ni">rc_params_from_file</span><span class="nt">(fname, fail_on_error, use_default_template)</span>
-<span class="nn">    850         parameters specified</span> in <span class="ni">the file. </span><span class="nt">(Useful for updating dicts.)</span>
-<span class="g g-Whitespace">    </span><span class="mi">851</span>     <span class="sd">&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">852</span><span class="sd">     config_from_file = _rc_params_in_file(fname, fail_on_error=fail_on_error)</span>
-<span class="g g-Whitespace">    </span><span class="mi">853</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">854</span><span class="sd">     if not use_default_template:</span>
-
-<span class="nn">c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\matplotlib\__init__.py</span> in <span class="ni">_rc_params_in_file</span><span class="nt">(fname, transform, fail_on_error)</span>
-<span class="g g-Whitespace">    </span><span class="mi">776</span><span class="sd">     import matplotlib as mpl</span>
-<span class="g g-Whitespace">    </span><span class="mi">777</span><span class="sd">     rc_temp = {}</span>
-<span class="ne">--&gt; </span><span class="mi">778</span><span class="sd">     with _open_file_or_url(fname) as fd:</span>
-<span class="g g-Whitespace">    </span><span class="mi">779</span><span class="sd">         try:</span>
-<span class="g g-Whitespace">    </span><span class="mi">780</span><span class="sd">             for line_no, line in enumerate(fd, 1):</span>
-
-<span class="nn">~\AppData\Local\Programs\Python\Python37\lib\contextlib.py</span> in <span class="ni">__enter__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">110</span><span class="sd">         del self.args, self.kwds, self.func</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span><span class="sd">         try:</span>
-<span class="ne">--&gt; </span><span class="mi">112</span><span class="sd">             return next(self.gen)</span>
-<span class="g g-Whitespace">    </span><span class="mi">113</span><span class="sd">         except StopIteration:</span>
-<span class="g g-Whitespace">    </span><span class="mi">114</span><span class="sd">             raise RuntimeError(&quot;generator didn&#39;t yield&quot;) from None</span>
-
-<span class="nn">c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\matplotlib\__init__.py</span> in <span class="ni">_open_file_or_url</span><span class="nt">(fname)</span>
-<span class="g g-Whitespace">    </span><span class="mi">753</span><span class="sd">         if encoding is None:</span>
-<span class="g g-Whitespace">    </span><span class="mi">754</span><span class="sd">             encoding = &quot;utf-8&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">755</span><span class="sd">         with open(fname, encoding=encoding) as f:</span>
-<span class="g g-Whitespace">    </span><span class="mi">756</span><span class="sd">             yield f</span>
-<span class="g g-Whitespace">    </span><span class="mi">757</span><span class="sd"> </span>
-
-<span class="nn">~\AppData\Local\Programs\Python\Python37\lib\codecs.py</span> in <span class="ni">__init__</span><span class="nt">(self, errors)</span>
-<span class="g g-Whitespace">    </span><span class="mi">258</span><span class="sd">     remembers the state of the decoding process between calls to decode().</span>
-<span class="g g-Whitespace">    </span><span class="mi">259</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">260</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;strict&#39;</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">261</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">262</span><span class="s2">         Create an IncrementalDecoder instance.</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="data">
@@ -1001,10 +929,10 @@ regional_lts shape: (15736, 21)
     </tr>
     <tr>
       <th>top</th>
-      <td>Al-Anbar, Iraq</td>
+      <td>Badakhshan, Afghanistan</td>
       <td>NGA</td>
       <td>Nigeria</td>
-      <td>Eastern</td>
+      <td>Central</td>
       <td>Sub-Saharan Africa</td>
       <td>(1000.0, 1000.0)</td>
     </tr>
@@ -1019,7 +947,10 @@ regional_lts shape: (15736, 21)
     </tr>
   </tbody>
 </table>
-</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: loan_themes 
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: loan_themes 
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1352,7 +1283,10 @@ regional_lts shape: (15736, 21)
     </tr>
   </tbody>
 </table>
-</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: PCE_data 
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: PCE_data 
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1630,8 +1564,8 @@ regional_lts shape: (15736, 21)
     </tr>
     <tr>
       <th>top</th>
-      <td>Burundi</td>
-      <td>Sub-Saharan Africa</td>
+      <td>American Samoa</td>
+      <td>Other High Income</td>
     </tr>
     <tr>
       <th>freq</th>
