@@ -286,6 +286,11 @@ const thebe_selector_output = ".output, .cell_output"
        The characteristics of KIVA borrowers
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#global-welfare">
+       Global welfare
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
@@ -379,6 +384,11 @@ const thebe_selector_output = ".output, .cell_output"
        The characteristics of KIVA borrowers
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#global-welfare">
+       Global welfare
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
@@ -422,14 +432,11 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Packages</span>
-
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
 <span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">mdates</span>
 </pre></div>
 </div>
@@ -442,13 +449,13 @@ const thebe_selector_output = ".output, .cell_output"
 <h4>1. Original Data<a class="headerlink" href="#original-data" title="Permalink to this headline">¶</a></h4>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loan_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//csvs//kiva-project//kiva_loans.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loan_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//data//kiva-project//kiva_loans.csv&#39;</span><span class="p">)</span>
 
-<span class="n">location_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//csvs//kiva-project//kiva_mpi_region_locations.csv&#39;</span><span class="p">)</span>
+<span class="n">location_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//data//kiva-project//kiva_mpi_region_locations.csv&#39;</span><span class="p">)</span>
 
-<span class="n">loan_themes</span>  <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//csvs//kiva-project//loan_theme_ids.csv&#39;</span><span class="p">)</span>
+<span class="n">loan_themes</span>  <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//data//kiva-project//loan_theme_ids.csv&#39;</span><span class="p">)</span>
 
-<span class="n">regional_lts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//csvs//kiva-project//loan_themes_by_region.csv&#39;</span><span class="p">)</span>
+<span class="n">regional_lts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//data//kiva-project//loan_themes_by_region.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -562,14 +569,15 @@ regional_lts shape: (15736, 21)
 <p><a class="reference external" href="https://www.quora.com/What-does-per-capita-expenditure-mean?share=1">Per Capita Expenditure (PCE)</a> for each country - this is the total market value of all purchases in a country divided by that country’s total population (data: <a class="reference external" href="https://bit.ly/3blw0be">https://bit.ly/3blw0be</a>)</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PCE_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//csvs//kiva-project//PCE data.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Per Capita Expenditure</span>
+<span class="n">PCE_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//data//kiva-project//PCE data.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;PCE data shape:&#39;</span><span class="p">,</span><span class="n">PCE_data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PCE data shape: (178, 62)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PCE data shape: (225, 54)
 </pre></div>
 </div>
 </div>
@@ -1309,10 +1317,7 @@ regional_lts shape: (15736, 21)
     </tr>
   </tbody>
 </table>
-</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: PCE_data 
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: PCE_data 
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1333,16 +1338,201 @@ regional_lts shape: (15736, 21)
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>1960</th>
-      <th>1961</th>
-      <th>1962</th>
-      <th>1963</th>
-      <th>1964</th>
-      <th>1965</th>
-      <th>1966</th>
       <th>1967</th>
       <th>1968</th>
       <th>1969</th>
+      <th>1970</th>
+      <th>1971</th>
+      <th>1972</th>
+      <th>1973</th>
+      <th>1974</th>
+      <th>1975</th>
+      <th>1976</th>
+      <th>1977</th>
+      <th>1978</th>
+      <th>1979</th>
+      <th>1980</th>
+      <th>1981</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>217.000000</td>
+      <td>217.000000</td>
+      <td>217.000000</td>
+      <td>217.000000</td>
+      <td>217.000000</td>
+      <td>217.000000</td>
+      <td>217.000000</td>
+      <td>217.000000</td>
+      <td>217.000000</td>
+      <td>217.000000</td>
+      <td>217.000000</td>
+      <td>217.000000</td>
+      <td>217.000000</td>
+      <td>217.000000</td>
+      <td>218.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>15.956498</td>
+      <td>16.280323</td>
+      <td>16.624286</td>
+      <td>16.971705</td>
+      <td>17.329724</td>
+      <td>17.681889</td>
+      <td>18.028986</td>
+      <td>18.379862</td>
+      <td>18.722949</td>
+      <td>19.057465</td>
+      <td>19.390829</td>
+      <td>19.729447</td>
+      <td>20.077419</td>
+      <td>20.428203</td>
+      <td>20.699954</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>65.110375</td>
+      <td>66.645947</td>
+      <td>68.293438</td>
+      <td>70.000670</td>
+      <td>71.760259</td>
+      <td>73.438521</td>
+      <td>75.074430</td>
+      <td>76.649920</td>
+      <td>78.111491</td>
+      <td>79.486030</td>
+      <td>80.796125</td>
+      <td>82.119866</td>
+      <td>83.470633</td>
+      <td>84.806632</td>
+      <td>85.998259</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.000000</td>
+      <td>0.010000</td>
+      <td>0.010000</td>
+      <td>0.010000</td>
+      <td>0.010000</td>
+      <td>0.010000</td>
+      <td>0.010000</td>
+      <td>0.010000</td>
+      <td>0.010000</td>
+      <td>0.010000</td>
+      <td>0.010000</td>
+      <td>0.010000</td>
+      <td>0.010000</td>
+      <td>0.010000</td>
+      <td>0.010000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>0.270000</td>
+      <td>0.280000</td>
+      <td>0.290000</td>
+      <td>0.300000</td>
+      <td>0.300000</td>
+      <td>0.300000</td>
+      <td>0.300000</td>
+      <td>0.300000</td>
+      <td>0.300000</td>
+      <td>0.310000</td>
+      <td>0.310000</td>
+      <td>0.320000</td>
+      <td>0.340000</td>
+      <td>0.360000</td>
+      <td>0.370000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>2.740000</td>
+      <td>2.790000</td>
+      <td>2.850000</td>
+      <td>2.930000</td>
+      <td>2.990000</td>
+      <td>3.040000</td>
+      <td>3.110000</td>
+      <td>3.190000</td>
+      <td>3.270000</td>
+      <td>3.330000</td>
+      <td>3.360000</td>
+      <td>3.460000</td>
+      <td>3.550000</td>
+      <td>3.620000</td>
+      <td>3.680000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>8.950000</td>
+      <td>9.260000</td>
+      <td>9.590000</td>
+      <td>9.660000</td>
+      <td>9.670000</td>
+      <td>9.870000</td>
+      <td>9.920000</td>
+      <td>9.990000</td>
+      <td>10.170000</td>
+      <td>10.440000</td>
+      <td>10.650000</td>
+      <td>10.680000</td>
+      <td>10.810000</td>
+      <td>11.060000</td>
+      <td>11.190000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>754.550000</td>
+      <td>774.510000</td>
+      <td>796.030000</td>
+      <td>818.320000</td>
+      <td>841.110000</td>
+      <td>862.030000</td>
+      <td>881.940000</td>
+      <td>900.350000</td>
+      <td>916.400000</td>
+      <td>930.690000</td>
+      <td>943.460000</td>
+      <td>956.170000</td>
+      <td>969.010000</td>
+      <td>981.240000</td>
+      <td>993.890000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>1982</th>
+      <th>1983</th>
+      <th>1984</th>
+      <th>1985</th>
+      <th>1986</th>
+      <th>1987</th>
+      <th>1988</th>
+      <th>1989</th>
+      <th>1990</th>
       <th>...</th>
       <th>2010</th>
       <th>2011</th>
@@ -1353,253 +1543,109 @@ regional_lts shape: (15736, 21)
       <th>2016</th>
       <th>2017</th>
       <th>2018</th>
-      <th>Unnamed: 60</th>
+      <th>2019</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>count</th>
-      <td>42.000000</td>
-      <td>43.000000</td>
-      <td>44.000000</td>
-      <td>44.000000</td>
-      <td>46.000000</td>
-      <td>49.000000</td>
-      <td>50.000000</td>
-      <td>51.000000</td>
-      <td>51.000000</td>
-      <td>52.000000</td>
+      <td>225</td>
+      <td>218</td>
+      <td>218</td>
+      <td>218</td>
+      <td>218</td>
+      <td>218</td>
+      <td>218</td>
+      <td>218</td>
+      <td>218</td>
+      <td>218</td>
       <td>...</td>
-      <td>178.000000</td>
-      <td>165.000000</td>
-      <td>164.000000</td>
-      <td>163.000000</td>
-      <td>161.000000</td>
-      <td>159.000000</td>
-      <td>158.000000</td>
-      <td>156.000000</td>
-      <td>147.000000</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>1809.494762</td>
-      <td>1847.716977</td>
-      <td>1877.875227</td>
-      <td>1940.011136</td>
-      <td>2015.650652</td>
-      <td>2010.033673</td>
-      <td>2288.681000</td>
-      <td>2320.084902</td>
-      <td>2392.880000</td>
-      <td>2671.819423</td>
-      <td>...</td>
-      <td>7432.308315</td>
-      <td>7394.381152</td>
-      <td>7501.210305</td>
-      <td>7620.346564</td>
-      <td>7789.201615</td>
-      <td>7952.960314</td>
-      <td>8114.411582</td>
-      <td>8357.417692</td>
-      <td>8682.582653</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>2328.596444</td>
-      <td>2368.869204</td>
-      <td>2396.605752</td>
-      <td>2484.395372</td>
-      <td>2564.813108</td>
-      <td>2590.874723</td>
-      <td>3100.951093</td>
-      <td>3202.102899</td>
-      <td>3313.045327</td>
-      <td>3692.897134</td>
-      <td>...</td>
-      <td>9241.753759</td>
-      <td>8860.780457</td>
-      <td>8887.466955</td>
-      <td>8930.195998</td>
-      <td>9055.941821</td>
-      <td>9209.450015</td>
-      <td>9352.514087</td>
-      <td>9508.928613</td>
-      <td>9765.671221</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>5.400000</td>
-      <td>5.460000</td>
-      <td>6.260000</td>
-      <td>7.100000</td>
-      <td>7.600000</td>
-      <td>7.830000</td>
-      <td>8.960000</td>
-      <td>8.720000</td>
-      <td>8.820000</td>
-      <td>9.000000</td>
-      <td>...</td>
-      <td>189.820000</td>
-      <td>198.280000</td>
-      <td>199.700000</td>
-      <td>213.930000</td>
-      <td>215.140000</td>
-      <td>204.180000</td>
-      <td>194.430000</td>
-      <td>188.640000</td>
-      <td>189.160000</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>638.492500</td>
-      <td>615.280000</td>
-      <td>586.805000</td>
-      <td>615.527500</td>
-      <td>574.932500</td>
-      <td>524.920000</td>
-      <td>570.900000</td>
-      <td>577.155000</td>
-      <td>583.605000</td>
-      <td>581.315000</td>
-      <td>...</td>
-      <td>1038.437500</td>
-      <td>1071.930000</td>
-      <td>1175.210000</td>
-      <td>1257.215000</td>
-      <td>1326.620000</td>
-      <td>1312.475000</td>
-      <td>1439.117500</td>
-      <td>1523.852500</td>
-      <td>1552.660000</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>947.700000</td>
-      <td>958.810000</td>
-      <td>1090.455000</td>
-      <td>1131.675000</td>
-      <td>1166.285000</td>
-      <td>1056.250000</td>
-      <td>1181.270000</td>
-      <td>1233.510000</td>
-      <td>1212.540000</td>
-      <td>1266.920000</td>
-      <td>...</td>
-      <td>3180.270000</td>
-      <td>3264.480000</td>
-      <td>3280.025000</td>
-      <td>3569.600000</td>
-      <td>3813.130000</td>
-      <td>3945.950000</td>
-      <td>4085.135000</td>
-      <td>4403.790000</td>
-      <td>4579.960000</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>2022.472500</td>
-      <td>2058.570000</td>
-      <td>2096.865000</td>
-      <td>2161.477500</td>
-      <td>2315.760000</td>
-      <td>2330.140000</td>
-      <td>2511.492500</td>
-      <td>2537.875000</td>
-      <td>2602.420000</td>
-      <td>2824.700000</td>
-      <td>...</td>
-      <td>9308.487500</td>
-      <td>8833.490000</td>
-      <td>9080.125000</td>
-      <td>9492.310000</td>
-      <td>9691.510000</td>
-      <td>10008.145000</td>
-      <td>10458.250000</td>
-      <td>10925.800000</td>
-      <td>11395.550000</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>10350.000000</td>
-      <td>10847.400000</td>
-      <td>11143.700000</td>
-      <td>11568.600000</td>
-      <td>11941.800000</td>
-      <td>12326.700000</td>
-      <td>13818.600000</td>
-      <td>14632.700000</td>
-      <td>15066.200000</td>
-      <td>15839.300000</td>
-      <td>...</td>
-      <td>48546.600000</td>
-      <td>40030.900000</td>
-      <td>40534.200000</td>
-      <td>41121.300000</td>
-      <td>41139.500000</td>
-      <td>41384.100000</td>
-      <td>41516.800000</td>
-      <td>41636.300000</td>
-      <td>41717.200000</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-<p>8 rows × 60 columns</p>
-</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>region</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>178</td>
-      <td>178</td>
+      <td>218</td>
+      <td>218</td>
+      <td>218</td>
+      <td>218</td>
+      <td>218</td>
+      <td>218</td>
+      <td>218</td>
+      <td>218</td>
+      <td>218</td>
+      <td>218</td>
     </tr>
     <tr>
       <th>unique</th>
-      <td>178</td>
-      <td>7</td>
+      <td>225</td>
+      <td>182</td>
+      <td>186</td>
+      <td>184</td>
+      <td>180</td>
+      <td>185</td>
+      <td>183</td>
+      <td>182</td>
+      <td>183</td>
+      <td>187</td>
+      <td>...</td>
+      <td>190</td>
+      <td>195</td>
+      <td>190</td>
+      <td>188</td>
+      <td>191</td>
+      <td>190</td>
+      <td>191</td>
+      <td>189</td>
+      <td>192</td>
+      <td>192</td>
     </tr>
     <tr>
       <th>top</th>
-      <td>American Samoa</td>
-      <td>Other High Income</td>
+      <td>East Asia and Pacific</td>
+      <td>0.01</td>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>0.02</td>
+      <td>0.04</td>
+      <td>0.03</td>
+      <td>0.03</td>
+      <td>...</td>
+      <td>0.03</td>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.11</td>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.06</td>
     </tr>
     <tr>
       <th>freq</th>
       <td>1</td>
-      <td>44</td>
+      <td>6</td>
+      <td>6</td>
+      <td>6</td>
+      <td>6</td>
+      <td>6</td>
+      <td>5</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>...</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>6</td>
+      <td>6</td>
+      <td>6</td>
+      <td>6</td>
     </tr>
   </tbody>
 </table>
+<p>4 rows × 39 columns</p>
 </div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
@@ -1612,6 +1658,7 @@ regional_lts shape: (15736, 21)
 <div class="section" id="the-impact-of-kiva-donors">
 <h4>The impact of KIVA donors<a class="headerlink" href="#the-impact-of-kiva-donors" title="Permalink to this headline">¶</a></h4>
 <p>In this section, we seek to explore the data to answer certain questions around KIVA donor contributions.</p>
+<br>
 <p><em><strong>1. How much of the total loan amount has Kiva financed?</strong></em></p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -1641,7 +1688,6 @@ regional_lts shape: (15736, 21)
 <img alt="_images/kiva_16_0.png" src="_images/kiva_16_0.png" />
 </div>
 </div>
-<br>
 <br>
 <p><em><strong>2. How much money have Kiva donors contributed over time?</strong></em></p>
 <div class="cell tag_hide-input docutils container">
@@ -1688,7 +1734,6 @@ regional_lts shape: (15736, 21)
 </div>
 </div>
 <br>
-<br>
 <p><em><strong>3. How much money have Kiva donors given to individual loans?</strong></em></p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -1724,7 +1769,6 @@ regional_lts shape: (15736, 21)
 <img alt="_images/kiva_20_0.png" src="_images/kiva_20_0.png" />
 </div>
 </div>
-<br>
 <br>
 <p><em><strong>4. How much money have Kiva donors given to individual countries?</strong></em></p>
 <div class="cell tag_hide-input docutils container">
@@ -1804,7 +1848,7 @@ regional_lts shape: (15736, 21)
 </div>
 <p>This shows that the top 10 countries in terms of the number of loans and amount of funding from KIVA were the same and each country maintained its position.</p>
 <p>Countries that had the highest contribution per loan were:</p>
-<div class="cell tag_hide-cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initial status message</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The shape of tab2 before merge: &#39;</span><span class="p">,</span> <span class="n">tab2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -1886,9 +1930,8 @@ The shape of tab2 after merge:  (87, 3)
 </div>
 </div>
 <br>
-<br>
 <p><em><strong>5. What is the geographical footprint of where funds given by KIVA donors end up?</strong></em></p>
-<div class="cell tag_hide-cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make a copy of the loan_data dataset and combine it with partner data</span>
 <span class="n">loan_data_copy</span> <span class="o">=</span> <span class="n">loan_data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -1978,7 +2021,7 @@ partner_id
 </div>
 </div>
 </div>
-<div class="cell tag_hide-cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initial status message</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The shape of tab3 before merge: &#39;</span><span class="p">,</span> <span class="n">tab3</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -2028,12 +2071,19 @@ Out of the 366 partners that disbursed loans, KIVA had the contact details of 90
 <span class="n">tab3</span> <span class="o">=</span> <span class="n">tab3</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;count_of_amount&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># display top 10 results; do they match with the original tab3? They match!</span>
+
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
 <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">tab3</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">(</span><span class="n">tab3</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="mi">1000000</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#7e81c4&#39;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Kiva donor overall contribution (in million USD)&#39;</span><span class="p">)</span>
+
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">tab3</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="n">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">),</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Field partners&#39;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;FIELD PARTNERS THAT RECEIVED THE MOST FUNDING ON KIVA&#39;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -2049,12 +2099,19 @@ Out of the 366 partners that disbursed loans, KIVA had the contact details of 90
 <span class="n">tab3</span> <span class="o">=</span> <span class="n">tab3</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;number_of_loans&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># display top 10 results in terms of number of loans</span>
+
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
 <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">tab3</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="n">tab3</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#7e81c4&#39;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Total number of loans on Kiva&#39;</span><span class="p">)</span>
+
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">tab3</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="n">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">),</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Top 10 Field partners&#39;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;FIELD PARTNERS THAT SERVICED THE HIGHEST LOANS ON KIVA&#39;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -2072,12 +2129,19 @@ Out of the 366 partners that disbursed loans, KIVA had the contact details of 90
 <span class="n">tab3</span> <span class="o">=</span> <span class="n">tab3</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;contribution_per_loan&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># display top 20 results in terms of donor contribution per loan</span>
+
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
 <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">tab3</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="n">tab3</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#7e81c4&#39;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Kiva donor contribution per loan&#39;</span><span class="p">)</span>
+
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">tab3</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="n">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">),</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Top 20 Field partners&#39;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;FIELD PARTNERS THAT RECEIVED THE MOST VALUABLE LOANS ON KIVA&#39;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -2089,14 +2153,823 @@ Out of the 366 partners that disbursed loans, KIVA had the contact details of 90
 <p>The per capita contribution shows most of the largest contributions per loan actually went directly to social impact businesses.</p>
 <br>
 <br>
-<br>
 </div>
 <div class="section" id="the-characteristics-of-kiva-borrowers">
 <h4>The characteristics of KIVA borrowers<a class="headerlink" href="#the-characteristics-of-kiva-borrowers" title="Permalink to this headline">¶</a></h4>
 <p>In this section, we seek to understand KIVA borrower characteristics.</p>
-<ol class="simple">
-<li><p>What is the size of the shortfall for each individual borrower in a given sector?</p></li>
-</ol>
+<br>
+<p><em><strong>1. What is the size of the shortfall for each individual borrower in a given sector?</strong></em></p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a pivot-table</span>
+<span class="n">tab6</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">loan_data_copy</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;funded_amount&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sector&#39;</span><span class="p">],</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+
+<span class="c1"># sort the results in descending order</span>
+<span class="n">tab6</span> <span class="o">=</span> <span class="n">tab6</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;funded_amount&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># rename the aggregated column to an appropiate label</span>
+<span class="n">tab6</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sum_of_funded_amount&#39;</span><span class="p">]</span>
+
+<span class="c1"># make some index entries into columns</span>
+<span class="n">tab6</span> <span class="o">=</span> <span class="n">tab6</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sector&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create another pivot-table</span>
+<span class="n">loans_by_sector</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">loan_data_copy</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sector&#39;</span><span class="p">],</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
+
+<span class="c1"># sort the results in descending order</span>
+<span class="n">loans_by_sector</span> <span class="o">=</span> <span class="n">loans_by_sector</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># rename the aggregated column to an appropiate label</span>
+<span class="n">loans_by_sector</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;number_of_loans&#39;</span><span class="p">]</span>
+
+<span class="c1"># make some index entries into columns</span>
+<span class="n">loans_by_sector</span> <span class="o">=</span> <span class="n">loans_by_sector</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sector&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a third pivot-table</span>
+<span class="n">loan_amounts_by_sector</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">loan_data_copy</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;loan_amount&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sector&#39;</span><span class="p">],</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+
+<span class="c1"># sort the results in descending order</span>
+<span class="n">loan_amounts_by_sector</span> <span class="o">=</span> <span class="n">loan_amounts_by_sector</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;loan_amount&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># rename the aggregated column to an appropiate label</span>
+<span class="n">loan_amounts_by_sector</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sum_of_loan_amount&#39;</span><span class="p">]</span>
+
+<span class="c1"># make some index entries into columns</span>
+<span class="n">loan_amounts_by_sector</span> <span class="o">=</span> <span class="n">loan_amounts_by_sector</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sector&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initial status message</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The shape of tab6 before merge: &#39;</span><span class="p">,</span> <span class="n">tab6</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># join the data, keeping only relevant entries</span>
+<span class="n">tab6</span> <span class="o">=</span> <span class="n">tab6</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">loans_by_sector</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;sector&#39;</span><span class="p">)</span>
+
+<span class="c1"># final status message</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The shape of tab6 after merge: &#39;</span><span class="p">,</span> <span class="n">tab6</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+
+<span class="c1"># initial status message</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The shape of tab6 before merge: &#39;</span><span class="p">,</span> <span class="n">tab6</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># join the data, keeping only relevant entries</span>
+<span class="n">tab6</span> <span class="o">=</span> <span class="n">tab6</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">loan_amounts_by_sector</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;sector&#39;</span><span class="p">)</span>
+
+<span class="c1"># final status message</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The shape of tab6 after merge: &#39;</span><span class="p">,</span> <span class="n">tab6</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The shape of tab6 before merge:  (15, 2)
+The shape of tab6 after merge:  (15, 3)
+The shape of tab6 before merge:  (15, 3)
+The shape of tab6 after merge:  (15, 4)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># assess additional metrics</span>
+<span class="n">tab6</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;donor_contribution_per_loan&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tab6</span><span class="p">[</span><span class="s1">&#39;sum_of_funded_amount&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">tab6</span><span class="p">[</span><span class="s1">&#39;number_of_loans&#39;</span><span class="p">]</span>
+<span class="n">tab6</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;funding_gap_per_loan&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">tab6</span><span class="p">[</span><span class="s1">&#39;sum_of_loan_amount&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">tab6</span><span class="p">[</span><span class="s1">&#39;sum_of_funded_amount&#39;</span><span class="p">])</span><span class="o">/</span><span class="n">tab6</span><span class="p">[</span><span class="s1">&#39;number_of_loans&#39;</span><span class="p">]</span>
+
+<span class="c1"># sort the results in descending order</span>
+<span class="n">tab6</span> <span class="o">=</span> <span class="n">tab6</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;donor_contribution_per_loan&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># display all results</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">tab6</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">tab6</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">4</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#7e81c4&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Kiva donor contribution per loan&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">tab6</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">),</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Sectors&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;SECTORS THAT RECEIVED THE MOST VALUABLE LOANS ON KIVA&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/kiva_45_0.png" src="_images/kiva_45_0.png" />
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sort the results in descending order</span>
+<span class="n">tab6</span> <span class="o">=</span> <span class="n">tab6</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;funding_gap_per_loan&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># display all results</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">tab6</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">tab6</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">5</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;crimson&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Funding gap per loan&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">tab6</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">),</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Sectors&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;SECTORS THAT HAD THE LARGEST FUNDING GAP ON KIVA&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/kiva_46_0.png" src="_images/kiva_46_0.png" />
+</div>
+</div>
+<p>In as much as Entertainment has the second most valuable loans, it appears that this sector had the highest funding gap. Manufacturing had the lowest funding gap.</p>
+<br>
+<p><em><strong>2. How were loans and funding distributed across the genders?</strong></em></p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loan_data_copy</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;number_of_all_borrowers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">loan_data_copy</span><span class="p">[</span><span class="s1">&#39;borrower_genders&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;male&#39;</span><span class="p">)</span> <span class="c1"># counts both instances of female and male - they share the &#39;male&#39; element</span>
+<span class="n">loan_data_copy</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;number_of_female_borrowers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">loan_data_copy</span><span class="p">[</span><span class="s1">&#39;borrower_genders&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;female&#39;</span><span class="p">)</span>
+<span class="n">loan_data_copy</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;number_of_male_borrowers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">loan_data_copy</span><span class="p">[</span><span class="s1">&#39;number_of_all_borrowers&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">loan_data_copy</span><span class="p">[</span><span class="s1">&#39;number_of_female_borrowers&#39;</span><span class="p">]</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We had borrower data on&#39;</span><span class="p">,</span>
+      <span class="nb">round</span><span class="p">(</span><span class="n">loan_data_copy</span><span class="p">[</span><span class="s1">&#39;number_of_all_borrowers&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">/</span><span class="n">loan_data_copy</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+      <span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f the loans recorded&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>We had borrower data on 99.37 % of the loans recorded
+</pre></div>
+</div>
+</div>
+</div>
+<p><u><strong>How different genders group together to borrow on Kiva</strong></u></p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a pivot-table</span>
+<span class="n">borrower_group_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">loan_data_copy</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;number_of_male_borrowers&#39;</span><span class="p">,</span> <span class="s1">&#39;number_of_female_borrowers&#39;</span><span class="p">],</span>
+                                     <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;number_of_all_borrowers&#39;</span><span class="p">],</span><span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+<span class="c1">#N/B: Using the count gives the total number of loans with borrower data; we need the sum to see the gender distribution across group size</span>
+
+<span class="c1"># make some index entries into columns</span>
+<span class="n">borrower_group_data</span> <span class="o">=</span> <span class="n">borrower_group_data</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;number_of_all_borrowers&#39;</span><span class="p">])</span>
+
+
+<span class="c1"># display the results</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">borrower_group_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">borrower_group_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">2</span><span class="p">],</span>
+       <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Men&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#7e81c4&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">borrower_group_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">borrower_group_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span>
+       <span class="n">bottom</span><span class="o">=</span><span class="n">borrower_group_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">2</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Women&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#cbcce7&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Number of borrowers&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Size of borrower groups&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;GENDER AND SIZE OF BORROWER GROUPS&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/kiva_50_0.png" src="_images/kiva_50_0.png" />
+</div>
+</div>
+<p>The graph above shows that most people preferred to borrow as individuals; however, there were substantially larger numbers of women in each group size compared to men.</p>
+<p><u><strong>Most common nationalities for the different genders</strong></u></p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a pivot-table</span>
+<span class="n">borrower_country_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">loan_data_copy</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;number_of_male_borrowers&#39;</span><span class="p">,</span> <span class="s1">&#39;number_of_female_borrowers&#39;</span><span class="p">],</span>
+                                       <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">],</span><span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># sort the male results in descending order</span>
+<span class="n">borrower_country_data</span> <span class="o">=</span> <span class="n">borrower_country_data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;number_of_male_borrowers&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># make some index entries into columns</span>
+<span class="n">borrower_country_data</span> <span class="o">=</span> <span class="n">borrower_country_data</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">])</span>
+
+
+<span class="c1"># display the results</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">borrower_country_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">borrower_country_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+       <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Men&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#7e81c4&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">borrower_country_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">borrower_country_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+       <span class="n">bottom</span><span class="o">=</span><span class="n">borrower_country_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Women&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#cbcce7&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">borrower_country_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">),</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Number of borrowers&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Top 10 countries for men&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;NUMBER OF BORROWERS BY GENDER AND COUNTRY&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/kiva_52_0.png" src="_images/kiva_52_0.png" />
+</div>
+</div>
+<p>The country with the highest number of male borrowers was Kenya, while the country where men formed the majority of KIVA borrowers was Nigeria.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sort the female results in descending order</span>
+<span class="n">borrower_country_data</span> <span class="o">=</span> <span class="n">borrower_country_data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;number_of_female_borrowers&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># display the results</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">borrower_country_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">borrower_country_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+       <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Men&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#7e81c4&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">borrower_country_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">borrower_country_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+       <span class="n">bottom</span><span class="o">=</span><span class="n">borrower_country_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Women&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#cbcce7&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">borrower_country_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">),</span>
+                   <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Number of borrowers&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Top 10 countries for women&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;NUMBER OF BORROWERS BY GENDER AND COUNTRY&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/kiva_54_0.png" src="_images/kiva_54_0.png" />
+</div>
+</div>
+<p>The country with the highest number of female borrowers was the Philippines, it can also be observed that nearly all borrowers were women in Paraguay and Senegal, while India appears to consist of only female borrowers.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a pivot-table</span>
+<span class="n">tab7</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">loan_data_copy</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;term_in_months&#39;</span><span class="p">,</span> <span class="s1">&#39;number_of_all_borrowers&#39;</span><span class="p">,</span> <span class="s1">&#39;number_of_male_borrowers&#39;</span><span class="p">,</span> <span class="s1">&#39;number_of_female_borrowers&#39;</span><span class="p">,</span> <span class="s1">&#39;loan_amount&#39;</span><span class="p">,</span> <span class="s1">&#39;funded_amount&#39;</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;repayment_interval&#39;</span><span class="p">],</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+
+<span class="c1"># sort the results in descending order</span>
+<span class="n">tab7</span> <span class="o">=</span> <span class="n">tab7</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;number_of_all_borrowers&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># make some index entries into columns</span>
+<span class="n">tab7</span> <span class="o">=</span> <span class="n">tab7</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;repayment_interval&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create another pivot-table</span>
+<span class="n">loan_repayment</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">loan_data_copy</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;repayment_interval&#39;</span><span class="p">],</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
+
+<span class="c1"># sort the results in descending order</span>
+<span class="n">loan_repayment</span> <span class="o">=</span> <span class="n">loan_repayment</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># rename the aggregated column to an appropiate label</span>
+<span class="n">loan_repayment</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;number_of_loans&#39;</span><span class="p">]</span>
+
+<span class="c1"># make some index entries into columns</span>
+<span class="n">loan_repayment</span> <span class="o">=</span> <span class="n">loan_repayment</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;repayment_interval&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initial status message</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The shape of tab7 before merge: &#39;</span><span class="p">,</span> <span class="n">tab7</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># join the data, keeping only relevant entries</span>
+<span class="n">tab7</span> <span class="o">=</span> <span class="n">tab7</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">loan_repayment</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;repayment_interval&#39;</span><span class="p">)</span>
+
+<span class="c1"># final status message</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The shape of tab7 after merge: &#39;</span><span class="p">,</span> <span class="n">tab7</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The shape of tab7 before merge:  (4, 7)
+The shape of tab7 after merge:  (4, 8)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Present findings in more digestible formats by:</span>
+
+<span class="c1"># 1. Converting total borrowers to male and female proportions</span>
+<span class="n">tab7</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;female_pct_of_total_borrowers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">((</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;number_of_female_borrowers&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;number_of_all_borrowers&#39;</span><span class="p">])</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">tab7</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;male_pct_of_total_borrowers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">((</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;number_of_male_borrowers&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;number_of_all_borrowers&#39;</span><span class="p">])</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># 2. Extracting funding amounts based on gender</span>
+<span class="n">tab7</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;million_USD_female_total_funding&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">((</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;female_pct_of_total_borrowers&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;funded_amount&#39;</span><span class="p">])</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">tab7</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;million_USD_male_total_funding&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">((</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;male_pct_of_total_borrowers&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;funded_amount&#39;</span><span class="p">])</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># 3. Extracting loan amounts based on gender</span>
+<span class="n">tab7</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;million_USD_female_total_loan_amount&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">((</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;female_pct_of_total_borrowers&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;loan_amount&#39;</span><span class="p">])</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">tab7</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;million_USD_male_total_loan_amount&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">((</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;male_pct_of_total_borrowers&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;loan_amount&#39;</span><span class="p">])</span><span class="o">/</span><span class="mi">1000000</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># 4. Extracting funding gaps based on gender</span>
+<span class="n">tab7</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;million_female_funding_gap&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;million_USD_female_total_loan_amount&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;million_USD_female_total_funding&#39;</span><span class="p">]</span>
+<span class="n">tab7</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;million_male_funding_gap&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;million_USD_male_total_loan_amount&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;million_USD_male_total_funding&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># drop raw data columns</span>
+<span class="n">tab7</span> <span class="o">=</span> <span class="n">tab7</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;funded_amount&#39;</span><span class="p">,</span> <span class="s1">&#39;loan_amount&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;number_of_all_borrowers&#39;</span><span class="p">,</span> <span class="s1">&#39;number_of_female_borrowers&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;number_of_male_borrowers&#39;</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><u><strong>Funding received based on gender</strong></u></p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># display summary of funding by gender</span>
+
+<span class="n">status</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Total male funding&#39;</span><span class="p">,</span><span class="s1">&#39;Total female funding&#39;</span><span class="p">]</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;million_USD_male_total_funding&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;million_USD_female_total_funding&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()]</span>
+
+<span class="n">fig1</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">status</span><span class="p">,</span>
+        <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.2f%%</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+        <span class="n">colors</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;#7e81c4&#39;</span><span class="p">,</span><span class="s1">&#39;#cbcce7&#39;</span><span class="p">]))</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>  <span class="c1"># Equal aspect ratio ensures that pie is drawn as a circle.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/kiva_62_0.png" src="_images/kiva_62_0.png" />
+</div>
+</div>
+<p><u><strong>Total loan amounts taken by each gender</strong></u></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># display loan amounts by gender</span>
+
+<span class="n">status</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Total loan taken by men&#39;</span><span class="p">,</span><span class="s1">&#39;Total loan taken by women&#39;</span><span class="p">]</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;million_USD_male_total_loan_amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;million_USD_female_total_loan_amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()]</span>
+
+<span class="n">fig1</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">status</span><span class="p">,</span>
+        <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.2f%%</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+        <span class="n">colors</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;#7e81c4&#39;</span><span class="p">,</span><span class="s1">&#39;#cbcce7&#39;</span><span class="p">]))</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>  <span class="c1"># Equal aspect ratio ensures that pie is drawn as a circle.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/kiva_64_0.png" src="_images/kiva_64_0.png" />
+</div>
+</div>
+<p><u><strong>Loan repayment behaviour based on gender</strong></u></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Display summary of loan repayment behaviour by gender</span>
+<span class="c1"># 1. Men</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">tab7</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span>
+       <span class="p">(</span><span class="n">tab7</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">tab7</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="p">(</span><span class="n">tab7</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">4</span><span class="p">]</span><span class="o">/</span><span class="mi">100</span><span class="p">),</span>
+       <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Men&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#7e81c4&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Loan term per loan&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Repayment interval&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;LOAN REPAYMENT BEHAVIOUR&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/kiva_66_0.png" src="_images/kiva_66_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. Women</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">tab7</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span>
+       <span class="p">(</span><span class="n">tab7</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">tab7</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="p">(</span><span class="n">tab7</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">3</span><span class="p">]</span><span class="o">/</span><span class="mi">100</span><span class="p">),</span>
+       <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Women&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#cbcce7&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Loan term per loan&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Repayment interval&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;LOAN REPAYMENT BEHAVIOUR&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/kiva_67_0.png" src="_images/kiva_67_0.png" />
+</div>
+</div>
+<p>In as much as most men and women consistently paid off long-term loans on a monthly basis, women had a much larger time horizon to pay off their loans in general.</p>
+<p>Additionally, a significant amount of data on repayment behaviour is missing for both genders (missing data is represented as the ‘bullet group’).</p>
+<p><u><strong>Funding gap in millions faced by each gender</strong></u></p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># display summary of funding gap by gender</span>
+
+<span class="n">status</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Male funding gap&#39;</span><span class="p">,</span><span class="s1">&#39;Female funding gap&#39;</span><span class="p">]</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="nb">abs</span><span class="p">(</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;million_male_funding_gap&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span> <span class="nb">abs</span><span class="p">(</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;million_male_funding_gap&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())]</span>
+
+<span class="n">fig1</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">status</span><span class="p">,</span>
+        <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.2f%%</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+        <span class="n">colors</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;#7e81c4&#39;</span><span class="p">,</span><span class="s1">&#39;#cbcce7&#39;</span><span class="p">]))</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>  <span class="c1"># Equal aspect ratio ensures that pie is drawn as a circle.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;In this instance, both men and women have the same size of funding gap, </span><span class="si">{}</span><span class="s1"> million US dollars</span><span class="se">\n</span><span class="s1">over the time period the data was collected.&#39;</span>
+      <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span>
+          <span class="nb">abs</span><span class="p">(</span><span class="n">tab7</span><span class="p">[</span><span class="s1">&#39;million_male_funding_gap&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span>
+          <span class="mi">2</span><span class="p">)</span>
+             <span class="p">)</span>
+     <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/kiva_69_0.png" src="_images/kiva_69_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In this instance, both men and women have the same size of funding gap, 10.19 million US dollars
+over the time period the data was collected.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># display summary of the funding gap by gender and monthly repayment behaviour</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">tab7</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">tab7</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">10</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Men&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">tab7</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">tab7</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">9</span><span class="p">],</span> <span class="n">bottom</span><span class="o">=</span><span class="n">tab7</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">10</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Women&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;crimson&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Funding gap (millions)&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Repayment interval&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;SIZE OF FUNDING GAP&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/kiva_70_0.png" src="_images/kiva_70_0.png" />
+</div>
+</div>
+<p>The graph above indicates that in as much as women are getting much more funding than men, those in the monthly repayment group still have a significant funding gap. Furthermore, the second-largest funding gap was not from those people belonging to the irregular payments group, but those belonging to the group that had missing data on payment behaviour. This makes sense because there may be a lack of trust that makes KIVA donors not foot the entire loan of those with missing repayment plans.</p>
+<br>
+<br>
+</div>
+<div class="section" id="global-welfare">
+<h4>Global welfare<a class="headerlink" href="#global-welfare" title="Permalink to this headline">¶</a></h4>
+<p>In this section, we seek to explore the data to understand the financial well-being of various countries with the aid of an external dataset</p>
+<p><em><strong>1. What percentage of their monthly expenditure does the average citizen devote to loan repayments?</strong></em></p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Made a copy of the data: </span>
+<span class="n">expenditure</span> <span class="o">=</span> <span class="n">PCE_data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">regions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;East Asia and Pacific&#39;</span><span class="p">,</span> <span class="s1">&#39;Europe and Central Asia&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;Latin America and the Caribbean&#39;</span><span class="p">,</span> <span class="s1">&#39;Middle East and North Africa&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;Other High Income&#39;</span><span class="p">,</span> <span class="s1">&#39;South Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Sub-Saharan Africa&#39;</span><span class="p">]</span>
+
+<span class="c1"># Reference rows:</span>
+<span class="n">row_indices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">57</span><span class="p">,</span><span class="mi">89</span><span class="p">,</span><span class="mi">104</span><span class="p">,</span><span class="mi">167</span><span class="p">,</span><span class="mi">176</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">row_indices</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">expenditure</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>East Asia and Pacific
+Europe and Central Asia
+Latin America and the Caribbean
+Middle East and North Africa
+Other high Income
+South Asia
+Sub-Saharan Africa
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expenditure</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(225, 54)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a regional column for the data</span>
+<span class="n">expenditure</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;region&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Regional column changes from&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">row_indices</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">expenditure</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">54</span><span class="p">])</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">to:&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">expenditure</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">26</span><span class="p">]</span> <span class="o">=</span> <span class="n">regions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">expenditure</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">26</span><span class="p">:</span><span class="mi">57</span><span class="p">]</span> <span class="o">=</span> <span class="n">regions</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">expenditure</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">57</span><span class="p">:</span><span class="mi">89</span><span class="p">]</span> <span class="o">=</span> <span class="n">regions</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">expenditure</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">89</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">104</span><span class="p">]</span> <span class="o">=</span> <span class="n">regions</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">expenditure</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">104</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">167</span><span class="p">]</span> <span class="o">=</span> <span class="n">regions</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">expenditure</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">167</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">176</span><span class="p">]</span> <span class="o">=</span> <span class="n">regions</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">expenditure</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">176</span><span class="p">:</span><span class="mi">225</span><span class="p">]</span> <span class="o">=</span> <span class="n">regions</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">row_indices</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">expenditure</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="mi">54</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Regional column changes from 
+
+0
+0
+0
+0
+0
+0
+0
+
+to: 
+
+East Asia and Pacific
+Europe and Central Asia
+Latin America and the Caribbean
+Middle East and North Africa
+Other High Income
+South Asia
+Sub-Saharan Africa
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;From:&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">row_indices</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> is in </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">expenditure</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">expenditure</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="mi">54</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;to:&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Delete header rows</span>
+<span class="n">expenditure</span> <span class="o">=</span> <span class="n">expenditure</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">row_indices</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">row_indices</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> is in </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">expenditure</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">expenditure</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="mi">54</span><span class="p">]))</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;Expenditure new shape:&#39;</span><span class="p">,</span><span class="n">expenditure</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>From: 
+
+East Asia and Pacific is in East Asia and Pacific
+Europe and Central Asia is in Europe and Central Asia
+Latin America and the Caribbean is in Latin America and the Caribbean
+Middle East and North Africa is in Middle East and North Africa
+Other high Income is in Other High Income
+South Asia is in South Asia
+Sub-Saharan Africa is in Sub-Saharan Africa
+
+ to: 
+
+American Samoa is in East Asia and Pacific
+Armenia is in Europe and Central Asia
+Belize is in Latin America and the Caribbean
+Iran, Islamic Republic of is in Middle East and North Africa
+Austria is in Other High Income
+Nepal is in South Asia
+Cameroon is in Sub-Saharan Africa
+
+ Expenditure new shape: (218, 55)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert any &#39;n/a&#39; strings to NaN values</span>
+<span class="n">expenditure</span> <span class="o">=</span> <span class="n">expenditure</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;n/a&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="c1"># Convert any numeric data stored as a string into a decimal</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">expenditure</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+
+<span class="n">cols</span> <span class="o">=</span> <span class="n">expenditure</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">16</span><span class="p">:</span><span class="mi">54</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">:</span>
+    <span class="n">expenditure</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">expenditure</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">:</span>
+    <span class="n">expenditure</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">expenditure</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float64&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">expenditure</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Country     object
+1967       float64
+1968       float64
+1969       float64
+1970       float64
+1971       float64
+1972       float64
+1973       float64
+1974       float64
+1975       float64
+1976       float64
+1977       float64
+1978       float64
+1979       float64
+1980       float64
+1981       float64
+1982        object
+1983        object
+1984        object
+1985        object
+1986        object
+1987        object
+1988        object
+1989        object
+1990        object
+1991        object
+1992        object
+1993        object
+1994        object
+1995        object
+1996        object
+1997        object
+1998        object
+1999        object
+2000        object
+2001        object
+2002        object
+2003        object
+2004        object
+2005        object
+2006        object
+2007        object
+2008        object
+2009        object
+2010        object
+2011        object
+2012        object
+2013        object
+2014        object
+2015        object
+2016        object
+2017        object
+2018        object
+2019        object
+region      object
+dtype: object
+
+ Country     object
+1967       float64
+1968       float64
+1969       float64
+1970       float64
+1971       float64
+1972       float64
+1973       float64
+1974       float64
+1975       float64
+1976       float64
+1977       float64
+1978       float64
+1979       float64
+1980       float64
+1981       float64
+1982       float64
+1983       float64
+1984       float64
+1985       float64
+1986       float64
+1987       float64
+1988       float64
+1989       float64
+1990       float64
+1991       float64
+1992       float64
+1993       float64
+1994       float64
+1995       float64
+1996       float64
+1997       float64
+1998       float64
+1999       float64
+2000       float64
+2001       float64
+2002       float64
+2003       float64
+2004       float64
+2005       float64
+2006       float64
+2007       float64
+2008       float64
+2009       float64
+2010       float64
+2011       float64
+2012       float64
+2013       float64
+2014       float64
+2015       float64
+2016       float64
+2017       float64
+2018       float64
+2019       float64
+region      object
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
