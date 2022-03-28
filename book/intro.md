@@ -18,7 +18,7 @@ Click on any of the images to pick an area of exploration:
 |                    👆 Data Storytelling                    |                       👆 Data Pipelining                        |
 
 
-Below is an excerpt from [an article I wrote outlining a learning and planning framework for NLP](https://medium.com/@ceethinwa/delivering-success-in-natural-language-processing-projects-part-one-40c4775cf6a9) introducing the concepts of computer vision and natural language processing:
+Below is an excerpt from [an article I wrote outlining a learning and planning framework for NLP](https://medium.com/@ceethinwa/delivering-success-in-natural-language-processing-projects-part-one-40c4775cf6a9):
 
 *Artificial Intelligence and machine learning have grown in prominence between the late 20th and early 21st century. However, though algorithms are increasingly controlling our day-to-day lives, they are created and managed only by a very privileged few.*
 
