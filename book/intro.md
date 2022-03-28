@@ -23,12 +23,12 @@ The introduction below is an excerpt from [an article I wrote outlining a learni
 
 *Some of these algorithms are not even understood by their own creators because they operate in a black box i.e. they know the input and output but they do not know how the parameters are estimated, the statistical validity of those estimates and how the mathematical model is being optimized. Just try interpreting a model with a billion parameters that change constantly!*
 
-*It is therefore important to have at least a surface level understanding of algorithms and their use in technical projects in order for
+*It is therefore important to have at least a surface level understanding of algorithms and their use in technical projects in order for*
 * *communities affected by the technology to have a say,*
 * *technical teams to systematically plan for and manage these projects, and*
 * *business leaders to have visibility of project progress and project effects on stakeholders.*
 
-*Understanding machine learning concepts in general can be improved by leveraging tools that ease learning. These learning aids can allow non-technical audiences to
+*Understanding machine learning concepts in general can be improved by leveraging tools that ease learning. These learning aids can allow non-technical audiences to*
 * *learn machine learning — in particular, NLP — much faster and gain deeper insights as a result,*
 * *evaluate technical aspects around modelling,*
 * *raise any ethical concerns around modelling, and*
@@ -65,7 +65,7 @@ _**Approach 2: Deep Learning**_
 *The only key criteria that the human can control are the hyper-parameters that include the*
 1. <u>*activation function*</u> — *gives the first set of estimated parameters which are usually normalized and it tends to be non-linear,*
 2. <u>*loss function,*</u>
-3. <u>model selection metric</u> — *i.e. we say that the model has succeeded in its task and it can stop training when a certain threshold of the model selection metric is used,*
+3. <u>*model selection metric*</u> — *i.e. we say that the model has succeeded in its task and it can stop training when a certain threshold of the model selection metric is used,*
 4. <u>*desired dimensions of the output*</u>
 5. <u>*number of epochs*</u> — *the number of times the model will go over the data in order to identify the patterns.*
 
