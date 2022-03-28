@@ -27,7 +27,7 @@ They also *naturally* respond to **beautiful visuals**.
 
 Additionally, they *naturally* respond to **captivating sound**.
 
-So how can we incorporate what human beings gravitate to with data analysis and modelling results?
+So how can we combine what human beings gravitate to with data analysis and modelling results?
 
 That's where **data storytelling** comes in.
 
