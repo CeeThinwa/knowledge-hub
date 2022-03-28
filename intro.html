@@ -194,6 +194,61 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#u-what-is-ai-u">
+   <u>
+    <em>
+     <strong>
+      What is AI?
+     </strong>
+    </em>
+   </u>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#u-what-is-ml-u">
+   <u>
+    <em>
+     <strong>
+      What is ML?
+     </strong>
+    </em>
+   </u>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#approach-1-bayesian-frequentist-statistical-modelling">
+     <em>
+      <strong>
+       Approach 1: Bayesian/Frequentist Statistical Modelling
+      </strong>
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#approach-2-deep-learning">
+     <em>
+      <strong>
+       Approach 2: Deep Learning
+      </strong>
+     </em>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-do-these-4-areas-work-together">
+   How do these 4 areas work together?
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -206,6 +261,61 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#u-what-is-ai-u">
+   <u>
+    <em>
+     <strong>
+      What is AI?
+     </strong>
+    </em>
+   </u>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#u-what-is-ml-u">
+   <u>
+    <em>
+     <strong>
+      What is ML?
+     </strong>
+    </em>
+   </u>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#approach-1-bayesian-frequentist-statistical-modelling">
+     <em>
+      <strong>
+       Approach 1: Bayesian/Frequentist Statistical Modelling
+      </strong>
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#approach-2-deep-learning">
+     <em>
+      <strong>
+       Approach 2: Deep Learning
+      </strong>
+     </em>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-do-these-4-areas-work-together">
+   How do these 4 areas work together?
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -241,6 +351,67 @@ empower people to <em>create impactful research for mixed audiences</em>.</p>
 </tr>
 </tbody>
 </table>
+<p>Below is an excerpt from <a class="reference external" href="https://medium.com/&#64;ceethinwa/delivering-success-in-natural-language-processing-projects-part-one-40c4775cf6a9">an article I wrote outlining a learning and planning framework for NLP</a>:</p>
+<p><em>Artificial Intelligence and machine learning have grown in prominence between the late 20th and early 21st century. However, though algorithms are increasingly controlling our day-to-day lives, they are created and managed only by a very privileged few.</em></p>
+<p><em>Some of these algorithms are not even understood by their own creators because they operate in a black box i.e. they know the input and output but they do not know how the parameters are estimated, the statistical validity of those estimates and how the mathematical model is being optimized. Just try interpreting a model with a billion parameters that change constantly!</em></p>
+<p><em>It is therefore important to have at least a surface level understanding of algorithms and their use in technical projects in order for</em></p>
+<ul class="simple">
+<li><p><em>communities affected by the technology to have a say,</em></p></li>
+<li><p><em>technical teams to systematically plan for and manage these projects, and</em></p></li>
+<li><p><em>business leaders to have visibility of project progress and project effects on stakeholders.</em></p></li>
+</ul>
+<p><em>Understanding machine learning concepts in general can be improved by leveraging tools that ease learning. These learning aids can allow non-technical audiences to</em></p>
+<ul class="simple">
+<li><p><em>learn machine learning — in particular, NLP — much faster and gain deeper insights as a result,</em></p></li>
+<li><p><em>evaluate technical aspects around modelling,</em></p></li>
+<li><p><em>raise any ethical concerns around modelling, and</em></p></li>
+<li><p><em>assess model performance.</em></p></li>
+</ul>
+<div class="section" id="u-what-is-ai-u">
+<h2><u><em><strong>What is AI?</strong></em></u><a class="headerlink" href="#u-what-is-ai-u" title="Permalink to this headline">¶</a></h2>
+<p><em>Artificial Intelligence, simply put, is the quest to make machines achieve general intelligence, where these machines can</em></p>
+<ol class="simple">
+<li><p><em>receive data in varying size and complexity,</em></p></li>
+<li><p><em>process it into generalized information, and</em></p></li>
+<li><p><em>use this information to create ideas and act without human assistance.</em></p></li>
+</ol>
+</div>
+<div class="section" id="u-what-is-ml-u">
+<h2><u><em><strong>What is ML?</strong></em></u><a class="headerlink" href="#u-what-is-ml-u" title="Permalink to this headline">¶</a></h2>
+<p><em>Machine learning is a subset of artificial intelligence that focuses on the processing of data into information.</em>
+<em>There are two ways that machine learning produces information:</em></p>
+<ol class="simple">
+<li><p><em>A human creates a pattern and the model evaluates how well the data fits to the pattern based on statistical inference, and</em></p></li>
+<li><p><em>The model creates the pattern and the model and human evaluate how well the data fits into the pattern</em></p></li>
+</ol>
+<div class="section" id="approach-1-bayesian-frequentist-statistical-modelling">
+<h3><em><strong>Approach 1: Bayesian/Frequentist Statistical Modelling</strong></em><a class="headerlink" href="#approach-1-bayesian-frequentist-statistical-modelling" title="Permalink to this headline">¶</a></h3>
+<p><em>These types of models can have</em></p>
+<ul class="simple">
+<li><p><em>static estimated parameters when using an unchanging fixed dataset, or</em></p></li>
+<li><p><em>dynamic estimated parameters.</em></p></li>
+</ul>
+<p><em>For models with dynamic estimated parameters, an objective/loss function is used that minimizes the error in the model. In this case the variables/features stay fixed, but the observations/instances change over time, altering the data distribution in the process.</em></p>
+<p><em>These types of machine learning models can be great in that they can be interpreted by people. However, they do not do well on unstructured data and may be limited by the researcher’s choice of variables and research objectives — they have to attempt different variable combinations to get statistically valid results that also satisfy research objectives.</em></p>
+</div>
+<div class="section" id="approach-2-deep-learning">
+<h3><em><strong>Approach 2: Deep Learning</strong></em><a class="headerlink" href="#approach-2-deep-learning" title="Permalink to this headline">¶</a></h3>
+<p><em>These types of models have only dynamic estimated parameters, in part, because the model itself selects variables (inputs into a paticular neuron), and also experiments with different combinations of these variables to get optimal estimated parameters.</em></p>
+<p><em>The only key criteria that the human can control are the hyper-parameters that include the</em></p>
+<ol class="simple">
+<li><p><u><em>activation function</em></u> — <em>gives the first set of estimated parameters which are usually normalized and it tends to be non-linear,</em></p></li>
+<li><p><u><em>loss function,</em></u></p></li>
+<li><p><u><em>model selection metric</em></u> — <em>i.e. we say that the model has succeeded in its task and it can stop training when a certain threshold of the model selection metric is used,</em></p></li>
+<li><p><u><em>desired dimensions of the output</em></u></p></li>
+<li><p><u><em>number of epochs</em></u> — <em>the number of times the model will go over the data in order to identify the patterns.</em></p></li>
+</ol>
+<p><em>A great benefit of this approach is that this model type is able to handle large amounts of unstructured data very well. However, because the variables and the parameter estimation method is unknown, interpreting how it obtained its results becomes very challenging.</em></p>
+<p><em><strong>Natural Language Processing is an application of Deep Learning, alongside Computer Vision — think of Computer Vision as the “eyes” of the computer and Natural Language Processing as the “ears and mouth” of the computer. Both applications specialize in unstructured data, which is increasing in size as more and more people communicate on many digital channels today.</strong></em></p>
+</div>
+</div>
+<div class="section" id="how-do-these-4-areas-work-together">
+<h2>How do these 4 areas work together?<a class="headerlink" href="#how-do-these-4-areas-work-together" title="Permalink to this headline">¶</a></h2>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
