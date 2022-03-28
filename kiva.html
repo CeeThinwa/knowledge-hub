@@ -2972,9 +2972,7 @@ dtype: object
 </div>
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">YearlyExpenditure</span> <span class="o">=</span> <span class="n">expenditure</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;2014&#39;</span><span class="p">:</span><span class="s1">&#39;2017&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-
-<span class="n">MonthlyExpenditure</span> <span class="o">=</span> <span class="n">YearlyExpenditure</span><span class="o">/</span><span class="mi">12</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MonthlyExpenditure</span> <span class="o">=</span> <span class="p">(</span><span class="n">expenditure</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;2014&#39;</span><span class="p">:</span><span class="s1">&#39;2017&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span><span class="o">/</span><span class="mi">12</span>
 
 <span class="n">MonthlyExpenditure</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;country&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">expenditure</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span>
 
@@ -3343,6 +3341,218 @@ dtype: object
  &#39;Nigeria&#39; &#39;Rwanda&#39; &#39;Sao Tome and Principe&#39; &#39;Senegal&#39; &#39;Seychelles&#39;
  &#39;Sierra Leone&#39; &#39;Somalia&#39; &#39;South Africa&#39; &#39;South Sudan&#39; &#39;Sudan&#39; &#39;Tanzania&#39;
  &#39;Togo&#39; &#39;Uganda&#39; &#39;Zambia&#39; &#39;Zimbabwe&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tab8</span><span class="p">[</span><span class="n">tab8</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">MonthlyExpenditure</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="kc">False</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>monthly_loan_repayment 2013</th>
+      <th>monthly_loan_repayment 2014</th>
+      <th>monthly_loan_repayment 2015</th>
+      <th>monthly_loan_repayment 2016</th>
+      <th>monthly_loan_repayment 2017</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>16</th>
+      <td>Congo</td>
+      <td>NaN</td>
+      <td>985.934278</td>
+      <td>949.294355</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Cote D'Ivoire</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5000.000000</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Egypt</td>
+      <td>NaN</td>
+      <td>54.054388</td>
+      <td>57.473545</td>
+      <td>56.541037</td>
+      <td>29.336612</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Kyrgyzstan</td>
+      <td>95.256498</td>
+      <td>87.512062</td>
+      <td>81.251923</td>
+      <td>66.830975</td>
+      <td>69.387298</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>Myanmar (Burma)</td>
+      <td>NaN</td>
+      <td>1084.647495</td>
+      <td>301.828805</td>
+      <td>153.652721</td>
+      <td>80.601104</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>Palestine</td>
+      <td>60.239473</td>
+      <td>54.171694</td>
+      <td>58.878974</td>
+      <td>62.737288</td>
+      <td>60.043055</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>Saint Vincent and the Grenadines</td>
+      <td>NaN</td>
+      <td>43.601190</td>
+      <td>91.355946</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>The Democratic Republic of the Congo</td>
+      <td>692.234105</td>
+      <td>766.169315</td>
+      <td>528.320730</td>
+      <td>405.974124</td>
+      <td>416.532751</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>Yemen</td>
+      <td>62.567830</td>
+      <td>57.303204</td>
+      <td>60.290609</td>
+      <td>43.056244</td>
+      <td>42.720586</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># MATCH COUNTRIES IN KIVA LOAN DATA AND THOSE IN THE ORIGINAL DATASET </span>
+
+<span class="n">tab8</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">16</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Congo, Republic of&#39;</span>
+<span class="n">tab8</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">18</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Cote d&#39;Ivoire&quot;</span>
+<span class="n">tab8</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">21</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Egypt, Arab Republic of&#39;</span>
+<span class="n">tab8</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">35</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Kyrgyz Republic&#39;</span>
+<span class="n">tab8</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">48</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Myanmar&#39;</span>
+<span class="n">tab8</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">54</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;West Bank and Gaza&#39;</span>
+<span class="c1"># tab8.iloc[61,0] missing in other dataset</span>
+<span class="c1"># tab8.iloc[62,0] missing in other dataset; only have American Samoa</span>
+
+<span class="c1"># tab8.iloc[63,0] missing in other dataset</span>
+<span class="c1"># tab8.iloc[65,0] missing in other dataset</span>
+<span class="c1"># tab8.iloc[66,0] missing in other dataset</span>
+<span class="n">tab8</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">73</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Congo, Democratic Republic of&#39;</span>
+<span class="c1"># tab8.iloc[82,0] missing in other dataset</span>
+
+<span class="n">tab8</span><span class="p">[</span><span class="n">tab8</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">MonthlyExpenditure</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="kc">False</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>monthly_loan_repayment 2013</th>
+      <th>monthly_loan_repayment 2014</th>
+      <th>monthly_loan_repayment 2015</th>
+      <th>monthly_loan_repayment 2016</th>
+      <th>monthly_loan_repayment 2017</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>61</th>
+      <td>Saint Vincent and the Grenadines</td>
+      <td>NaN</td>
+      <td>43.601190</td>
+      <td>91.355946</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>Yemen</td>
+      <td>62.56783</td>
+      <td>57.303204</td>
+      <td>60.290609</td>
+      <td>43.056244</td>
+      <td>42.720586</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initial status message</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The shape of tab8 before merge: &#39;</span><span class="p">,</span> <span class="n">tab8</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># join the data, keeping only relevant entries</span>
+<span class="n">tab8</span> <span class="o">=</span> <span class="n">tab8</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">MonthlyExpenditure</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;country&#39;</span><span class="p">)</span>
+
+<span class="c1"># final status message</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The shape of tab8 after merge: &#39;</span><span class="p">,</span> <span class="n">tab8</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The shape of tab8 before merge:  (85, 6)
+The shape of tab8 after merge:  (83, 11)
 </pre></div>
 </div>
 </div>
