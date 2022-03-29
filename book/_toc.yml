@@ -4,9 +4,9 @@
 format: jb-book
 root: intro
 chapters:
-- file: computer-vision
-- file: nlp
 - file: data-storytelling
   sections:
     - file: kiva
+- file: nlp
+- file: computer-vision
 - file: data-pipelining
