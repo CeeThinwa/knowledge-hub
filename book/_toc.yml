@@ -4,6 +4,7 @@
 format: jb-book
 root: intro
 chapters:
+- file: blending_the_4
 - file: data-storytelling
   sections:
     - file: kiva
