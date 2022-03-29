@@ -18,7 +18,7 @@ Click on any of the images to pick an area of exploration:
 |                    👆 Data Storytelling                    |                       👆 Data Pipelining                        |
 
 
-Below is an excerpt from [an article I wrote outlining a learning and planning framework for NLP](https://medium.com/@ceethinwa/delivering-success-in-natural-language-processing-projects-part-one-40c4775cf6a9):
+Below is an excerpt from [an article I wrote](https://medium.com/@ceethinwa/delivering-success-in-natural-language-processing-projects-part-one-40c4775cf6a9):
 
 <u>_**What is AI?**_</u>
 
