@@ -21,4 +21,4 @@ AT THE SAME TIME.
 
 This can get very complicated, as shown in the visual below:
 
-[system](./images/system.svg)
+![system](./images/system.svg)
