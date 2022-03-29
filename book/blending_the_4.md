@@ -19,3 +19,6 @@ world can be incredibly complex, but nothing beats trying to
 
 AT THE SAME TIME.
 
+This can get very complicated, as shown in the visual below:
+
+[system](./images/system.svg)
