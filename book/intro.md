@@ -35,21 +35,21 @@ Below is an excerpt from [an article I wrote outlining a learning and planning f
 * *raise any ethical concerns around modelling, and*
 * *assess model performance.*
 
-### <u>_**What is AI?**_</u>
+<u>_**What is AI?**_</u>
 
 *Artificial Intelligence, simply put, is the quest to make machines achieve general intelligence, where these machines can*
 1. *receive data in varying size and complexity,*
 2. *process it into generalized information, and*
 3. *use this information to create ideas and act without human assistance.*
 
-### <u>_**What is ML?**_</u>
+<u>_**What is ML?**_</u>
 
 *Machine learning is a subset of artificial intelligence that focuses on the processing of data into information.*
 *There are two ways that machine learning produces information:*
 1. *A human creates a pattern and the model evaluates how well the data fits to the pattern based on statistical inference, and*
 2. *The model creates the pattern and the model and human evaluate how well the data fits into the pattern*
 
-#### _**Approach 1: Bayesian/Frequentist Statistical Modelling**_
+_**Approach 1: Bayesian/Frequentist Statistical Modelling**_
 
 *These types of models can have*
 * *static estimated parameters when using an unchanging fixed dataset, or*
@@ -59,7 +59,7 @@ Below is an excerpt from [an article I wrote outlining a learning and planning f
 
 *These types of machine learning models can be great in that they can be interpreted by people. However, they do not do well on unstructured data and may be limited by the researcher’s choice of variables and research objectives — they have to attempt different variable combinations to get statistically valid results that also satisfy research objectives.*
 
-#### _**Approach 2: Deep Learning**_
+_**Approach 2: Deep Learning**_
 
 *These types of models have only dynamic estimated parameters, in part, because the model itself selects variables (inputs into a paticular neuron), and also experiments with different combinations of these variables to get optimal estimated parameters.*
 
