@@ -73,5 +73,3 @@ _**Approach 2: Deep Learning**_
 *A great benefit of this approach is that this model type is able to handle large amounts of unstructured data very well. However, because the variables and the parameter estimation method is unknown, interpreting how it obtained its results becomes very challenging.*
 
 _**Natural Language Processing is an application of Deep Learning, alongside Computer Vision — think of Computer Vision as the “eyes” of the computer and Natural Language Processing as the “ears and mouth” of the computer. Both applications specialize in unstructured data, which is increasing in size as more and more people communicate on many digital channels today.**_
-
-## How do these 4 areas work together?
