@@ -32,3 +32,26 @@ So let's break it down:
 Impactful machine learning has to incorporate both real world perspectives and technical expertise. It can be visualized as shown below:
 
 ![the environment](./images/system1.svg)
+
+Naturally, there is a need to bridge the gap between
+
+* people in the real world using the product (with no idea of what's going on under the hood) and
+* technical people involved in the construction and maintenance of the machine learning system
+
+This is where **data storytelling** comes in.
+
+### Data storytelling
+
+By using teaching techniques, stylistic devices (e.g. narrative, humour etc.) and great design (especially for data visualizations), data storytellers are able to help non-technical users identify
+
+* how the app would fit into their day-to-day,
+* what restrictions they need to protect their privacy and
+* what improvements they would need for the machine learning app to be used more intuitively
+
+Once user requirements are obtained, data storytellers translate them into technical requirements, so that the user controls the machine learning app, not the other way round.
+
+This is visualized below:
+
+![the storytellers](./images/system2.svg)
+
+Data storytellers can include infographic creators, data scientists, data analysts, statisticians and BI (Business Intelligence) developers. 
