@@ -12,7 +12,7 @@ To complement the two applied areas of machine learning, we need data storytelli
 world can be incredibly complex, but nothing beats trying to
 
 * identify concept and model drift
-* systematically analyze error and optimizing models
+* systematically analyze error and optimize models
 * explain how everything works to key stakeholders to build trust
 * add new data sources into the data pipeline and removing 'stale' data
 * teach new people how to use the application housing the model
