@@ -1,7 +1,7 @@
 # Real world machine learning
 
 Real world data (aka data in the wild) tends to be messy, unstructured and sporadically captured. As such, it is not enough to know
-about computer vision, natural language processing, data storytelling and data pipelining concepts, it is important to actually apply
+about computer vision, natural language processing, data storytelling and data pipelining concepts, we need to actually apply
 them.
 
 Having static data pipelining, computer vision and natural language processing is enough to build a sophisticated robot. However, this robot will need tons
