@@ -23,7 +23,7 @@ This can get very complicated, as shown in the visual below:
 
 ![system](./images/system.svg)
 
-So let's break it down:
+So let's break it down.
 
 ## The Break Down
 
@@ -54,4 +54,11 @@ This is visualized below:
 
 ![the storytellers](./images/system2.svg)
 
-Data storytellers can include infographic creators, data scientists, data analysts, statisticians and BI (Business Intelligence) developers. 
+Data storytellers can include infographic creators, data scientists, data analysts, statisticians and BI (Business Intelligence) developers.
+
+A question then arises, how exactly will these requirements be implemented?
+
+This is where **data pipelining** comes in.
+
+### Data pipelining
+
