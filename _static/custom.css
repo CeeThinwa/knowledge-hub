@@ -33,3 +33,6 @@ body, .row, .dropdown-buttons {background-color: #fffbf2;}
 .highlight pre {
     background-color: #fffbf2;
     }
+
+/* Resize certain images */
+img[alt=system] { width: 75%; }
