@@ -23,6 +23,8 @@ This can get very complicated, as shown in the visual below:
 
 ![system](./images/system.svg)
 
+$\includegraphics[scale=0.5]{./images/system.svg}$
+
 So let's break it down.
 
 ## The Break Down
