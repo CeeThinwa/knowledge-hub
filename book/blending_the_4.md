@@ -22,3 +22,13 @@ AT THE SAME TIME.
 This can get very complicated, as shown in the visual below:
 
 ![system](./images/system.svg)
+
+So let's break it down:
+
+## The Break Down
+
+### The environment
+
+Impactful machine learning has to incorporate both real world perspectives and technical expertise. It can be visualized as shown below:
+
+![the environment](./images/system1.svg)
