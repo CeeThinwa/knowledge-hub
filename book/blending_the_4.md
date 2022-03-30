@@ -89,3 +89,7 @@ Now that the data infrastructure is in place, now we can enter into **machine le
 ### Machine Learning
 
 #### <u>Natural Language Processing</u>
+
+Natural Language Processing has the following data sources
+
+![NLP data sources](./images/system4-sources.svg)
