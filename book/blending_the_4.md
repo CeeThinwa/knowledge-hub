@@ -56,9 +56,36 @@ This is visualized below:
 
 Data storytellers can include infographic creators, data scientists, data analysts, statisticians and BI (Business Intelligence) developers.
 
-A question then arises, how exactly will these requirements be implemented?
+A question then arises: *How exactly will these requirements be implemented?*
 
 This is where **data pipelining** comes in.
 
 ### Data pipelining
 
+To get valid results that can be valid stories, we need to make sure that the data on which the modelling is based is *clean*: that is:
+
+* approved by a domain expert
+* statistically validated
+* tracked as it undergoes transformation
+* organized as much as possible, once it enters the system
+* having complete metadata (data explaining characteristics of the data)
+
+As they say: *garbage in, garbage out*. If the data is fed directly into the models in a haphazard manner; troubleshooting what went wrong or trying to explain
+the output given by the ML app becomes a nightmare. Enter data pipelines - A smooth way to
+
+* ensure <u>data lineage</u> (having different _**labeled**_ versions of the data as its being transformed, with the labels describing the various transformations in detail)
+* ensure <u>data provenance</u> (having metadata that explains the context around data collection, the characteristics of the various data sources and a high level explanation of the data transformation)
+* establish best practices to clean and standardize data
+* strengthen data security (due to the tracking) and quickly detect any data breaches if they were to occur
+
+This is illustrated by the pipes in the image below:
+
+![the pipelines](./images/system3.svg)
+
+Data pipeliners typically include IT, backend developers, machine learning engineers, data scientists and database administrators.
+
+Now that the data infrastructure is in place, now we can enter into **machine learning** territory.
+
+### Machine Learning
+
+#### <u>Natural Language Processing</u>
