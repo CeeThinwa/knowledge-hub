@@ -48,7 +48,8 @@ By using teaching techniques, stylistic devices (e.g. narrative, humour etc.) an
 * what restrictions they need to protect their privacy and
 * what improvements they would need for the machine learning app to be used more intuitively
 
-Once user requirements are obtained, data storytellers translate them into technical requirements, so that the user controls the machine learning app, not the other way round.
+Once user requirements are obtained, data storytellers translate them into technical requirements,
+<br>so that the user controls the machine learning app, not the other way round.
 
 This is visualized below:
 
@@ -71,7 +72,9 @@ To get valid results that can be valid stories, we need to make sure that the da
 * having complete metadata (data explaining characteristics of the data)
 
 As they say: *garbage in, garbage out*. If the data is fed directly into the models in a haphazard manner; troubleshooting what went wrong or trying to explain
-the output given by the ML app becomes a nightmare. Enter data pipelines - A smooth way to
+the output given by the ML app becomes a nightmare.
+
+Enter data pipelines - A smooth way to
 
 * ensure <u>data lineage</u> (having different _**labeled**_ versions of the data as its being transformed, with the labels describing the various transformations in detail)
 * ensure <u>data provenance</u> (having metadata that explains the context around data collection, the characteristics of the various data sources and a high level explanation of the data transformation)
@@ -172,9 +175,9 @@ R, MATLAB and Julia also have many packages dedicated to specific models or grou
 
 Natural Language Processing has the following data sources
 
-![NLP data sources](./images/system4-sources-50pct.svg)
+![NLP data sources](./images/system4-nlp-sources-50pct.svg)
 
-Text can be tricky because printed text (PDFs and scans) or text that is handwritten need to be
+Text can be tricky because printed text (PDFs and scans) and/or text that is handwritten needs to be
 
 * converted to photo,
 * read using OCR and computer vision models,
@@ -182,6 +185,14 @@ Text can be tricky because printed text (PDFs and scans) or text that is handwri
 * fed back into the NLP ML system as raw data
 
 Otherwise, text directly input into computer systems and stored in common text formats are pretty easy to feed into an NLP system.
+
+Data for the computer with regards to NLP is shown in the visual below:
+
+![NLP technical data](./images/system4-nlp-technical-50pct.svg)
+
+On the other hand, data in use by humans in the system with regards to NLP is shown below:
+
+![NLP non-technical data](./images/system4-nlp-nontechnical-50pct.svg)
 
 <u>**Key Challenges**</u>
 
@@ -197,23 +208,7 @@ They include
 
 <u>**Data & Data Sources**</u>
 
-Natural Language Processing has the following data sources
+Computer Vision has the following data sources
 
-![NLP data sources](./images/system4-sources-50pct.svg)
+![CV data sources](./images/system4-cv-sources-50pct.svg)
 
-Text can be tricky because printed text (PDFs and scans) or text that is handwritten need to be
-
-* converted to photo,
-* read using OCR and computer-vision technology,
-* converted to string, then
-* fed back into the NLP ML system as raw data
-
-Otherwise, text directly input into computer systems and stored in common text formats are pretty easy to feed into an NLP system.
-
-Data for the computer with regards to NLP is shown in the visual below:
-
-![NLP technical data](./images/system4-technical-50pct.svg)
-
-On the other hand, data in use by humans in the system with regards to NLP is shown below:
-
-![NLP non-technical data](./images/system4-nontechnical-50pct.svg)
