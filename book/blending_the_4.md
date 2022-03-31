@@ -130,7 +130,7 @@ Text can be tricky because printed text (PDFs and scans) or text that is handwri
 
 Otherwise, text directly input into computer systems and stored in common text formats are pretty easy to feed into an NLP system.
 
-Another key thing to note is that the data can come into the system either as a batch or as a stream; also, it could be pre-recorded or captured on the spot.
+Another key thing to note is that the data can come into the system either as a batch (typically pre-recorded or pre-saved data) or as a stream (typically data that is captured on an adhoc basis in small amounts).
 
 All the above affect how the data pipeline for the NLP system will be built, as well as the analysis and modelling procedure required.
 
