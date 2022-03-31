@@ -164,9 +164,9 @@ On the other hand, built models are loaded into the pipeline, then trained, test
 * the `Tensorflow` library in Python or
 * the `Pytorch` library in Python
 
-R, MATLAB and Julia also have many packages dedicated to specific models or groups of models that can be classified as built models.
+R, MATLAB and Julia also have many packages dedicated to specific models or groups of models that can be classified as built models, because they are trained inside the system.
 
-#### <u>Natural Language Processing</u>
+#### <u>Natural Language Processing (NLP)</u>
 
 <u>**Data & Data Sources**</u>
 
@@ -183,34 +183,42 @@ Text can be tricky because printed text (PDFs and scans) or text that is handwri
 
 Otherwise, text directly input into computer systems and stored in common text formats are pretty easy to feed into an NLP system.
 
-Another key thing to note is that the data can come into the system either as a batch (typically pre-recorded or pre-saved data) or as a stream (typically data that is captured on an ad-hoc basis in small amounts).
-
-All the above affect how the data pipeline for the NLP system will be built, as well as the analysis and modelling steps required.
-
-The data endpoints may also be customized according to the consumer.
-
-Data in use by the computer would need to be
-
-* put in by data entry workers and
-* seen by the technical team for encoding as it travels through the pipeline.
-
-Data for the computer also tends to be in large amounts, a good amount of the time.
-
-This is shown in the visual below:
+Data for the computer with regards to NLP is shown in the visual below:
 
 ![NLP technical data](./images/system4-technical-50pct.svg)
 
-On the other hand, data in use by humans in the system (typically the non-technical team) would need to be
-
-* displayed in a way to ease user experience
-* shown in small samples at the beginning of the pipeline and at the checking stage of the pipeline
-* shown visually for high level users (e.g. a summary of data lineage and provenance, visualization of system logs etc.)
-
-This is shown below:
+On the other hand, data in use by humans in the system with regards to NLP is shown below:
 
 ![NLP non-technical data](./images/system4-nontechnical-50pct.svg)
 
-<u>**NLP Modelling**</u>
+<u>**Key Challenges**</u>
 
-Typically to apply NLP, the models tend to applied through a model pipeline, as models tend to have a narrow area of application.
+They include
 
+* **Multilingualism** (i.e. where more than one language is in a particular waveform (audio) or string (text)) - For many parts of the world, people tend to be bilingual or multilingual, hence getting monolingual language data becomes very difficult.
+* **Language Evolution**
+
+#### <u>Computer Vision (CV)</u>
+
+<u>**Data & Data Sources**</u>
+
+Natural Language Processing has the following data sources
+
+![NLP data sources](./images/system4-sources-50pct.svg)
+
+Text can be tricky because printed text (PDFs and scans) or text that is handwritten need to be
+
+* converted to photo,
+* read using OCR and computer-vision technology,
+* converted to string, then
+* fed back into the NLP ML system as raw data
+
+Otherwise, text directly input into computer systems and stored in common text formats are pretty easy to feed into an NLP system.
+
+Data for the computer with regards to NLP is shown in the visual below:
+
+![NLP technical data](./images/system4-technical-50pct.svg)
+
+On the other hand, data in use by humans in the system with regards to NLP is shown below:
+
+![NLP non-technical data](./images/system4-nontechnical-50pct.svg)
