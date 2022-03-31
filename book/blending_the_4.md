@@ -183,14 +183,6 @@ Text can be tricky because printed text (PDFs and scans) or text that is handwri
 
 Otherwise, text directly input into computer systems and stored in common text formats are pretty easy to feed into an NLP system.
 
-Data for the computer with regards to NLP is shown in the visual below:
-
-![NLP technical data](./images/system4-technical-50pct.svg)
-
-On the other hand, data in use by humans in the system with regards to NLP is shown below:
-
-![NLP non-technical data](./images/system4-nontechnical-50pct.svg)
-
 <u>**Key Challenges**</u>
 
 They include
