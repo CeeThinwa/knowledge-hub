@@ -94,4 +94,14 @@ Natural Language Processing has the following data sources
 
 ![NLP data sources](./images/system4-sources-50pct.svg)
 
-A key thing to note is that 
+A key thing to note is that the data can come into the system either as a batch or as a stream; also, it could be pre-recorded or captured on the spot.
+
+Text can be tricky because
+
+* printed text (PDFs and scans) or text that is handwritten needs to be
+    * converted to photo,
+    * read using OCR and computer-vision technology,
+    * converted to string, then
+    * fed back into the NLP ML system as raw data
+
+Otherwise, text directly input into computer systems and stored in common text formats are pretty easy to feed into an NLP system.
