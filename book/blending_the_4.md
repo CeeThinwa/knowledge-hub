@@ -123,6 +123,8 @@ Disadvantages of this method is that:
 
 #### <u>Natural Language Processing</u>
 
+<u>**Data & Data Sources**</u>
+
 Natural Language Processing has the following data sources
 
 ![NLP data sources](./images/system4-sources-50pct.svg)
@@ -145,10 +147,20 @@ The data endpoints may also be customized according to the consumer.
 Data in use by the computer would need to be
 
 * put in by data entry workers and
-* seen by the technical team for encoding.
+* seen by the technical team for encoding as it travels through the pipeline.
+
+Data for the computer also tends to be in large amounts, a good amount of the time.
 
 This is shown in the visual below:
 
+![NLP technical data](./images/system4-technical-50pct.svg)
 
+On the other hand, data in use by humans in the system (typically the non-technical team) would need to be
 
+* displayed in a way to ease user experience
+* shown in small samples at the beginning of the pipeline and at the checking stage of the pipeline
+* shown visually for high level users (e.g. a summary of data lineage and provenance, visualization of system logs etc.)
 
+This is shown below:
+
+![NLP non-technical data](./images/system4-nontechnical-50pct.svg)
