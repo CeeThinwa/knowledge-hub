@@ -88,6 +88,8 @@ Now that the data infrastructure is in place, now we can enter into **machine le
 
 ### Machine Learning
 
+<u>**People**</u>
+
 Machine learning comprises of two types of teams:
 
 * Technical teams
@@ -120,6 +122,47 @@ Disadvantages of this method is that:
 * The cost of model development can increase, especially if the number of data entry and checking workers keeps growing with the available data.
 * There tend to be silos when this is implemented in the real world, with no room of growth; for instance, growing from a data checker to a machine learning engineer rarely happens.
 * Data entry and checking work tends to be subcontracted to less developed countries, and many subcontractors do not match pay and working conditions to global standards typically implemented in developed countries.
+
+<u>**Data & Data Sources**</u>
+
+The data can come into the system either as a batch (typically pre-recorded or pre-saved data) or as a stream (typically data that is captured on an ad-hoc basis in small amounts).
+
+All the above affect how the data pipeline for the ML system will be built, as well as the analysis and modelling steps required.
+
+The data endpoints may also be customized according to the consumer.
+
+Data in use by the computer would need to be
+
+* put in by data entry workers and
+* seen by the technical team for encoding as it travels through the pipeline.
+
+Data for the computer also tends to be in large amounts, a good amount of the time.
+
+On the other hand, data in use by humans in the system (typically the non-technical team) would need to be
+
+* displayed in a way to ease user experience
+* shown in small samples at the beginning of the pipeline and at the checking stage of the pipeline
+* shown visually for high level users (e.g. a summary of data lineage and provenance, visualization of system logs etc.)
+
+<u>**Models**</u>
+
+There tend to be two types of models:
+
+* Pre-trained models
+* Built models.
+
+Pre-trained models are trained by many other people and are made available to the public. They can be loaded into the system either through
+
+* the HuggingFace `transformers` library in Python,
+* the `pickle` library in Python or
+* FastAPI as a REST API containing the pre-trained model
+
+On the other hand, built models are loaded into the pipeline, then trained, tested and optimized there. They can be loaded through
+
+* the `scikit-learn` library in Python,
+* the `JAX` library in Python,
+* the `Tensorflow` library in Python,
+* the `Pytorch` library in Python,
 
 #### <u>Natural Language Processing</u>
 
@@ -164,3 +207,8 @@ On the other hand, data in use by humans in the system (typically the non-techni
 This is shown below:
 
 ![NLP non-technical data](./images/system4-nontechnical-50pct.svg)
+
+<u>**NLP Modelling**</u>
+
+Typically to apply NLP, the models tend to applied through a model pipeline, as models tend to have a narrow area of application.
+
