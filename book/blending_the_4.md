@@ -21,7 +21,7 @@ AT THE SAME TIME.
 
 This can get very complicated, as shown in the visual below:
 
-![system](./images/system-75pct.svg)
+![system](./images/system-50pct.svg)
 
 So let's break it down.
 
@@ -31,7 +31,7 @@ So let's break it down.
 
 Impactful machine learning has to incorporate both real world perspectives and technical expertise. It can be visualized as shown below:
 
-![the environment](./images/system1-75pct.svg)
+![the environment](./images/system1-50pct.svg)
 
 Naturally, there is a need to bridge the gap between
 
@@ -52,7 +52,7 @@ Once user requirements are obtained, data storytellers translate them into techn
 
 This is visualized below:
 
-![the storytellers](./images/system2-75pct.svg)
+![the storytellers](./images/system2-50pct.svg)
 
 Data storytellers can include infographic creators, data scientists, data analysts, statisticians and BI (Business Intelligence) developers.
 
@@ -80,7 +80,7 @@ the output given by the ML app becomes a nightmare. Enter data pipelines - A smo
 
 This is illustrated by the pipes in the image below:
 
-![the pipelines](./images/system3.svg)
+![the pipelines](./images/system3-50pct.svg)
 
 Data pipeliners typically include IT, backend developers, machine learning engineers, data scientists and database administrators.
 
@@ -92,5 +92,5 @@ Now that the data infrastructure is in place, now we can enter into **machine le
 
 Natural Language Processing has the following data sources
 
-![NLP data sources](./images/system4-sources.svg)
+![NLP data sources](./images/system4-sources-50pct.svg)
 
