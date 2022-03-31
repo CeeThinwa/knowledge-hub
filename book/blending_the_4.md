@@ -103,7 +103,7 @@ The non-technical team would comprise
 * the data entry workers
 * the checkers (those that make sure appropriate labels are applied correctly)
 
-Both teams are integrated the system and this system is commonly referred to as a **Human in the loop** kind of machine learning system.
+Both teams are integrated into the system - therefore, this system is commonly referred to as a **Human in the Loop** kind of machine learning system.
 
 Advantages of this method is that:
 * There is optimal specialization and division of labour
