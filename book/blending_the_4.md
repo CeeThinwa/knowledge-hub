@@ -94,3 +94,4 @@ Natural Language Processing has the following data sources
 
 ![NLP data sources](./images/system4-sources-50pct.svg)
 
+A key thing to note is that 
