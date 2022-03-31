@@ -177,7 +177,7 @@ Natural Language Processing has the following data sources
 Text can be tricky because printed text (PDFs and scans) or text that is handwritten need to be
 
 * converted to photo,
-* read using OCR and computer-vision technology,
+* read using OCR and computer vision models,
 * converted to string, then
 * fed back into the NLP ML system as raw data
 
@@ -191,7 +191,7 @@ They include
 * **Multilingualism** (i.e. where more than one language is in a particular waveform (audio) or string (text)) - For many parts of the world, people tend to be bilingual or multilingual, hence getting monolingual language data becomes very difficult.
 * **Language Evolution** (i.e. where new words enter or old words leave a language over time) - This is especially true of various slang versions of the available languages.
 * **Stylistic Device Recognition** - NLP language models struggle to identify devices like hyperbole, humour, satire etc. when conducting sentiment analysis.
-* **Diacritics and Language Scripts** - many languages contain diacritics (symbols attached to letters to indicate different pronunciation e.g ç in façade) and some languages use specific scripts (e.g Hangul (한글) script for Korean). This means that an NLP app built in Spanish may not recognize Korean.
+* **Diacritics and Language Scripts** - many languages contain diacritics (symbols attached to letters to indicate different pronunciation e.g ç in façade) and some languages use specific scripts (e.g Hangul 한글 script for Korean). This means that an NLP app built in Spanish may not recognize Korean.
 
 #### <u>Computer Vision (CV)</u>
 
