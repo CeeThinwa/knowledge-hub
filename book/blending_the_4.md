@@ -132,6 +132,10 @@ Otherwise, text directly input into computer systems and stored in common text f
 
 Another key thing to note is that the data can come into the system either as a batch (typically pre-recorded or pre-saved data) or as a stream (typically data that is captured on an ad-hoc basis in small amounts).
 
-All the above affect how the data pipeline for the NLP system will be built, as well as the analysis and modelling procedure required.
+All the above affect how the data pipeline for the NLP system will be built, as well as the analysis and modelling steps required.
+
+The data endpoints may also be customized according to the consumer; data in use by the computer would need to be seen by technical users and then encoded, as shown in the visual below:
+
+
 
 
