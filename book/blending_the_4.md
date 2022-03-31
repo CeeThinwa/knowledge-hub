@@ -161,8 +161,10 @@ On the other hand, built models are loaded into the pipeline, then trained, test
 
 * the `scikit-learn` library in Python,
 * the `JAX` library in Python,
-* the `Tensorflow` library in Python,
-* the `Pytorch` library in Python,
+* the `Tensorflow` library in Python or
+* the `Pytorch` library in Python
+
+R, MATLAB and Julia also have many packages dedicated to specific models or groups of models that can be classified as built models.
 
 #### <u>Natural Language Processing</u>
 
