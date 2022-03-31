@@ -88,6 +88,34 @@ Now that the data infrastructure is in place, now we can enter into **machine le
 
 ### Machine Learning
 
+Machine learning comprises of two types of teams:
+* Technical teams
+* Non-technical teams
+
+The technical team would comprise
+* the data administrators and pipeline builders,
+* the data preprocessors,
+* the ML algorithm design specialists and
+* the model implementers and evaluators
+
+The non-technical team would comprise
+* the subject matter experts (they define what "correct" is)
+* the data entry workers
+* the checkers (those that make sure appropriate labels are applied correctly)
+
+Both teams are integrated the system and this system is commonly referred to as a **Human in the loop** kind of machine learning system.
+
+Advantages of this method is that:
+* There is optimal specialization and division of labour
+* If the non-technical and technical team have frequent contact and all individuals collaborate, they can advise each other on things like
+    * improvement of data labelling and preprocessing processes
+    * error analysis
+
+Disadvantages of this method is that:
+* The cost of model development can increase, especially if the number of data entry and checking workers keeps growing with the available data.
+* There tend to be silos when this is implemented in the real world, with no room of growth; for instance, growing from a data checker to a machine learning engineer rarely happens.
+* Data entry and checking work tends to be subcontracted to less developed countries, and many subcontractors do not match pay and working conditions to global standards typically implemented in developed countries.
+
 #### <u>Natural Language Processing</u>
 
 Natural Language Processing has the following data sources
