@@ -102,8 +102,9 @@ The technical team would comprise
 
 * the data administrators and pipeline builders,
 * the data preprocessors,
-* the ML algorithm design specialists and
-* the model implementers and evaluators - also the data storytellers
+* the ML algorithm design specialists,
+* the model implementers and evaluators and
+* the data storytellers
 
 The non-technical team would comprise
 
