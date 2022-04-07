@@ -235,4 +235,9 @@ On the other hand, data in use by humans in the system with regards to CV is sho
 
 ![CV non-technical data](./images/system4-cv-nontechnical-50pct.svg)
 
+<u>**Key Challenges**</u>
 
+They include
+
+* **Data Retrieval** - images, by nature, tend to be extremely heavy compared to text files (common input for NLP models).
+* **Multilingualism** (i.e. where more than one language is in a particular waveform[audio] or 
