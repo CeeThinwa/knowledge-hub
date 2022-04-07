@@ -93,7 +93,9 @@ Now that the data infrastructure is in place, now we can enter into **machine le
 
 <u>**People**</u>
 
-![team structure](./images/system4-people-50pct.gif)
+![team structure](./images/system-people-50pct.gif)
+
+(High res version of team is [here](./images/system-people-50pct.png))
 
 Machine learning comprises of two types of teams:
 
