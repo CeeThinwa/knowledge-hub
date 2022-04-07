@@ -100,7 +100,7 @@ Now that the data infrastructure is in place, now we can enter into **machine le
 Machine learning comprises of two types of teams:
 
 * Technical teams<br>
-![technical](./images/system-technical-people-50pct.svg)<br><>br
+![technical](./images/system-technical-people-50pct.svg)<br><br>
 * Non-technical teams<br>
 ![non-technical](./images/system-nontechnical-people-50pct.svg)<br>
 
