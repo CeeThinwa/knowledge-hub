@@ -95,7 +95,7 @@ Now that the data infrastructure is in place, now we can enter into **machine le
 
 ![team structure](./images/system-people-50pct.gif)
 
-(High res version of team visualization is [here](https://raw.githubusercontent.com/CeeThinwa/knowledge-hub/main/book/images/system-people2-50pct.svg))
+(High res version of team visualization is <a href='https://raw.githubusercontent.com/CeeThinwa/knowledge-hub/main/book/images/system-people2-50pct.svg'>here</a>))
 
 Machine learning comprises of two types of teams:
 
@@ -259,8 +259,6 @@ Ethical challenges include:
 
 * **Deepfakes** - computer vision models, particularly GANs (Generative Adversarial Networks), can be used to produce realistic looking photos and/or videos of real life people in the public eye with the main purpose of spreading propaganda and/or disinformation. Check one out in action below:
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=bE1KWpoX9Hk" target="_blank">
-  <img src="http://img.youtube.com/vi/bE1KWpoX9Hk/0.jpg"
-       alt="Jordan Peele uses AI, President Obama in fake news PSA" width="50%" /></a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bE1KWpoX9Hk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 * **Optical illusions** - even the most well trained model can struggle with identifying people wearing optical illusions, or people in an area that has many optical illusions.
