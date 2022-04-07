@@ -93,6 +93,8 @@ Now that the data infrastructure is in place, now we can enter into **machine le
 
 <u>**People**</u>
 
+![team structure](./images/system4-people-50pct.gif)
+
 Machine learning comprises of two types of teams:
 
 * Technical teams
@@ -111,6 +113,9 @@ The non-technical team would comprise
 * the subject matter experts (they define what "correct" is)
 * the data entry workers
 * the checkers (those that make sure appropriate labels are applied correctly)
+
+A great example of such a team structure is shown below:
+
 
 Both teams are integrated into the system - therefore, this system is commonly referred to as a **Human in the Loop** kind of machine learning system.
 
