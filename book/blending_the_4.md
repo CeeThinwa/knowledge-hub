@@ -95,11 +95,11 @@ Now that the data infrastructure is in place, now we can enter into **machine le
 
 ![team structure](./images/system-people-50pct.gif)
 
-(High res version of team is [here](./images/system-people-50pct.png))
+(High res version of team visualization is [here](./images/system-people-50pct.png))
 
 Machine learning comprises of two types of teams:
 
-* Technical teams
+* Technical teams<br><br>
 * Non-technical teams
 
 The technical team would comprise
