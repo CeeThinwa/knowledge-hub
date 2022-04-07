@@ -210,14 +210,19 @@ On the other hand, data in use by humans in the system with regards to NLP is sh
 Technical challenges include:
 
 * **Multilingualism** (i.e. where more than one language is in a particular waveform[audio] or string[text]) - For many parts of the world, people tend to be bilingual or multilingual, hence getting monolingual language data becomes very difficult.
+
 * **Language Evolution** (i.e. where new words enter or old words leave a language over time) - This is especially true of various slang versions of the available languages.
+
 * **Stylistic Device Recognition** - NLP language models struggle to identify devices like hyperbole, humour, satire etc. when conducting sentiment analysis.
+
 * **Diacritics and Language Scripts** - many languages contain diacritics (symbols attached to letters to indicate different pronunciation e.g. ç in façade) and some languages use specific scripts (e.g Hangul 한글 script for Korean). This means that an NLP app built in Spanish may not recognize Korean.
 
 Ethical challenges include:
 
 * **Low Resource Languages** - there are thousands upon thousands of languages spoken globally, each containing a significant number of dialects. Unfortunately, only a few languages are frequently recorded, leaving the vast majority of languages without enough data to train many of the sophisticated models in place today.
+
 * **Fake avatars on social media** - they can also be used in social engineering scams, where NLP and CV models are used to create a realistic looking person with the aim of fooling people into believing that they are dealing with a real human being on the other side of a chat.
+
 * **Hate speech** - on social media chats and on phone SMS, nefarious people can use NLP to spread hate speech and/or disinformation; they can also impersonate legitimate institutions and spam millions of unsuspecting customers in order to obtain login credentials and other sensitive information. 
 
 #### <u>Computer Vision (CV)</u>
@@ -249,7 +254,10 @@ Technical challenges include:
 Ethical challenges include:
 
 * **Surveillance** - computer vision models in the wrong hands can facilitate unlawful, unethical and unauthorized surveillance of people by the powers that be.
+
 * **Lack of diversity** - many photos that are fed into computer vision models todaymay not have enough diverse examples for the computer to learn from. Also, a computer trained on both lighter and darker people, may still struggle to recognize people if it is put in an area with predominantly light people only, and/or disabled people, and/or people with drastic body modifications.
-* **Deepfakes** - computer vision models, particularly GANs (Generative Adversarial Networks), can be used to produce realistic looking photos and/or videos with the main purpose of spreading propaganda and/or disinformation.Check it out in action below:<br>
-[Jordan Peele Obama deepfake](https://www.youtube.com/watch?v=bE1KWpoX9Hk)<br>
+
+* **Deepfakes** - computer vision models, particularly GANs (Generative Adversarial Networks), can be used to produce realistic looking photos and/or videos with the main purpose of spreading propaganda and/or disinformation. Check it out in action below:<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bE1KWpoX9Hk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 * **Optical illusions** - even the most well trained model can struggle with identifying people wearing optical illusions, or people in an area that has many optical illusions.
