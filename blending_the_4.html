@@ -397,17 +397,22 @@ the output given by the ML app becomes a nightmare.</p>
 <div class="section" id="machine-learning">
 <h3>Machine Learning<a class="headerlink" href="#machine-learning" title="Permalink to this headline">¶</a></h3>
 <p><u><strong>People</strong></u></p>
+<p><img alt="team structure" src="_images/system-people-50pct.gif" /></p>
+<p>(High res version of team visualization is <span class="xref myst">here</span>)</p>
 <p>Machine learning comprises of two types of teams:</p>
 <ul class="simple">
-<li><p>Technical teams</p></li>
-<li><p>Non-technical teams</p></li>
+<li><p>Technical teams<br>
+<img alt="technical" src="_images/system-technical-people-50pct.svg" /><br><br></p></li>
+<li><p>Non-technical teams<br>
+<img alt="non-technical" src="_images/system-nontechnical-people-50pct.svg" /><br></p></li>
 </ul>
 <p>The technical team would comprise</p>
 <ul class="simple">
 <li><p>the data administrators and pipeline builders,</p></li>
 <li><p>the data preprocessors,</p></li>
-<li><p>the ML algorithm design specialists and</p></li>
-<li><p>the model implementers and evaluators</p></li>
+<li><p>the ML algorithm design specialists,</p></li>
+<li><p>the model implementers and evaluators and</p></li>
+<li><p>the data storytellers</p></li>
 </ul>
 <p>The non-technical team would comprise</p>
 <ul class="simple">
@@ -416,7 +421,8 @@ the output given by the ML app becomes a nightmare.</p>
 <li><p>the checkers (those that make sure appropriate labels are applied correctly)</p></li>
 </ul>
 <p>Both teams are integrated into the system - therefore, this system is commonly referred to as a <strong>Human in the Loop</strong> kind of machine learning system.</p>
-<p>Advantages of this method is that:</p>
+<p><strong>Advantages</strong></p>
+<p>Advantages of this method are that:</p>
 <ul class="simple">
 <li><p>There is optimal specialization and division of labour</p></li>
 <li><p>If the non-technical and technical team have frequent contact and all individuals collaborate, they can advise each other on things like</p>
@@ -426,7 +432,8 @@ the output given by the ML app becomes a nightmare.</p>
 </ul>
 </li>
 </ul>
-<p>Disadvantages of this method is that:</p>
+<p><strong>Disadvantages</strong></p>
+<p>Disadvantages of this method are that:</p>
 <ul class="simple">
 <li><p>The cost of model development can increase, especially if the number of data entry and checking workers keeps growing with the available data.</p></li>
 <li><p>There tend to be silos when this is implemented in the real world, with no room of growth; for instance, growing from a data checker to a machine learning engineer rarely happens.</p></li>
@@ -486,13 +493,18 @@ the output given by the ML app becomes a nightmare.</p>
 <p>On the other hand, data in use by humans in the system with regards to NLP is shown below:</p>
 <p><img alt="NLP non-technical data" src="_images/system4-nlp-nontechnical-50pct.svg" /></p>
 <p><u><strong>Key Challenges</strong></u></p>
-<p>They include</p>
+<p>Technical challenges include:</p>
 <ul class="simple">
-<li><p><strong>Low-resource Languages</strong> - there are thousands upon thousands of languages spoken globally, each containing a significant number of dialects. Unfortunately, only a few languages are frequently recorded, leaving the vast majority of languages without enough data to train many of the sophisticated models in place today.</p></li>
-<li><p><strong>Multilingualism</strong> (i.e. where more than one language is in a particular waveform (audio) or string (text)) - For many parts of the world, people tend to be bilingual or multilingual, hence getting monolingual language data becomes very difficult.</p></li>
+<li><p><strong>Multilingualism</strong> (i.e. where more than one language is in a particular waveform[audio] or string[text]) - For many parts of the world, people tend to be bilingual or multilingual, hence getting monolingual language data becomes very difficult.</p></li>
 <li><p><strong>Language Evolution</strong> (i.e. where new words enter or old words leave a language over time) - This is especially true of various slang versions of the available languages.</p></li>
 <li><p><strong>Stylistic Device Recognition</strong> - NLP language models struggle to identify devices like hyperbole, humour, satire etc. when conducting sentiment analysis.</p></li>
-<li><p><strong>Diacritics and Language Scripts</strong> - many languages contain diacritics (symbols attached to letters to indicate different pronunciation e.g ç in façade) and some languages use specific scripts (e.g Hangul 한글 script for Korean). This means that an NLP app built in Spanish may not recognize Korean.</p></li>
+<li><p><strong>Diacritics and Language Scripts</strong> - many languages contain diacritics (symbols attached to letters to indicate different pronunciation e.g. ç in façade) and some languages use specific scripts (e.g Hangul 한글 script for Korean). This means that an NLP app built in Spanish may not recognize Korean.</p></li>
+</ul>
+<p>Ethical challenges include:</p>
+<ul class="simple">
+<li><p><strong>Low Resource Languages</strong> - there are thousands upon thousands of languages spoken globally, each containing a significant number of dialects. Unfortunately, only a few languages are frequently recorded, leaving the vast majority of languages without enough data to train many of the sophisticated models in place today.</p></li>
+<li><p><strong>Fake avatars on social media</strong> - they can also be used in social engineering scams, where NLP and CV models are used to create a realistic looking person with the aim of fooling people into believing that they are dealing with a real human being on the other side of a chat.</p></li>
+<li><p><strong>Hate speech</strong> - on social media chats and on phone SMS, nefarious people can use NLP to spread hate speech and/or disinformation; they can also impersonate legitimate institutions and spam millions of unsuspecting customers in order to obtain login credentials and other sensitive information.</p></li>
 </ul>
 </div>
 <div class="section" id="u-computer-vision-cv-u">
@@ -500,6 +512,29 @@ the output given by the ML app becomes a nightmare.</p>
 <p><u><strong>Data &amp; Data Sources</strong></u></p>
 <p>Computer Vision has the following data sources</p>
 <p><img alt="CV data sources" src="_images/system4-cv-sources-50pct.svg" /></p>
+<p>A pretty cool thing about digital images is that, due to use of common standards in storage (raw bytes, .PNG, .JPEG, .GIF, .SVG etc.), they can be visualized as is, or converted into numerical arrays.</p>
+<p>Black and white photos tend to be easier to load, display and represent as arrays compared to colored photos.</p>
+<p>Data for the computer with regards to CV is shown in the visual below:</p>
+<p><img alt="CV technical data" src="_images/system4-cv-technical-50pct.svg" /></p>
+<p>On the other hand, data in use by humans in the system with regards to CV is shown below:</p>
+<p><img alt="CV non-technical data" src="_images/system4-cv-nontechnical-50pct.svg" /></p>
+<p><u><strong>Key Challenges</strong></u></p>
+<p>Technical challenges include:</p>
+<ul class="simple">
+<li><p><strong>Data Retrieval</strong> - images, by nature, tend to be extremely heavy compared to text files (common input for NLP models). As such, cloud technology and use of programming languages that allow for parralelization of workflow such as <code class="docutils literal notranslate"><span class="pre">Go</span></code> or libraries within programming languages that enable parralelization of tasks such as the <code class="docutils literal notranslate"><span class="pre">Dask</span></code> library in <code class="docutils literal notranslate"><span class="pre">Python</span></code> is necessary. A side effect of this is that Computer Vision models can be very expensive to set up, deploy and maintain in terms of time and GPU/cloud space.</p></li>
+</ul>
+<p>Ethical challenges include:</p>
+<ul class="simple">
+<li><p><strong>Surveillance</strong> - computer vision models in the wrong hands can facilitate unlawful, unethical and unauthorized surveillance of people by the powers that be.</p></li>
+<li><p><strong>Lack of diversity</strong> - many photos that are fed into computer vision models todaymay not have enough diverse examples for the computer to learn from. Also, a computer trained on both lighter and darker people, may still struggle to recognize people if it is put in an area with predominantly light people only, and/or disabled people, and/or people with drastic body modifications.</p></li>
+<li><p><strong>Deepfakes</strong> - computer vision models, particularly GANs (Generative Adversarial Networks), can be used to produce realistic looking photos and/or videos of real life people in the public eye with the main purpose of spreading propaganda and/or disinformation. Check one out in action below:</p></li>
+</ul>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=bE1KWpoX9Hk" target="_blank">
+  <img src="http://img.youtube.com/vi/bE1KWpoX9Hk/0.jpg"
+       alt="Jordan Peele uses AI, President Obama in fake news PSA" width="50%" /></a>
+<ul class="simple">
+<li><p><strong>Optical illusions</strong> - even the most well trained model can struggle with identifying people wearing optical illusions, or people in an area that has many optical illusions.</p></li>
+</ul>
 </div>
 </div>
 </div>
