@@ -100,9 +100,9 @@ Now that the data infrastructure is in place, now we can enter into **machine le
 Machine learning comprises of two types of teams:
 
 * Technical teams<br>
-![technical](./images/system-technical-people-50pct.svg)<br>
+![technical](./images/system-technical-people-50pct.svg)<br><>br
 * Non-technical teams<br>
-![non-technical](./images/system-nontechnical-people-50pct.svg)
+![non-technical](./images/system-nontechnical-people-50pct.svg)<br>
 
 The technical team would comprise
 
@@ -222,4 +222,17 @@ They include
 Computer Vision has the following data sources
 
 ![CV data sources](./images/system4-cv-sources-50pct.svg)
+
+A pretty cool thing about digital images is that, due to use of common standards in storage (raw bytes, .PNG, .JPEG, .GIF, .SVG etc.), they can be visualized as is, or converted into numerical arrays.
+
+Black and white photos tend to be easier to load, display and represent as arrays compared to colored photos.
+
+Data for the computer with regards to CV is shown in the visual below:
+
+![CV technical data](./images/system4-cv-technical-50pct.svg)
+
+On the other hand, data in use by humans in the system with regards to CV is shown below:
+
+![CV non-technical data](./images/system4-cv-nontechnical-50pct.svg)
+
 
