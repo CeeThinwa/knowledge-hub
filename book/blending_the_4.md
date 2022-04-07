@@ -118,19 +118,20 @@ The non-technical team would comprise
 * the data entry workers
 * the checkers (those that make sure appropriate labels are applied correctly)
 
-A great example of such a team structure is shown below:
-
-
 Both teams are integrated into the system - therefore, this system is commonly referred to as a **Human in the Loop** kind of machine learning system.
 
-Advantages of this method is that:
+**Advantages**
+
+Advantages of this method are that:
 
 * There is optimal specialization and division of labour
 * If the non-technical and technical team have frequent contact and all individuals collaborate, they can advise each other on things like
     * improvement of data labelling and preprocessing processes
     * error analysis
 
-Disadvantages of this method is that:
+**Disadvantages**
+
+Disadvantages of this method are that:
 
 * The cost of model development can increase, especially if the number of data entry and checking workers keeps growing with the available data.
 * There tend to be silos when this is implemented in the real world, with no room of growth; for instance, growing from a data checker to a machine learning engineer rarely happens.
