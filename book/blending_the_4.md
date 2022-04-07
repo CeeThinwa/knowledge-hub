@@ -95,7 +95,7 @@ Now that the data infrastructure is in place, now we can enter into **machine le
 
 ![team structure](./images/system-people-50pct.gif)
 
-(High res version of team visualization is [here](./images/system-people2-50pct.svg))
+(High res version of team visualization is [here](https://raw.githubusercontent.com/CeeThinwa/knowledge-hub/main/book/images/system-people2-50pct.svg))
 
 Machine learning comprises of two types of teams:
 
