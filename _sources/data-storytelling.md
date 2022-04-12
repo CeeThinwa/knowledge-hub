@@ -1,7 +1,7 @@
 (ds)=
 # Welcome to Data Storytelling!
 
-People generally need to go beyond the jargon because, a mentioned earlier, we are increasingly working with apps and websites that make use of machine learning and artifical intelligence.
+People generally need to go beyond the jargon because, as mentioned earlier, we are increasingly working with apps and websites that make use of machine learning and artifical intelligence.
 
 Human beings *naturally* respond to **compelling narrative**.
 
