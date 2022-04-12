@@ -1,8 +1,6 @@
 (ds)=
 # Welcome to Data Storytelling!
 
-### <u>_**What is Data Storytelling?**_</u>
-
 People generally need to go beyond the jargon because, a mentioned earlier, we are increasingly working with apps and websites that make use of machine learning and artifical intelligence.
 
 Human beings *naturally* respond to **compelling narrative**.
@@ -23,3 +21,6 @@ Data Storytelling is
 
 It leverages stories communicated beautifully and simply through a variety of mediums for organizational, community, national and global impact.
 It is dominant in Infographic Design, Data Science, Business Intelligence and Data Analysis.
+
+A couple of data stories that I shared in the past include
+1. [Supplementing data sources to estimate the welfare level of Kiva borrowers](kiva.ipynb)
