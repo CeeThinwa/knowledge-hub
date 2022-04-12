@@ -446,85 +446,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_3420</span>\<span class="mf">1089544034.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="ne">c</span>:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\pandas\__init__.py in &lt;module&gt;
-<span class="g g-Whitespace">     </span><span class="mi">48</span> <span class="kn">import</span> <span class="nn">pandas.core.config_init</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span> 
-<span class="ne">---&gt; </span><span class="mi">50</span> <span class="kn">from</span> <span class="nn">pandas.core.api</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span>     <span class="c1"># dtype</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span>     <span class="n">Int8Dtype</span><span class="p">,</span>
-
-<span class="ne">c</span>:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\pandas\core\api.py in &lt;module&gt;
-<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="kn">from</span> <span class="nn">pandas.core.construction</span> <span class="kn">import</span> <span class="n">array</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="kn">from</span> <span class="nn">pandas.core.flags</span> <span class="kn">import</span> <span class="n">Flags</span>
-<span class="ne">---&gt; </span><span class="mi">48</span> <span class="kn">from</span> <span class="nn">pandas.core.groupby</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span>     <span class="n">Grouper</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span>     <span class="n">NamedAgg</span><span class="p">,</span>
-
-<span class="ne">c</span>:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\pandas\core\groupby\__init__.py in &lt;module&gt;
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">pandas.core.groupby.generic</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">DataFrameGroupBy</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">NamedAgg</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">SeriesGroupBy</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="p">)</span>
-
-<span class="ne">c</span>:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\pandas\core\groupby\generic.py in &lt;module&gt;
-<span class="g g-Whitespace">     </span><span class="mi">71</span> <span class="kn">import</span> <span class="nn">pandas.core.common</span> <span class="k">as</span> <span class="nn">com</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span> <span class="kn">from</span> <span class="nn">pandas.core.construction</span> <span class="kn">import</span> <span class="n">create_series_with_explicit_dtype</span>
-<span class="ne">---&gt; </span><span class="mi">73</span> <span class="kn">from</span> <span class="nn">pandas.core.frame</span> <span class="kn">import</span> <span class="n">DataFrame</span>
-<span class="g g-Whitespace">     </span><span class="mi">74</span> <span class="kn">from</span> <span class="nn">pandas.core.generic</span> <span class="kn">import</span> <span class="n">NDFrame</span>
-<span class="g g-Whitespace">     </span><span class="mi">75</span> <span class="kn">from</span> <span class="nn">pandas.core.groupby</span> <span class="kn">import</span> <span class="n">base</span>
-
-<span class="ne">c</span>:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\pandas\core\frame.py in &lt;module&gt;
-<span class="g g-Whitespace">    </span><span class="mi">127</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">128</span> 
-<span class="ne">--&gt; </span><span class="mi">129</span> <span class="kn">from</span> <span class="nn">pandas.core</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">130</span>     <span class="n">algorithms</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">131</span>     <span class="n">common</span> <span class="k">as</span> <span class="n">com</span><span class="p">,</span>
-
-<span class="ne">c</span>:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\pandas\core\generic.py in &lt;module&gt;
-<span class="g g-Whitespace">    </span><span class="mi">142</span> <span class="kn">from</span> <span class="nn">pandas.core.shared_docs</span> <span class="kn">import</span> <span class="n">_shared_docs</span>
-<span class="g g-Whitespace">    </span><span class="mi">143</span> <span class="kn">from</span> <span class="nn">pandas.core.sorting</span> <span class="kn">import</span> <span class="n">get_indexer_indexer</span>
-<span class="ne">--&gt; </span><span class="mi">144</span> <span class="kn">from</span> <span class="nn">pandas.core.window</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">145</span>     <span class="n">Expanding</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">146</span>     <span class="n">ExponentialMovingWindow</span><span class="p">,</span>
-
-<span class="ne">c</span>:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\pandas\core\window\__init__.py in &lt;module&gt;
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">pandas.core.window.ewm</span> <span class="kn">import</span> <span class="p">(</span>  <span class="c1"># noqa:F401</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">ExponentialMovingWindow</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">ExponentialMovingWindowGroupby</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">pandas.core.window.expanding</span> <span class="kn">import</span> <span class="p">(</span>  <span class="c1"># noqa:F401</span>
-
-<span class="ne">c</span>:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\pandas\core\window\ewm.py in &lt;module&gt;
-<span class="g g-Whitespace">     </span><span class="mi">36</span>     <span class="n">window_agg_numba_parameters</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">37</span> <span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">38</span> <span class="kn">from</span> <span class="nn">pandas.core.window.indexers</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">39</span>     <span class="n">BaseIndexer</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">40</span>     <span class="n">ExponentialMovingWindowIndexer</span><span class="p">,</span>
-
-<span class="ne">c</span>:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\pandas\core\window\indexers.py in &lt;module&gt;
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> 
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">pandas._libs.window.indexers</span> <span class="kn">import</span> <span class="n">calculate_variable_window_bounds</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">pandas.util._decorators</span> <span class="kn">import</span> <span class="n">Appender</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> 
-
-<span class="nn">~\AppData\Local\Programs\Python\Python37\lib\importlib\_bootstrap.py</span> in <span class="ni">parent</span><span class="nt">(self)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="data">
@@ -1047,7 +968,7 @@ regional_lts shape: (15736, 21)
     </tr>
     <tr>
       <th>top</th>
-      <td>Loreto, Peru</td>
+      <td>Badakhshan, Afghanistan</td>
       <td>NGA</td>
       <td>Nigeria</td>
       <td>Central</td>
@@ -1065,7 +986,10 @@ regional_lts shape: (15736, 21)
     </tr>
   </tbody>
 </table>
-</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: loan_themes 
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: loan_themes 
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1398,7 +1322,10 @@ regional_lts shape: (15736, 21)
     </tr>
   </tbody>
 </table>
-</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: PCE_data 
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: PCE_data 
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1678,25 +1605,25 @@ regional_lts shape: (15736, 21)
     </tr>
     <tr>
       <th>top</th>
-      <td>Korea, Democratic People's Republic of</td>
-      <td>0.06</td>
+      <td>East Asia and Pacific</td>
       <td>0.01</td>
+      <td>0.06</td>
       <td>0.06</td>
       <td>0.01</td>
       <td>0.01</td>
       <td>0.02</td>
-      <td>0.07</td>
+      <td>0.04</td>
       <td>0.03</td>
       <td>0.03</td>
       <td>...</td>
       <td>0.03</td>
       <td>0.06</td>
-      <td>0.03</td>
-      <td>0.11</td>
-      <td>0.11</td>
-      <td>0.04</td>
       <td>0.06</td>
       <td>0.11</td>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.06</td>
       <td>0.06</td>
       <td>0.06</td>
     </tr>

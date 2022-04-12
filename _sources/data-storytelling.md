@@ -22,5 +22,5 @@ Data Storytelling is
 It leverages stories communicated beautifully and simply through a variety of mediums for organizational, community, national and global impact.
 It is dominant in Infographic Design, Data Science, Business Intelligence and Data Analysis.
 
-A couple of data stories that I shared in the past include
+A couple of data stories that I have shared in the past include
 1. [Supplementing data sources to estimate the welfare level of Kiva borrowers](kiva.ipynb)
