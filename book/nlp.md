@@ -1,7 +1,7 @@
 (nlp)=
 # Welcome to Natural Language Processing!
 
-Below is an excerpt from
+Below is my definition of NLP as stated in
 [an article I wrote outlining a learning and planning framework for NLP](https://medium.com/@ceethinwa/delivering-success-in-natural-language-processing-projects-part-one-40c4775cf6a9):
 
 :::{admonition} EXCERPT
