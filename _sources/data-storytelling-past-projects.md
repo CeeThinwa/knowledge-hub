@@ -41,7 +41,7 @@ The notebook can be found
 and the report can be found
 [here](https://drive.google.com/file/d/1UTNIz8CHg2-bXxo5Sb540aXk--q6ZEza/view?usp=sharing)
 
-<embed src='Job Ad Text Analysis - Jan 2020.pdf' width="75%" />
+<iframe src='Job Ad Text Analysis - Jan 2020.pdf' width="75%" ><iframe/>
 
 :::
 
