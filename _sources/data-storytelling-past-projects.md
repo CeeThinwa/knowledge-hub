@@ -1,8 +1,7 @@
 (ds-proj)=
 # Past data stories
 
-:::{admonition}
-## What do customers think of Alexa?
+:::{admonition} What do customers think of Alexa?
 :class: tip
 <u>_**Project Summary**_</u>
 
@@ -23,8 +22,7 @@ My project submission can be found
 
 
 
-:::{admonition}
-## Who is the perfect Marketing Researcher?
+:::{admonition} Who is the perfect Marketing Researcher?
 :class: tip
 <u>_**Project Summary**_</u>
 
