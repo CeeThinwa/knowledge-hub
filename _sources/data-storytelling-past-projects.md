@@ -41,7 +41,7 @@ The notebook can be found
 and the report can be found
 [here](https://drive.google.com/file/d/1UTNIz8CHg2-bXxo5Sb540aXk--q6ZEza/view?usp=sharing)
 
-<embed src='https://drive.google.com/file/d/1UTNIz8CHg2-bXxo5Sb540aXk--q6ZEza/view?usp=sharing' width="75%" />
+<embed src='https://drive.google.com/file/d/1UTNIz8CHg2-bXxo5Sb540aXk--q6ZEza/view' width="75%" />
 
 :::
 
