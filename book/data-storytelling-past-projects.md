@@ -15,6 +15,7 @@ Help Amazon solve the following challenges:
 3. We need to see the number of reviews classified by rating
 
 <u>_**Resources**_</u>
+
 My project submission can be found
 [here](https://github.com/CeeThinwa/Python-Data-Science-Notebooks/blob/master/Amazon_Alexa_Challenge_Revised.ipynb)
 :::
@@ -34,8 +35,13 @@ was based on data obtained from [Indeed.com](http://indeed.com/) in January 2020
 
 
 <u>_**Resources**_</u>
-It can be found
+
+The notebook can be found
 [here](https://github.com/CeeThinwa/Python-Data-Science-Notebooks/blob/master/Amazon_Alexa_Challenge_Revised.ipynb)
+and the report can be found
+[here](https://drive.google.com/file/d/1UTNIz8CHg2-bXxo5Sb540aXk--q6ZEza/view?usp=sharing)
+
+<embed src='https://drive.google.com/file/d/1UTNIz8CHg2-bXxo5Sb540aXk--q6ZEza/view?usp=sharing' width="75%" />
 
 :::
 
