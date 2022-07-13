@@ -7,6 +7,7 @@ chapters:
 - file: blending_the_4
 - file: data-storytelling
   sections:
+    - file: data-storytelling-past-projects
     - file: kiva
 - file: nlp
 - file: computer-vision
