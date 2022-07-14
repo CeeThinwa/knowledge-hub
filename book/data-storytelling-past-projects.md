@@ -101,6 +101,8 @@ For the locations in which Kiva has active loans, the objective is to pair Kiva'
 
 The project report can be found [here](kiva.ipynb)
 
+https://github.com/CeeThinwa/assignment-1-CeeThinwa/blob/master/KIVA%20Analysis.ipynb
+
 :::
 
 
