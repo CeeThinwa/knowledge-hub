@@ -104,7 +104,3 @@ The project report can be found [here](kiva.ipynb)
 https://github.com/CeeThinwa/assignment-1-CeeThinwa/blob/master/KIVA%20Analysis.ipynb
 
 :::
-
-
-
-[Supplementing data sources to estimate the welfare level of Kiva borrowers](kiva.ipynb)
