@@ -73,6 +73,38 @@ and the project report can be found
 
 :::
 
+## How can we assess the welfare of the poor when they borrow?
+
+:::{admonition} Project Summary
+:class: tip
+<u>_**Context**_</u>
+
+*Kiva.org* is an online crowdfunding platform to extend financial services to poor and financially excluded people around the world. Kiva lenders have provided over $1 billion US dollars in loans to over 2 million people. In order to set investment priorities, help inform lenders, and understand their target communities, knowing the level of poverty of each borrower is critical.
+
+<u>_**Problem**_</u>
+
+The problem can be broken down as follows:
+1. What is the welfare of Kiva borrowers, relative to their purchasing power?
+2. In which communities are Kiva having the most impact?
+
+For the locations in which Kiva has active loans, the objective is to pair Kiva's data with additional data sources to estimate the welfare level of borrowers in specific regions, based on shared economic and demographic characteristics.
+
+<u>_**Solution**_</u>
+
+1. The welfare of KIVA borrowers overall is varied
+    * Few borrowers are taking loans for personal use, and that's a good thing
+    * A good number of the most valuable loans (up to 50,000 US dollars) are taken up by social impact startups, which are in turn working with local communities; this makes impact more indirect
+    * countries that have many more people in need like Burkina Faso, Sierra Leone and Mali have a high debt burden, trapping borrowers from these countries in poverty even when they borrow small amounts
+2. Massive impact is being achieved for Kenyan men and Filipino women, because the loans are small enough to pay back and monthly repayments are taking up only 50% or less of their monthly income
+
+<u>_**Resources**_</u>
+
+The project notebook can be found
+[here](https://github.com/CeeThinwa/Python-Data-Science-Notebooks/blob/master/Amazon_Alexa_Challenge_Revised.ipynb)
+and the project report can be found
+[here](https://drive.google.com/file/d/1UTNIz8CHg2-bXxo5Sb540aXk--q6ZEza/view?usp=sharing)
+
+:::
 
 
 
