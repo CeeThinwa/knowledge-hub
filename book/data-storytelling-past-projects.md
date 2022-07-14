@@ -45,11 +45,15 @@ Data is disrupting professions everywhere, and academia is fighting to keep up (
 
 <u>_**Problem**_</u>
 
-The
+The problem can be broken down as follows:
+1. No job-seeker can read all job postings at a given time at once
+2. Key words need to be identified that the job-seeker can take note of
 
 <u>_**Solution**_</u>
 
-The
+1. With Python, the data available at a given point in time was mined and analyzed, allowing the job seeker to "read" 900+ job postings at once
+2. Nouns tended to give the most complete information compared to verbs or pronouns when used in *n-grams* (`n` number of words analyzed as a phrase).
+    * 
 
 <u>_**Resources**_</u>
 
