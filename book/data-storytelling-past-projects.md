@@ -13,7 +13,7 @@
 <u>_**Context**_</u>
 
 When Amazon customers purchase an Amazon Alexa, a voice controlled-assistant,
-some of them may chose to leave a review and give the product a rating. The rating ranges from 1 star to 5 stars. A sample of 3,150 customer reviews
+some of them may chose to leave a review and give the product a rating. The rating ranges from 1 star to 5 stars. A sample of 3,150 customer reviews written between May - July 2018
 (data source [here](https://go.aws/2WkOfZp)) were selected for analysis.
 
 <u>_**Problem**_</u>
