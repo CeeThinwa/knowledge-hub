@@ -99,10 +99,7 @@ For the locations in which Kiva has active loans, the objective is to pair Kiva'
 
 <u>_**Resources**_</u>
 
-The project notebook can be found
-[here](https://github.com/CeeThinwa/Python-Data-Science-Notebooks/blob/master/Amazon_Alexa_Challenge_Revised.ipynb)
-and the project report can be found
-[here](https://drive.google.com/file/d/1UTNIz8CHg2-bXxo5Sb540aXk--q6ZEza/view?usp=sharing)
+The project report can be found [here](kiva.ipynb)
 
 :::
 
