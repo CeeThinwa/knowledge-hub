@@ -3,6 +3,11 @@
 
 ## What do Amazon customers think of Alexa?
 
+### Skills at work
+
+* Data visualization
+
+
 :::{admonition} Project Summary
 :class: tip
 <u>_**Context**_</u>
@@ -17,16 +22,18 @@ Help Amazon solve the following challenges:
 1. It's been discovered that all verified_reviews that are only say "love it" or are only one word are actually fake. Reviews like "great!" or "Love It!" need to be removed from the dataset.
 2. We need to see the number of customers that left a review each day from the sample reviews that we do have
 3. We need to see the number of reviews classified by rating
+4. Can we anticipate sentiment of Amazon Alexa reviews given the data at hand?
 
 <u>_**Solution**_</u>
 
 1. Python code leveraging the Pandas library found reviews that had two whitespaces and removed them
 2. A lot of the reviews in the sample dataset happened towards the tail end of July 2018
 3. A lot of the reviews were 5-star reviews, indicating an overwhelming sense of positivity in the reviews
+4. Yes we can, leveraging the CatBoost classifier, created by Yandex (which is now open source)
 
 <u>_**Resources**_</u>
 
-My project submission can be found
+My project notebook can be found
 [here](https://github.com/CeeThinwa/Python-Data-Science-Notebooks/blob/master/Amazon_Alexa_Challenge_Revised.ipynb)
 :::
 
