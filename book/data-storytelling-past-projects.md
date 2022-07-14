@@ -57,6 +57,7 @@ The problem can be broken down as follows:
 1. With Python, the data available at a given point in time was mined and analyzed, allowing the job seeker to "read" 900+ job postings at once
 2. Nouns tended to give the most complete information compared to verbs or pronouns when used in *n-grams* (`n` number of words analyzed as a phrase).
 3. Skills and competencies emphasised by employers were:
+    * At least 3 years of working experience
     * Soft skills particularly the ability to manage, communicate, prioritize and multi-task all at once
     * Prior experience in Marketing Research
     * Prior experience in hands-on Marketing
