@@ -3,11 +3,6 @@
 
 ## What do Amazon customers think of Alexa?
 
-### Skills at work
-
-* Data visualization
-
-
 :::{admonition} Project Summary
 :class: tip
 <u>_**Context**_</u>
@@ -43,18 +38,21 @@ My project notebook can be found
 :class: tip
 <u>_**Context**_</u>
 
-The goal of this research is to help job-seekers seeking to work in the niche area of marketing research to gain a clear
-and current understanding of how they should package themselves to become attractive to the “global” employer. Research
-was based on data obtained from [Indeed.com](http://indeed.com/) in January 2020.
+The
 
-<u>_**Research Conclusions**_</u>
+<u>_**Problem**_</u>
 
+The
+
+<u>_**Solution**_</u>
+
+The
 
 <u>_**Resources**_</u>
 
-The notebook can be found
+The project notebook can be found
 [here](https://github.com/CeeThinwa/Python-Data-Science-Notebooks/blob/master/Amazon_Alexa_Challenge_Revised.ipynb)
-and the report can be found
+and the project report can be found
 [here](https://drive.google.com/file/d/1UTNIz8CHg2-bXxo5Sb540aXk--q6ZEza/view?usp=sharing)
 
 :::
