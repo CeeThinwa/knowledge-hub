@@ -186,3 +186,7 @@ book/_build/html/_images/system4-cv-nontechnical-50pct.svg
 book/_build/html/_images/system4-cv-technical-50pct.svg
 book/data/kiva-project/.ipynb_checkpoints/PCE data-checkpoint.html
 book/data/kiva-project/.ipynb_checkpoints/PCE data-checkpoint.tsv
+book/_build/.doctrees/data-storytelling-past-projects.doctree
+book/_build/html/_sources/data-storytelling-past-projects.md
+book/_build/html/data-storytelling-past-projects.html
+book/data/kiva-project/kiva_loans.csv
