@@ -205,6 +205,34 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-do-amazon-customers-think-of-alexa">
+   What do Amazon customers think of Alexa?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-is-the-perfect-marketing-researcher">
+   Who is the perfect Marketing Researcher?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-can-we-assess-the-welfare-of-the-poor-when-they-borrow">
+   How can we assess the welfare of the poor when they borrow?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-can-we-learn-more-about-kenyans-on-twitter">
+   How can we learn more about Kenyans on Twitter?
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -217,6 +245,34 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-do-amazon-customers-think-of-alexa">
+   What do Amazon customers think of Alexa?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-is-the-perfect-marketing-researcher">
+   Who is the perfect Marketing Researcher?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-can-we-assess-the-welfare-of-the-poor-when-they-borrow">
+   How can we assess the welfare of the poor when they borrow?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-can-we-learn-more-about-kenyans-on-twitter">
+   How can we learn more about Kenyans on Twitter?
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -225,39 +281,130 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="past-data-stories">
 <span id="ds-proj"></span><h1>Past data stories<a class="headerlink" href="#past-data-stories" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-do-amazon-customers-think-of-alexa">
+<h2>What do Amazon customers think of Alexa?<a class="headerlink" href="#what-do-amazon-customers-think-of-alexa" title="Permalink to this headline">¶</a></h2>
 <div class="tip admonition">
-<p class="admonition-title">What do customers think of Alexa?</p>
-<p><u><em><strong>Project Summary</strong></em></u></p>
+<p class="admonition-title">Project Summary</p>
+<p><u><em><strong>Context</strong></em></u></p>
 <p>When Amazon customers purchase an Amazon Alexa, a voice controlled-assistant,
-some of them may chose to leave a review and give the product a rating. The rating ranges from 1 star
-to 5 stars. A sample of 3,150 customer reviews
-(data source <a class="reference external" href="https://go.aws/2WkOfZp">here</a>) were selected for analysis.
-Help Amazon solve the following challenges:</p>
+some of them may chose to leave a review and give the product a rating. The rating ranges from 1 star to 5 stars. A sample of 3,150 customer reviews written between May - July 2018
+(data source <a class="reference external" href="https://go.aws/2WkOfZp">here</a>) were selected for analysis.</p>
+<p><u><em><strong>Problem</strong></em></u></p>
+<p>Help Amazon solve the following challenges:</p>
 <ol class="simple">
 <li><p>It’s been discovered that all verified_reviews that are only say “love it” or are only one word are actually fake. Reviews like “great!” or “Love It!” need to be removed from the dataset.</p></li>
 <li><p>We need to see the number of customers that left a review each day from the sample reviews that we do have</p></li>
 <li><p>We need to see the number of reviews classified by rating</p></li>
+<li><p>Can we anticipate sentiment of Amazon Alexa reviews given the data at hand?</p></li>
+</ol>
+<p><u><em><strong>Solution</strong></em></u></p>
+<ol class="simple">
+<li><p>Python code leveraging the Pandas library found reviews that had two whitespaces and removed them</p></li>
+<li><p>A lot of the reviews in the sample dataset happened towards the tail end of July 2018</p></li>
+<li><p>A lot of the reviews were 5-star reviews, indicating an overwhelming sense of positivity in the reviews</p></li>
+<li><p>Yes we can, leveraging the CatBoost classifier, created by Yandex (which is now open source)</p></li>
 </ol>
 <p><u><em><strong>Resources</strong></em></u></p>
-<p>My project submission can be found
+<p>My project notebook can be found
 <a class="reference external" href="https://github.com/CeeThinwa/Python-Data-Science-Notebooks/blob/master/Amazon_Alexa_Challenge_Revised.ipynb">here</a></p>
 </div>
+</div>
+<div class="section" id="who-is-the-perfect-marketing-researcher">
+<h2>Who is the perfect Marketing Researcher?<a class="headerlink" href="#who-is-the-perfect-marketing-researcher" title="Permalink to this headline">¶</a></h2>
 <div class="tip admonition">
-<p class="admonition-title">Who is the perfect Marketing Researcher?</p>
-<p><u><em><strong>Project Summary</strong></em></u></p>
-<p>The goal of this research is to help job-seekers seeking to work in the niche area of marketing research to gain a clear
-and current understanding of how they should package themselves to become attractive to the “global” employer. Research
-was based on data obtained from <a class="reference external" href="http://indeed.com/">Indeed.com</a> in January 2020.</p>
-<p><u><em><strong>Research Conclusions</strong></em></u></p>
+<p class="admonition-title">Project Summary</p>
+<p><u><em><strong>Context</strong></em></u></p>
+<p>Data is disrupting professions everywhere, and academia is fighting to keep up (or is it already too late?) resulting in many job-seekers seeking to plug into research oriented roles that can make their professions better. Marketers such as myself seeking to work in the niche area of marketing research need to gain a clear and current understanding of how they should package themselves to become attractive to the “global” employer. Sample data obtained from <a class="reference external" href="http://Indeed.com">Indeed.com</a> (for the US market) in January 2020 was obtained to answer:</p>
+<blockquote>
+<div><p>What skills and competencies are needed in Marketing Researchers?
+What are the general characteristics of employers seeking this skillset?</p>
+</div></blockquote>
+<p><u><em><strong>Problem</strong></em></u></p>
+<p>The problem can be broken down as follows:</p>
+<ol class="simple">
+<li><p>No job-seeker can read all job postings at a given time at once</p></li>
+<li><p>Key words need to be identified that the job-seeker can take note of</p></li>
+<li><p>Skills and competencies needed in the role needed to be identified by the job-seeker so that they know what areas they would have to upskill in</p></li>
+<li><p>The general characteristics of employers seeking this skillset need to be identified</p></li>
+</ol>
+<p><u><em><strong>Solution</strong></em></u></p>
+<ol class="simple">
+<li><p>With Python, the data available at a given point in time was mined and analyzed, allowing the job seeker to “read” 900+ job postings at once</p></li>
+<li><p>Nouns tended to give the most complete information compared to verbs or pronouns when used in <em>n-grams</em> (<code class="docutils literal notranslate"><span class="pre">n</span></code> number of words analyzed as a phrase).</p></li>
+<li><p>Skills and competencies emphasised by employers were:</p>
+<ul class="simple">
+<li><p>At least 3 years of working experience</p></li>
+<li><p>Soft skills particularly the ability to manage, communicate, prioritize and multi-task all at once</p></li>
+<li><p>Prior experience in Marketing Research</p></li>
+<li><p>Prior experience in hands-on Marketing</p></li>
+</ul>
+</li>
+<li><p>Most of the frequent expressions discussed the candidate characteristics, not
+the employer characteristics</p></li>
+</ol>
 <p><u><em><strong>Resources</strong></em></u></p>
-<p>The notebook can be found
+<p>The project notebook can be found
 <a class="reference external" href="https://github.com/CeeThinwa/Python-Data-Science-Notebooks/blob/master/Amazon_Alexa_Challenge_Revised.ipynb">here</a>
-and the report can be found
+and the project report can be found
 <a class="reference external" href="https://drive.google.com/file/d/1UTNIz8CHg2-bXxo5Sb540aXk--q6ZEza/view?usp=sharing">here</a></p>
 </div>
+</div>
+<div class="section" id="how-can-we-assess-the-welfare-of-the-poor-when-they-borrow">
+<h2>How can we assess the welfare of the poor when they borrow?<a class="headerlink" href="#how-can-we-assess-the-welfare-of-the-poor-when-they-borrow" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Project Summary</p>
+<p><u><em><strong>Context</strong></em></u></p>
+<p><em><a class="reference external" href="http://Kiva.org">Kiva.org</a></em> is an online crowdfunding platform to extend financial services to poor and financially excluded people around the world. Kiva lenders have provided over $1 billion US dollars in loans to over 2 million people. In order to set investment priorities, help inform lenders, and understand their target communities, knowing the level of poverty of each borrower is critical.</p>
+<p><u><em><strong>Problem</strong></em></u></p>
+<p>The problem can be broken down as follows:</p>
 <ol class="simple">
-<li><p><a class="reference internal" href="kiva.html"><span class="doc std std-doc">Supplementing data sources to estimate the welfare level of Kiva borrowers</span></a></p></li>
+<li><p>What is the welfare of Kiva borrowers, relative to their purchasing power?</p></li>
+<li><p>In which communities are Kiva having the most impact?</p></li>
 </ol>
+<p>For the locations in which Kiva has active loans, the objective is to pair Kiva’s data with additional data sources to estimate the welfare level of borrowers in specific regions, based on shared economic and demographic characteristics.</p>
+<p><u><em><strong>Solution</strong></em></u></p>
+<ol class="simple">
+<li><p>The welfare of KIVA borrowers overall is varied</p>
+<ul class="simple">
+<li><p>Few borrowers are taking loans for personal use, and that’s a good thing</p></li>
+<li><p>A good number of the most valuable loans (up to 50,000 US dollars) are taken up by social impact startups, which are in turn working with local communities; this makes impact more indirect</p></li>
+<li><p>countries that have many more people in need like Burkina Faso, Sierra Leone and Mali have a high debt burden, trapping borrowers from these countries in poverty even when they borrow small amounts</p></li>
+</ul>
+</li>
+<li><p>Massive impact is being achieved for Kenyan men and Filipino women, because the loans are small enough to pay back and monthly repayments are taking up only 50% or less of their monthly income</p></li>
+</ol>
+<p><u><em><strong>Resources</strong></em></u></p>
+<p>The project report can be found <a class="reference internal" href="kiva.html"><span class="doc std std-doc">here</span></a></p>
+<p><a class="reference external" href="https://github.com/CeeThinwa/assignment-1-CeeThinwa/blob/master/KIVA%20Analysis.ipynb">https://github.com/CeeThinwa/assignment-1-CeeThinwa/blob/master/KIVA Analysis.ipynb</a></p>
+</div>
+</div>
+<div class="section" id="how-can-we-learn-more-about-kenyans-on-twitter">
+<h2>How can we learn more about Kenyans on Twitter?<a class="headerlink" href="#how-can-we-learn-more-about-kenyans-on-twitter" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Project Summary</p>
+<p><u><em><strong>Context</strong></em></u></p>
+<p>Kenya is a linguistically diverse country with over 40+ languages, but current NLP solutions
+serving her inhabitants do not capture this linguistic diversity. Furthermore, many Kenyans
+code-switch, particularly in informal settings and this requires a fresh approach to conducting NLP
+tasks on data generated by Kenyans.</p>
+<p><u><em><strong>Problem</strong></em></u></p>
+<p>There is a need to build a Natural Language Processing solution for multilingual, code-switching
+cultures.</p>
+<p><u><em><strong>Solution</strong></em></u></p>
+<p>This NLP solution can be built using data from Kenyans that</p>
+<ol class="simple">
+<li><p>are active on the Twitter platform and</p></li>
+<li><p>unite under the <code class="docutils literal notranslate"><span class="pre">#KOT</span></code> hashtag.</p></li>
+</ol>
+<p><u><em><strong>Resources</strong></em></u></p>
+<p>My solution was presented in the form of a talk (which you can watch below), a
+<a class="reference external" href="https://github.com/CeeThinwa/Delta-Analytics-2021-CT-Project/blob/main/KOT%20EDA.ipynb">Jupyter notebook</a>
+and <a class="reference external" href="https://github.com/CeeThinwa/Delta-Analytics-2021-CT-Project/blob/main/Delta%20Analytics%20-%20Teaching%20Fellow%20Cynthia.pdf">slides</a></p>
+<p><u>Abstract</u></p>
+<p><em>Kenya is a linguistically diverse country with over 40+ languages, but current NLP solutions serving her inhabitants do not capture this linguistic diversity. Furthermore, many Kenyans code-switch, particularly in informal settings and this requires a fresh approach to conducting NLP tasks on data generated by Kenyans.</em></p>
+<p><em>The aim of this project is therefore to <strong>build a Natural Language Processing solution for multilingual, code-switching cultures</strong>, using sentiment analysis on Kenyan social media data as a use case. The data used was all tweets containing #KOT written during 1st June 2020 - 1st June 2021; #KOT is a hashtag that Kenyans on Twitter typically use to identify themselves. A problem-solving and project management framework, the <em>NLP toolbox</em>, was used to come up with this solution.</em></p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
