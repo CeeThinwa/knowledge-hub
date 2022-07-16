@@ -41,8 +41,8 @@ My project notebook can be found
 
 Data is disrupting professions everywhere, and academia is fighting to keep up (or is it already too late?) resulting in many job-seekers seeking to plug into research oriented roles that can make their professions better. Marketers such as myself seeking to work in the niche area of marketing research need to gain a clear and current understanding of how they should package themselves to become attractive to the "global" employer. Sample data obtained from Indeed.com (for the US market) in January 2020 was obtained to answer:
 
-> What skills and competencies are needed in Marketing Researchers?
-> What are the general characteristics of employers seeking this skillset?
+>1. What skills and competencies are needed in Marketing Researchers?
+>2. What are the general characteristics of employers seeking this skillset?
 
 <u>_**Problem**_</u>
 
