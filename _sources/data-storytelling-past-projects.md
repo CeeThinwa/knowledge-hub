@@ -105,7 +105,7 @@ https://github.com/CeeThinwa/assignment-1-CeeThinwa/blob/master/KIVA%20Analysis.
 
 :::
 
-## How can we learn more about Kenyans on Twitter?
+## How can we learn more about Kenyans?
 
 :::{admonition} Project Summary
 :class: tip
@@ -134,8 +134,6 @@ My solution was presented in the form of a talk (which you can watch below), a
  and [slides](https://github.com/CeeThinwa/Delta-Analytics-2021-CT-Project/blob/main/Delta%20Analytics%20-%20Teaching%20Fellow%20Cynthia.pdf)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2TUK9QytzFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
 
 <u>Abstract</u>
 
