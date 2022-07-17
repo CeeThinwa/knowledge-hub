@@ -48,7 +48,7 @@ Data is disrupting professions everywhere, and academia is fighting to keep up (
 
 The problem can be broken down as follows:
 1. No job-seeker can read all job postings at a given time at once
-2. Key words need to be identified that the job-seeker can take note of
+2. Key-words need to be identified that the job-seeker can take note of
 3. Skills and competencies needed in the role needed to be identified by the job-seeker so that they know what areas they would have to upskill in
 4. The general characteristics of employers seeking this skillset need to be identified
 
@@ -100,8 +100,6 @@ For the locations in which Kiva has active loans, the objective is to pair Kiva'
 <u>_**Resources**_</u>
 
 The project report can be found [here](kiva.ipynb)
-
-https://github.com/CeeThinwa/assignment-1-CeeThinwa/blob/master/KIVA%20Analysis.ipynb
 
 :::
 

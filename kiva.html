@@ -305,6 +305,11 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusions">
+   Conclusions
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -402,6 +407,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusions">
+   Conclusions
+  </a>
  </li>
 </ul>
 
@@ -848,10 +858,7 @@ regional_lts shape: (15736, 21)
     </tr>
   </tbody>
 </table>
-</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: location_data 
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: location_data 
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -2675,149 +2682,16 @@ over the time period the data was collected.
 <h3>Global welfare<a class="headerlink" href="#global-welfare" title="Permalink to this headline">¶</a></h3>
 <p>In this section, we seek to explore the data to understand the financial well-being of various countries with the aid of an external dataset</p>
 <p><em><strong>1. What percentage of their monthly expenditure does the average citizen devote to loan repayments?</strong></em></p>
+<p>The purchasing power of various countries of the world can be visualized in the form of the monthly income table below:</p>
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Made a copy of the data: </span>
 <span class="n">expenditure</span> <span class="o">=</span> <span class="n">PCE_data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
-<span class="n">regions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;East Asia and Pacific&#39;</span><span class="p">,</span> <span class="s1">&#39;Europe and Central Asia&#39;</span><span class="p">,</span>
-           <span class="s1">&#39;Latin America and the Caribbean&#39;</span><span class="p">,</span> <span class="s1">&#39;Middle East and North Africa&#39;</span><span class="p">,</span>
-           <span class="s1">&#39;Other High Income&#39;</span><span class="p">,</span> <span class="s1">&#39;South Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Sub-Saharan Africa&#39;</span><span class="p">]</span>
-
-<span class="c1"># Reference rows:</span>
-<span class="n">row_indices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">57</span><span class="p">,</span><span class="mi">89</span><span class="p">,</span><span class="mi">104</span><span class="p">,</span><span class="mi">167</span><span class="p">,</span><span class="mi">176</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">row_indices</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">expenditure</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>East Asia and Pacific
-Bulgaria
-Chile
-Australia
-Greenland
-Mauritania
-Sierra Leone
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expenditure</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(185, 61)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a regional column for the data</span>
-<span class="n">expenditure</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;region&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Regional column changes from&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">row_indices</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">expenditure</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">54</span><span class="p">])</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">to:&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="n">expenditure</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">26</span><span class="p">]</span> <span class="o">=</span> <span class="n">regions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">expenditure</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">26</span><span class="p">:</span><span class="mi">57</span><span class="p">]</span> <span class="o">=</span> <span class="n">regions</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">expenditure</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">57</span><span class="p">:</span><span class="mi">89</span><span class="p">]</span> <span class="o">=</span> <span class="n">regions</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">expenditure</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">89</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">104</span><span class="p">]</span> <span class="o">=</span> <span class="n">regions</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
-<span class="n">expenditure</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">104</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">167</span><span class="p">]</span> <span class="o">=</span> <span class="n">regions</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">expenditure</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">167</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">176</span><span class="p">]</span> <span class="o">=</span> <span class="n">regions</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
-<span class="n">expenditure</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">176</span><span class="p">:</span><span class="mi">225</span><span class="p">]</span> <span class="o">=</span> <span class="n">regions</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">row_indices</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">expenditure</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="mi">54</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Regional column changes from 
-
-6,988.29
-8,205.04
-4,738.27
-25,169.20
-18,483.00
-6,287.90
-4,588.56
-
-to: 
-
-nan
-4,555.65
-8,704.49
-30,337.90
-18,828.90
-933.86
-530.94
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;From:&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">row_indices</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> is in </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">expenditure</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">expenditure</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="mi">54</span><span class="p">]))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;to:&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="c1"># Delete header rows</span>
-<span class="n">expenditure</span> <span class="o">=</span> <span class="n">expenditure</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">row_indices</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">row_indices</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> is in </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">expenditure</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">expenditure</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="mi">54</span><span class="p">]))</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;Expenditure new shape:&#39;</span><span class="p">,</span><span class="n">expenditure</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>From: 
-
-East Asia and Pacific is in nan
-Bulgaria is in 4,555.65
-Chile is in 8,704.49
-Australia is in 30,337.90
-Greenland is in 18,828.90
-Mauritania is in 933.86
-Sierra Leone is in 530.94
-
- to: 
-
-American Samoa is in 6,988.29
-Czech Republic is in 9,773.87
-Cuba is in 3,158.76
-Belgium is in 23,067.40
-Israel is in 18,198.20
-Rwanda is in 563.96
-Zambia is in nan
-
- Expenditure new shape: (178, 62)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert any &#39;n/a&#39; strings to NaN values</span>
+<span class="c1"># Convert any &#39;n/a&#39; strings to NaN values</span>
 <span class="n">expenditure</span> <span class="o">=</span> <span class="n">expenditure</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;n/a&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
 
 <span class="c1"># Convert any numeric data stored as a string into a decimal</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">expenditure</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
-
 <span class="n">cols</span> <span class="o">=</span> <span class="n">expenditure</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">61</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">:</span>
@@ -2825,49 +2699,13 @@ Zambia is in nan
 
 <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">:</span>
     <span class="n">expenditure</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">expenditure</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float64&#39;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">expenditure</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Country    object
-1960       object
-1961       object
-1962       object
-1963       object
-            ...  
-2016       object
-2017       object
-2018       object
-2019       object
-region     object
-Length: 62, dtype: object
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Country     object
-1960       float64
-1961       float64
-1962       float64
-1963       float64
-            ...   
-2016       float64
-2017       float64
-2018       float64
-2019       float64
-region      object
-Length: 62, dtype: object
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MonthlyExpenditure</span> <span class="o">=</span> <span class="p">(</span><span class="n">expenditure</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;2014&#39;</span><span class="p">:</span><span class="s1">&#39;2017&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span><span class="o">/</span><span class="mi">12</span>
+    
+<span class="n">MonthlyExpenditure</span> <span class="o">=</span> <span class="p">(</span><span class="n">expenditure</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;2013&#39;</span><span class="p">:</span><span class="s1">&#39;2017&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span><span class="o">/</span><span class="mi">12</span>
 
 <span class="n">MonthlyExpenditure</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;country&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">expenditure</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span>
 
-<span class="n">MonthlyExpenditure</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;region&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">expenditure</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span>
+<span class="c1"># Drop any null columns</span>
+<span class="n">MonthlyExpenditure</span> <span class="o">=</span> <span class="n">MonthlyExpenditure</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
 
 <span class="n">MonthlyExpenditure</span>
 </pre></div>
@@ -2892,59 +2730,59 @@ Length: 62, dtype: object
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>2013</th>
       <th>2014</th>
       <th>2015</th>
       <th>2016</th>
       <th>2017</th>
       <th>country</th>
-      <th>region</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>1</th>
+      <td>582.357500</td>
       <td>586.271667</td>
       <td>584.475000</td>
       <td>591.529167</td>
       <td>592.816667</td>
       <td>American Samoa</td>
-      <td>East Asia and Pacific</td>
     </tr>
     <tr>
       <th>2</th>
+      <td>61.932500</td>
       <td>63.661667</td>
       <td>66.361667</td>
       <td>69.737500</td>
       <td>71.814167</td>
       <td>Cambodia</td>
-      <td>East Asia and Pacific</td>
     </tr>
     <tr>
       <th>3</th>
+      <td>175.452500</td>
       <td>190.616667</td>
       <td>206.155833</td>
       <td>223.367500</td>
       <td>243.301667</td>
       <td>China</td>
-      <td>East Asia and Pacific</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Fiji</td>
-      <td>East Asia and Pacific</td>
     </tr>
     <tr>
       <th>5</th>
+      <td>164.263333</td>
       <td>170.690000</td>
       <td>176.700000</td>
       <td>183.363333</td>
       <td>190.249167</td>
       <td>Indonesia</td>
-      <td>East Asia and Pacific</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>121.336667</td>
+      <td>124.944167</td>
+      <td>137.075833</td>
+      <td>141.720833</td>
+      <td>145.214167</td>
+      <td>Kiribati</td>
     </tr>
     <tr>
       <th>...</th>
@@ -2956,55 +2794,57 @@ Length: 62, dtype: object
       <td>...</td>
     </tr>
     <tr>
+      <th>179</th>
+      <td>91.753333</td>
+      <td>91.670000</td>
+      <td>92.621667</td>
+      <td>93.139167</td>
+      <td>93.662500</td>
+      <td>Sudan</td>
+    </tr>
+    <tr>
       <th>180</th>
+      <td>42.089167</td>
       <td>42.224167</td>
       <td>43.976667</td>
       <td>43.604167</td>
       <td>43.282500</td>
       <td>Tanzania</td>
-      <td>Sub-Saharan Africa</td>
     </tr>
     <tr>
       <th>181</th>
+      <td>36.333333</td>
       <td>37.132500</td>
       <td>37.786667</td>
       <td>38.175000</td>
       <td>37.630833</td>
       <td>Togo</td>
-      <td>Sub-Saharan Africa</td>
     </tr>
     <tr>
       <th>182</th>
+      <td>54.592500</td>
       <td>54.118333</td>
       <td>57.973333</td>
       <td>56.637500</td>
       <td>54.675000</td>
       <td>Uganda</td>
-      <td>Sub-Saharan Africa</td>
-    </tr>
-    <tr>
-      <th>183</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Zambia</td>
-      <td>Sub-Saharan Africa</td>
     </tr>
     <tr>
       <th>184</th>
+      <td>84.350833</td>
       <td>80.766667</td>
       <td>94.590000</td>
       <td>83.371667</td>
       <td>83.315833</td>
       <td>Zimbabwe</td>
-      <td>Sub-Saharan Africa</td>
     </tr>
   </tbody>
 </table>
-<p>178 rows × 6 columns</p>
+<p>156 rows × 6 columns</p>
 </div></div></div>
 </div>
+<br>
+<p>In turn, the monthly repayments of various countries of the world can be visualized in the form of the monthly repayments table below:</p>
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the monthly repayment on each loan</span>
@@ -3162,6 +3002,8 @@ Length: 62, dtype: object
 <p>85 rows × 6 columns</p>
 </div></div></div>
 </div>
+<br>
+<p>We need to find the countries shared in common between the <a class="reference external" href="http://Kiva.org">Kiva.org</a> and the UN dataset as follows:</p>
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># compare country/territory labels in the 2 datasets</span>
@@ -3188,239 +3030,42 @@ Length: 62, dtype: object
  &#39;Timor-Leste&#39; &#39;Togo&#39; &#39;Turkey&#39; &#39;Uganda&#39; &#39;Ukraine&#39; &#39;United States&#39;
  &#39;Vanuatu&#39; &#39;Vietnam&#39; &#39;Yemen&#39; &#39;Zambia&#39; &#39;Zimbabwe&#39;]
 
-[&#39;American Samoa&#39; &#39;Cambodia&#39; &#39;China&#39; &#39;Fiji&#39; &#39;Indonesia&#39; &#39;Kiribati&#39;
- &quot;Lao People&#39;s Democratic Republic&quot; &#39;Malaysia&#39; &#39;Marshall Islands&#39;
- &#39;Mongolia&#39; &#39;Myanmar&#39; &#39;Northern Mariana Islands&#39; &#39;Palau&#39; &#39;Philippines&#39;
- &#39;Thailand&#39; &#39;Timor-Leste&#39; &#39;Tonga&#39; &#39;Vanuatu&#39; &#39;Vietnam&#39;
- &#39;Europe and Central Asia&#39; &#39;Albania&#39; &#39;Armenia&#39; &#39;Azerbaijan&#39; &#39;Belarus&#39;
- &#39;Bosnia and Herzegovina&#39; &#39;Croatia&#39; &#39;Czech Republic&#39; &#39;Estonia&#39; &#39;Georgia&#39;
- &#39;Hungary&#39; &#39;Kazakhstan&#39; &#39;Kosovo&#39; &#39;Kyrgyz Republic&#39; &#39;Latvia&#39; &#39;Lithuania&#39;
- &#39;Moldova&#39; &#39;Montenegro&#39; &#39;North Macedonia&#39; &#39;Poland&#39; &#39;Romania&#39;
- &#39;Russian Federation&#39; &#39;Serbia&#39; &#39;Slovak Republic&#39; &#39;Slovenia&#39; &#39;Tajikistan&#39;
- &#39;Turkey&#39; &#39;Turkmenistan&#39; &#39;Ukraine&#39; &#39;Uzbekistan&#39;
- &#39;Latin America and the Caribbean&#39; &#39;Argentina&#39; &#39;Barbados&#39; &#39;Belize&#39;
- &#39;Bolivia&#39; &#39;Brazil&#39; &#39;Colombia&#39; &#39;Costa Rica&#39; &#39;Cuba&#39; &#39;Dominican Republic&#39;
- &#39;Ecuador&#39; &#39;El Salvador&#39; &#39;Guatemala&#39; &#39;Haiti&#39; &#39;Honduras&#39; &#39;Jamaica&#39; &#39;Mexico&#39;
- &#39;Nicaragua&#39; &#39;Panama&#39; &#39;Paraguay&#39; &#39;Peru&#39; &#39;Suriname&#39; &#39;Uruguay&#39;
- &#39;Venezuela, Republica Bolivariana de&#39; &#39;Middle East and North Africa&#39;
- &#39;Algeria&#39; &#39;Egypt, Arab Republic of&#39; &#39;Iran, Islamic Republic of&#39; &#39;Jordan&#39;
- &#39;Lebanon&#39; &#39;Morocco&#39; &#39;Oman&#39; &#39;Tunisia&#39; &#39;West Bank and Gaza&#39;
- &#39;Other high Income&#39; &#39;Antigua and Barbuda&#39; &#39;Aruba&#39; &#39;Austria&#39;
- &#39;Bahamas, The&#39; &#39;Bahrain&#39; &#39;Belgium&#39; &#39;Bermuda&#39; &#39;Brunei Darussalam&#39; &#39;Canada&#39;
- &#39;Cyprus&#39; &#39;Denmark&#39; &#39;Faroe Islands&#39; &#39;Finland&#39; &#39;France&#39; &#39;Germany&#39; &#39;Greece&#39;
- &#39;Guam&#39; &#39;Hong Kong SAR, China&#39; &#39;Iceland&#39; &#39;Ireland&#39; &#39;Israel&#39; &#39;Italy&#39;
- &#39;Japan&#39; &#39;Korea, Republic of&#39; &#39;Kuwait&#39; &#39;Luxembourg&#39; &#39;Macao SAR, China&#39;
- &#39;Malta&#39; &#39;Netherlands&#39; &#39;New Zealand&#39; &#39;Norway&#39; &#39;Portugal&#39; &#39;Puerto Rico&#39;
- &#39;Qatar&#39; &#39;Saudi Arabia&#39; &#39;Singapore&#39; &#39;Spain&#39; &#39;Sweden&#39; &#39;Switzerland&#39;
+[&#39;American Samoa&#39; &#39;Cambodia&#39; &#39;China&#39; &#39;Indonesia&#39; &#39;Kiribati&#39; &#39;Malaysia&#39;
+ &#39;Marshall Islands&#39; &#39;Mongolia&#39; &#39;Northern Mariana Islands&#39; &#39;Palau&#39;
+ &#39;Philippines&#39; &#39;Thailand&#39; &#39;Timor-Leste&#39; &#39;Vietnam&#39; &#39;Albania&#39; &#39;Armenia&#39;
+ &#39;Belarus&#39; &#39;Bosnia and Herzegovina&#39; &#39;Bulgaria&#39; &#39;Croatia&#39; &#39;Czech Republic&#39;
+ &#39;Estonia&#39; &#39;Georgia&#39; &#39;Hungary&#39; &#39;Kazakhstan&#39; &#39;Kosovo&#39; &#39;Kyrgyz Republic&#39;
+ &#39;Latvia&#39; &#39;Lithuania&#39; &#39;Moldova&#39; &#39;Montenegro&#39; &#39;North Macedonia&#39; &#39;Poland&#39;
+ &#39;Romania&#39; &#39;Russian Federation&#39; &#39;Serbia&#39; &#39;Slovak Republic&#39; &#39;Slovenia&#39;
+ &#39;Turkey&#39; &#39;Ukraine&#39; &#39;Uzbekistan&#39; &#39;Argentina&#39; &#39;Belize&#39; &#39;Bolivia&#39; &#39;Brazil&#39;
+ &#39;Chile&#39; &#39;Colombia&#39; &#39;Costa Rica&#39; &#39;Cuba&#39; &#39;Dominican Republic&#39; &#39;Ecuador&#39;
+ &#39;El Salvador&#39; &#39;Guatemala&#39; &#39;Haiti&#39; &#39;Honduras&#39; &#39;Jamaica&#39; &#39;Mexico&#39;
+ &#39;Nicaragua&#39; &#39;Panama&#39; &#39;Paraguay&#39; &#39;Peru&#39; &#39;Uruguay&#39; &#39;Algeria&#39;
+ &#39;Egypt, Arab Republic of&#39; &#39;Iran, Islamic Republic of&#39; &#39;Jordan&#39; &#39;Lebanon&#39;
+ &#39;Morocco&#39; &#39;Oman&#39; &#39;West Bank and Gaza&#39; &#39;Australia&#39; &#39;Austria&#39;
+ &#39;Bahamas, The&#39; &#39;Bahrain&#39; &#39;Belgium&#39; &#39;Brunei Darussalam&#39; &#39;Canada&#39; &#39;Cyprus&#39;
+ &#39;Denmark&#39; &#39;Finland&#39; &#39;France&#39; &#39;Germany&#39; &#39;Greece&#39; &#39;Greenland&#39; &#39;Guam&#39;
+ &#39;Hong Kong SAR, China&#39; &#39;Iceland&#39; &#39;Ireland&#39; &#39;Israel&#39; &#39;Italy&#39; &#39;Japan&#39;
+ &#39;Korea, Republic of&#39; &#39;Kuwait&#39; &#39;Luxembourg&#39; &#39;Macao SAR, China&#39;
+ &#39;Netherlands&#39; &#39;New Zealand&#39; &#39;Norway&#39; &#39;Portugal&#39; &#39;Puerto Rico&#39;
+ &#39;Saudi Arabia&#39; &#39;Singapore&#39; &#39;Spain&#39; &#39;Sweden&#39; &#39;Switzerland&#39;
  &#39;United Arab Emirates&#39; &#39;United Kingdom&#39; &#39;United States&#39;
- &#39;Virgin Islands, US&#39; &#39;South Asia&#39; &#39;Bangladesh&#39; &#39;Bhutan&#39; &#39;India&#39; &#39;Nepal&#39;
- &#39;Pakistan&#39; &#39;Sri Lanka&#39; &#39;Sub-Saharan Africa&#39; &#39;Angola&#39; &#39;Benin&#39; &#39;Botswana&#39;
- &#39;Burkina Faso&#39; &#39;Burundi&#39; &#39;Cabo Verde&#39; &#39;Cameroon&#39;
- &#39;Central African Republic&#39; &#39;Chad&#39; &#39;Comoros&#39;
+ &#39;Virgin Islands, US&#39; &#39;Bangladesh&#39; &#39;Bhutan&#39; &#39;India&#39; &#39;Nepal&#39; &#39;Pakistan&#39;
+ &#39;Sri Lanka&#39; &#39;Angola&#39; &#39;Benin&#39; &#39;Botswana&#39; &#39;Burkina Faso&#39; &#39;Burundi&#39;
+ &#39;Cabo Verde&#39; &#39;Cameroon&#39; &#39;Central African Republic&#39; &#39;Chad&#39; &#39;Comoros&#39;
  &#39;Congo, Democratic Republic of&#39; &#39;Congo, Republic of&#39; &quot;Cote d&#39;Ivoire&quot;
- &#39;Equatorial Guinea&#39; &#39;Eritrea&#39; &#39;Eswatini&#39; &#39;Gabon&#39; &#39;Gambia, The&#39; &#39;Ghana&#39;
- &#39;Guinea&#39; &#39;Guinea-Bissau&#39; &#39;Kenya&#39; &#39;Lesotho&#39; &#39;Liberia&#39; &#39;Madagascar&#39;
- &#39;Malawi&#39; &#39;Mali&#39; &#39;Mauritius&#39; &#39;Mozambique&#39; &#39;Namibia&#39; &#39;Niger&#39; &#39;Nigeria&#39;
- &#39;Rwanda&#39; &#39;Senegal&#39; &#39;Seychelles&#39; &#39;South Africa&#39; &#39;South Sudan&#39; &#39;Sudan&#39;
- &#39;Tanzania&#39; &#39;Togo&#39; &#39;Uganda&#39; &#39;Zambia&#39; &#39;Zimbabwe&#39;]
+ &#39;Equatorial Guinea&#39; &#39;Eswatini&#39; &#39;Gabon&#39; &#39;Gambia, The&#39; &#39;Ghana&#39; &#39;Guinea&#39;
+ &#39;Guinea-Bissau&#39; &#39;Kenya&#39; &#39;Lesotho&#39; &#39;Liberia&#39; &#39;Madagascar&#39; &#39;Malawi&#39; &#39;Mali&#39;
+ &#39;Mauritania&#39; &#39;Mauritius&#39; &#39;Mozambique&#39; &#39;Namibia&#39; &#39;Niger&#39; &#39;Nigeria&#39;
+ &#39;Rwanda&#39; &#39;Senegal&#39; &#39;Sierra Leone&#39; &#39;South Africa&#39; &#39;Sudan&#39; &#39;Tanzania&#39;
+ &#39;Togo&#39; &#39;Uganda&#39; &#39;Zimbabwe&#39;]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tab8</span><span class="p">[</span><span class="n">tab8</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">MonthlyExpenditure</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="kc">False</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>country</th>
-      <th>monthly_loan_repayment 2013</th>
-      <th>monthly_loan_repayment 2014</th>
-      <th>monthly_loan_repayment 2015</th>
-      <th>monthly_loan_repayment 2016</th>
-      <th>monthly_loan_repayment 2017</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Afghanistan</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>750.000000</td>
-      <td>1333.333333</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>Chile</td>
-      <td>844.464286</td>
-      <td>747.916667</td>
-      <td>876.603303</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Congo</td>
-      <td>NaN</td>
-      <td>985.934278</td>
-      <td>949.294355</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>Cote D'Ivoire</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>5000.000000</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>Egypt</td>
-      <td>NaN</td>
-      <td>54.054388</td>
-      <td>57.473545</td>
-      <td>56.541037</td>
-      <td>29.336612</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>Iraq</td>
-      <td>173.604827</td>
-      <td>198.899334</td>
-      <td>186.551621</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>35</th>
-      <td>Kyrgyzstan</td>
-      <td>95.256498</td>
-      <td>87.512062</td>
-      <td>81.251923</td>
-      <td>66.830975</td>
-      <td>69.387298</td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>Mauritania</td>
-      <td>NaN</td>
-      <td>454.545455</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>48</th>
-      <td>Myanmar (Burma)</td>
-      <td>NaN</td>
-      <td>1084.647495</td>
-      <td>301.828805</td>
-      <td>153.652721</td>
-      <td>80.601104</td>
-    </tr>
-    <tr>
-      <th>54</th>
-      <td>Palestine</td>
-      <td>60.239473</td>
-      <td>54.171694</td>
-      <td>58.878974</td>
-      <td>62.737288</td>
-      <td>60.043055</td>
-    </tr>
-    <tr>
-      <th>61</th>
-      <td>Saint Vincent and the Grenadines</td>
-      <td>NaN</td>
-      <td>43.601190</td>
-      <td>91.355946</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>62</th>
-      <td>Samoa</td>
-      <td>45.125878</td>
-      <td>64.451621</td>
-      <td>56.148887</td>
-      <td>63.796669</td>
-      <td>60.880531</td>
-    </tr>
-    <tr>
-      <th>64</th>
-      <td>Sierra Leone</td>
-      <td>37.467588</td>
-      <td>61.049756</td>
-      <td>144.203680</td>
-      <td>120.683016</td>
-      <td>62.180512</td>
-    </tr>
-    <tr>
-      <th>65</th>
-      <td>Solomon Islands</td>
-      <td>NaN</td>
-      <td>50.795455</td>
-      <td>64.064459</td>
-      <td>79.784429</td>
-      <td>69.712160</td>
-    </tr>
-    <tr>
-      <th>66</th>
-      <td>Somalia</td>
-      <td>NaN</td>
-      <td>272.774699</td>
-      <td>230.544232</td>
-      <td>564.285714</td>
-      <td>510.714286</td>
-    </tr>
-    <tr>
-      <th>73</th>
-      <td>The Democratic Republic of the Congo</td>
-      <td>692.234105</td>
-      <td>766.169315</td>
-      <td>528.320730</td>
-      <td>405.974124</td>
-      <td>416.532751</td>
-    </tr>
-    <tr>
-      <th>82</th>
-      <td>Yemen</td>
-      <td>62.567830</td>
-      <td>57.303204</td>
-      <td>60.290609</td>
-      <td>43.056244</td>
-      <td>42.720586</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># MATCH COUNTRIES IN KIVA LOAN DATA AND THOSE IN THE ORIGINAL DATASET </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># MATCH COUNTRIES IN KIVA LOAN DATA AND THOSE IN THE ORIGINAL DATASET IF THEY HAVE DIFFERENT SPELLINGS </span>
 
 <span class="n">tab8</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">16</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Congo, Republic of&#39;</span>
 <span class="n">tab8</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">18</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Cote d&#39;Ivoire&quot;</span>
@@ -3437,6 +3082,7 @@ Length: 62, dtype: object
 <span class="n">tab8</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">73</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Congo, Democratic Republic of&#39;</span>
 <span class="c1"># tab8.iloc[82,0] missing in other dataset</span>
 
+<span class="c1">#CHECK FOR COUNTRIES NOT WITHIN EITHER ONE OF THE DATASET</span>
 <span class="n">tab8</span><span class="p">[</span><span class="n">tab8</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">MonthlyExpenditure</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="kc">False</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -3479,12 +3125,12 @@ Length: 62, dtype: object
       <td>NaN</td>
     </tr>
     <tr>
-      <th>13</th>
-      <td>Chile</td>
-      <td>844.464286</td>
-      <td>747.916667</td>
-      <td>876.603303</td>
-      <td>NaN</td>
+      <th>3</th>
+      <td>Azerbaijan</td>
+      <td>105.071779</td>
+      <td>108.725509</td>
+      <td>82.548595</td>
+      <td>59.692751</td>
       <td>NaN</td>
     </tr>
     <tr>
@@ -3497,13 +3143,22 @@ Length: 62, dtype: object
       <td>NaN</td>
     </tr>
     <tr>
-      <th>43</th>
-      <td>Mauritania</td>
+      <th>36</th>
+      <td>Lao People's Democratic Republic</td>
       <td>NaN</td>
-      <td>454.545455</td>
+      <td>122.887368</td>
+      <td>76.689249</td>
+      <td>78.100108</td>
+      <td>55.966610</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>Myanmar</td>
       <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>1084.647495</td>
+      <td>301.828805</td>
+      <td>153.652721</td>
+      <td>80.601104</td>
     </tr>
     <tr>
       <th>61</th>
@@ -3524,15 +3179,6 @@ Length: 62, dtype: object
       <td>60.880531</td>
     </tr>
     <tr>
-      <th>64</th>
-      <td>Sierra Leone</td>
-      <td>37.467588</td>
-      <td>61.049756</td>
-      <td>144.203680</td>
-      <td>120.683016</td>
-      <td>62.180512</td>
-    </tr>
-    <tr>
       <th>65</th>
       <td>Solomon Islands</td>
       <td>NaN</td>
@@ -3551,6 +3197,42 @@ Length: 62, dtype: object
       <td>510.714286</td>
     </tr>
     <tr>
+      <th>68</th>
+      <td>South Sudan</td>
+      <td>NaN</td>
+      <td>75.533234</td>
+      <td>44.681710</td>
+      <td>NaN</td>
+      <td>6250.000000</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>Suriname</td>
+      <td>NaN</td>
+      <td>331.387203</td>
+      <td>232.768221</td>
+      <td>263.640545</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>Tajikistan</td>
+      <td>67.230372</td>
+      <td>66.099868</td>
+      <td>53.060960</td>
+      <td>40.184397</td>
+      <td>37.572885</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>Vanuatu</td>
+      <td>NaN</td>
+      <td>62.500000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
       <th>82</th>
       <td>Yemen</td>
       <td>62.567830</td>
@@ -3559,10 +3241,21 @@ Length: 62, dtype: object
       <td>43.056244</td>
       <td>42.720586</td>
     </tr>
+    <tr>
+      <th>83</th>
+      <td>Zambia</td>
+      <td>NaN</td>
+      <td>81.800068</td>
+      <td>93.311061</td>
+      <td>107.013918</td>
+      <td>74.278048</td>
+    </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
+<p>The table above shows countries that are missing in either of the datasets and will not be included.</p>
+<p><strong>The percentage of monthly expenditure that the average citizen devote to loan repayments is visualized below:</strong></p>
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initial status message</span>
@@ -3578,21 +3271,207 @@ Length: 62, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The shape of tab8 before merge:  (85, 6)
-The shape of tab8 after merge:  (75, 11)
+The shape of tab8 after merge:  (70, 11)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;2014&#39;</span><span class="p">,</span><span class="s1">&#39;2015&#39;</span><span class="p">,</span><span class="s1">&#39;2016&#39;</span><span class="p">,</span><span class="s1">&#39;2017&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;2013&#39;</span><span class="p">,</span><span class="s1">&#39;2014&#39;</span><span class="p">,</span><span class="s1">&#39;2015&#39;</span><span class="p">,</span><span class="s1">&#39;2016&#39;</span><span class="p">,</span><span class="s1">&#39;2017&#39;</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years</span><span class="p">:</span>
     <span class="n">tab8</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="sa">f</span><span class="s1">&#39;% of monthly expenditure, </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">tab8</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;monthly_loan_repayment </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">tab8</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span>
     <span class="n">tab8</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;% of monthly expenditure, </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">tab8</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;% of monthly expenditure, </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
     <span class="n">tab8</span> <span class="o">=</span> <span class="n">tab8</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="sa">f</span><span class="s1">&#39;monthly_loan_repayment </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="n">tab8</span> <span class="o">=</span> <span class="n">tab8</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;monthly_loan_repayment 2013&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># sort the results in descending order</span>
+<span class="n">tab8</span> <span class="o">=</span> <span class="n">tab8</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f monthly expenditure, 2017&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">tab8</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span>
+       <span class="n">tab8</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f monthly expenditure, 2017&#39;</span><span class="p">],</span>
+       <span class="n">color</span><span class="o">=</span><span class="s1">&#39;crimson&#39;</span><span class="p">)</span>
+
+<span class="c1">#plt.ylabel(&#39;Funding gap per loan&#39;)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">tab8</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">),</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+<span class="c1">#plt.xlabel(&#39;Sectors&#39;)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;COUNTRIES WITH THE HEAVIEST LOAN BURDEN&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">tab8</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span>
+       <span class="n">tab8</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">)[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f monthly expenditure, 2017&#39;</span><span class="p">],</span>
+       <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+
+<span class="c1">#plt.ylabel(&#39;Funding gap per loan&#39;)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">tab8</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">),</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+<span class="c1">#plt.xlabel(&#39;Sectors&#39;)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;COUNTRIES WITH THE LIGHTEST LOAN BURDEN&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/kiva_81_0.png" src="_images/kiva_81_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<img alt="_images/kiva_81_2.png" src="_images/kiva_81_2.png" />
+</div>
+</div>
+<br>
+<p><em><strong>2. What geographical regions have the highest and lowest levels of poverty?</strong></em></p>
+<p>This is measured by the Multidimensional Poverty Index (MPI). This was obtained as follows:</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">loan_data_copy</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of null values in the &quot;region&quot; column: &#39;</span><span class="p">,</span><span class="n">loan_data_copy</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of null values in the &quot;country_code&quot; column: &#39;</span><span class="p">,</span><span class="n">loan_data_copy</span><span class="p">[</span><span class="s1">&#39;country_code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of null values in the &quot;country&quot; column: &#39;</span><span class="p">,</span><span class="n">loan_data_copy</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;N/B: &#39;</span><span class="p">,</span> <span class="n">loan_data_copy</span><span class="p">[</span><span class="n">loan_data_copy</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">location_data</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="kc">False</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+      <span class="s1">&#39;number of loan records have regions that are not covered in both datasets.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;     &#39;</span><span class="p">,</span> <span class="n">loan_data_copy</span><span class="p">[</span><span class="n">loan_data_copy</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">location_data</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="kc">False</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+      <span class="s1">&#39;number of loan records have countries that are not covered in both datasets.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(671205, 26)
+Number of null values in the &quot;region&quot; column:  56800
+Number of null values in the &quot;country_code&quot; column:  8
+Number of null values in the &quot;country&quot; column:  0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>N/B:  558379 number of loan records have regions that are not covered in both datasets.
+      80765 number of loan records have countries that are not covered in both datasets.
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<p><strong>Based on country:</strong></p>
+<br><div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Let&#39;s first get a national average for MPI</span>
+<span class="c1"># create a pivot-table</span>
+<span class="n">tab9</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">location_data</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;MPI&#39;</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">],</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;min&#39;</span><span class="p">)</span>
+
+<span class="c1"># rename the MPI</span>
+<span class="n">tab9</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;national_minimum_of_MPI&#39;</span><span class="p">]</span>
+
+<span class="c1"># make some index entries into columns</span>
+<span class="n">tab9</span> <span class="o">=</span> <span class="n">tab9</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">])</span>
+
+<span class="c1"># sort the results in descending order</span>
+<span class="n">tab9</span> <span class="o">=</span> <span class="n">tab9</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;national_minimum_of_MPI&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># display all results</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">tab9</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">tab9</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;crimson&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;MPI (national minimum)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">tab9</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">),</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Top 10 countries&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;COUNTRIES THAT HAD THE HIGHEST LEVEL OF POVERTY AS AT 2017&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># sort the results in ascending order</span>
+<span class="n">tab9</span> <span class="o">=</span> <span class="n">tab9</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;national_minimum_of_MPI&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># display all results</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">tab9</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">tab9</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;MPI (national minimum)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">tab9</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">),</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Bottom 10 countries&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;COUNTRIES THAT HAD THE LOWEST LEVEL OF POVERTY AS AT 2017&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/kiva_85_0.png" src="_images/kiva_85_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<img alt="_images/kiva_85_2.png" src="_images/kiva_85_2.png" />
+</div>
+</div>
+<br>
+<p>Based on the results above, countries with high MPI values are not receiving the most funding - in fact, El-Salvador, a country with one of the lowest MPI scores was one of the top 10 countries that received the most funding.</p>
+<p><strong>Based on in-country regions:</strong></p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">region_data</span> <span class="o">=</span> <span class="n">loan_data_copy</span><span class="p">[</span><span class="n">loan_data_copy</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">location_data</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
+<span class="n">region_data</span> <span class="o">=</span> <span class="n">region_data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">tab10</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">region_data</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;funded_amount&#39;</span><span class="p">,</span> <span class="s1">&#39;loan_amount&#39;</span><span class="p">,</span>
+                                            <span class="s1">&#39;number_of_all_borrowers&#39;</span><span class="p">,</span> <span class="s1">&#39;monthly_loan_repayment&#39;</span><span class="p">],</span>
+                       <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">],</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+
+<span class="c1"># make some index entries into columns</span>
+<span class="n">tab10</span> <span class="o">=</span> <span class="n">tab10</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">])</span>
+
+<span class="n">tab11</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">region_data</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">],</span>
+                       <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">],</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
+
+<span class="c1"># rename the aggregated column</span>
+<span class="n">tab11</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;number_of_loans&#39;</span><span class="p">]</span>
+
+<span class="c1"># make some index entries into columns</span>
+<span class="n">tab11</span> <span class="o">=</span> <span class="n">tab11</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initial status message</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The shape of tab10 before merge: &#39;</span><span class="p">,</span> <span class="n">tab10</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># join the data, keeping only relevant entries</span>
+<span class="n">tab10</span> <span class="o">=</span> <span class="n">tab10</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">tab11</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;region&#39;</span><span class="p">)</span>
+
+<span class="c1"># final status message</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The shape of tab10 after merge: &#39;</span><span class="p">,</span> <span class="n">tab10</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+
+<span class="c1"># initial status message</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The shape of tab10 before merge: &#39;</span><span class="p">,</span> <span class="n">tab10</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># join the data, keeping only relevant entries</span>
+<span class="n">tab10</span> <span class="o">=</span> <span class="n">tab10</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">location_data</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;region&#39;</span><span class="p">)</span>
+
+<span class="c1"># final status message</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The shape of tab10 after merge: &#39;</span><span class="p">,</span> <span class="n">tab10</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The shape of tab10 before merge:  (131, 5)
+The shape of tab10 after merge:  (131, 6)
+The shape of tab10 before merge:  (131, 6)
+The shape of tab10 after merge:  (144, 14)
 </pre></div>
 </div>
 </div>
@@ -3600,136 +3479,55 @@ The shape of tab8 after merge:  (75, 11)
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sort the results in descending order</span>
-<span class="n">tab8</span> <span class="o">=</span> <span class="n">tab8</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f monthly expenditure, 2017&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">tab10</span> <span class="o">=</span> <span class="n">tab10</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;MPI&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
-<span class="c1"># and display top 10 results</span>
-<span class="n">tab8</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="c1"># display all results</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">tab10</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="n">tab10</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;crimson&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;MPI&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">tab10</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="n">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">),</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Top 10 regions&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;REGIONS THAT HAD THE HIGHEST LEVEL OF POVERTY AS AT 2017&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># sort the results in ascending order</span>
+<span class="n">tab10</span> <span class="o">=</span> <span class="n">tab10</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;MPI&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># display all results</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">tab10</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="n">tab10</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;MPI&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">tab10</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="n">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">),</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Bottom 10 regions&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;REGIONS THAT HAD THE LOWEST LEVEL OF POVERTY AS AT 2017&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>country</th>
-      <th>region</th>
-      <th>% of monthly expenditure, 2014</th>
-      <th>% of monthly expenditure, 2015</th>
-      <th>% of monthly expenditure, 2016</th>
-      <th>% of monthly expenditure, 2017</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>4</th>
-      <td>Benin</td>
-      <td>Other High Income</td>
-      <td>130.16</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>5896.09</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Cote d'Ivoire</td>
-      <td>Other High Income</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>5367.01</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Burundi</td>
-      <td>Other High Income</td>
-      <td>2079.87</td>
-      <td>2182.02</td>
-      <td>2213.73</td>
-      <td>2161.06</td>
-    </tr>
-    <tr>
-      <th>64</th>
-      <td>Congo, Democratic Republic of</td>
-      <td>Other High Income</td>
-      <td>3279.72</td>
-      <td>2191.75</td>
-      <td>1699.35</td>
-      <td>1759.69</td>
-    </tr>
-    <tr>
-      <th>56</th>
-      <td>Rwanda</td>
-      <td>South Asia</td>
-      <td>386.63</td>
-      <td>650.94</td>
-      <td>752.02</td>
-      <td>1247.52</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>Mali</td>
-      <td>South Asia</td>
-      <td>300.26</td>
-      <td>368.45</td>
-      <td>366.06</td>
-      <td>635.28</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Bhutan</td>
-      <td>Other High Income</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>503.22</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>Malawi</td>
-      <td>Other High Income</td>
-      <td>786.46</td>
-      <td>528.29</td>
-      <td>327.17</td>
-      <td>404.08</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Burkina Faso</td>
-      <td>Other High Income</td>
-      <td>394.72</td>
-      <td>427.75</td>
-      <td>395.82</td>
-      <td>305.60</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>Panama</td>
-      <td>Latin America and the Caribbean</td>
-      <td>32.14</td>
-      <td>9.46</td>
-      <td>11.19</td>
-      <td>303.95</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<img alt="_images/kiva_89_0.png" src="_images/kiva_89_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<img alt="_images/kiva_89_2.png" src="_images/kiva_89_2.png" />
 </div>
 </div>
+<p>Peru has the third highest number of loans and it is the third most funded country; based on the graph above, it has 3 regions among countries with the lowest MPI scores with the fourth region having an unknown MPI score.</p>
+</div>
+</div>
+<div class="section" id="conclusions">
+<h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<p>The welfare of borrowers that receive the largest amount of funding on Kiva can be viewed as good because:</p>
+<ul class="simple">
+<li><p>Women form the bulk of the borrowers and they receive the highest number of funds, even as they have the highest shortfall.</p></li>
+<li><p>Countries like Peru and El Salvador which based on the data have low MPI scores have received a lot of funding</p></li>
+<li><p>The most valuable partnerships are those with social impact businesses, which implies that they are able to hanle regular payments as they make an income from their goods and services</p></li>
+<li><p>Few borrowers are taking loans for personal use</p></li>
+<li><p>Kenya and the Phillipines have a lot of funding for small loans; this implies that massive impact is being achieved in these countries because the loans are small enough to pay back and monthly repayments are taking up only 50% or less of their monthly income</p></li>
+</ul>
+<p>With that said, it is concerning to see that countries that have many more people in need are not accessing large amounts of funds; furthermore, even when they do, places like Burkina Faso, Sierra Leone and Mali had a high debt burden, trapping borrowers from these countries in poverty.</p>
 </div>
 </div>
 
