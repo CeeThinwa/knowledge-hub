@@ -4,11 +4,14 @@
 format: jb-book
 root: intro
 chapters:
-- file: blending_the_4
-- file: data-storytelling
+- file: ml/blending_the_4
+- file: ml/data-storytelling
   sections:
-    - file: data-storytelling-past-projects
-    - file: kiva
-- file: nlp
-- file: computer-vision
-- file: data-pipelining
+    - file: ml/data-storytelling-past-projects
+    - file: ml/kiva
+- file: ml/nlp
+- file: ml/computer-vision
+- file: ml/data-pipelining
+- file: past-articles/past-articles
+  sections:
+    - file: past-articles/growth
