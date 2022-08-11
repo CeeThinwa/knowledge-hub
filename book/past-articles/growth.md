@@ -3,8 +3,7 @@
 **Publisher**: *Medium*<br>
 **Publishing Date**: *Apr 17, 2019*
 
-<img src="./images/growth.jpeg"
-       alt="Article 1 header" width="25%" /><br>       
+![growth](./images/growth.jpeg)<br>       
 *Artisans hard at work in Kenya (Courtesy of [Standard Media Group](https://www.standardmedia.co.ke/images/tuesday/mlixqxsbelatc5bc5938ab7dbe.jpg))*
 
 In a moment of reflection, I chose to start this blog, with the hope that I can share insights that I have learned in the rough-and-tumble world of Africa's
