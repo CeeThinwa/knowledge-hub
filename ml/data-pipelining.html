@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kiva Project (adapted from https://bit.ly/2J7G9f8) &#8212; My Knowledge Hub</title>
+    <title>Welcome to Data Pipelining! &#8212; My Knowledge Hub</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,6 +55,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Past Articles" href="../past-articles/past-articles.html" />
+    <link rel="prev" title="Welcome to Computer Vision!" href="computer-vision.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -98,19 +100,14 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../computer-vision.html">
-   Welcome to Computer Vision!
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../nlp.html">
-   Welcome to Natural Language Processing!
+  <a class="reference internal" href="blending_the_4.html">
+   Real world machine learning
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../data-storytelling.html">
+  <a class="reference internal" href="data-storytelling.html">
    Welcome to Data Storytelling!
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -118,13 +115,50 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data-storytelling-past-projects.html">
+     Past data stories
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="kiva.html">
+     Kiva Project
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../data-pipelining.html">
+  <a class="reference internal" href="nlp.html">
+   Welcome to Natural Language Processing!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="computer-vision.html">
+   Welcome to Computer Vision!
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Welcome to Data Pipelining!
   </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../past-articles/past-articles.html">
+   Past Articles
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-articles/growth.html">
+     How growth can begin for Africa’s largest employer
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -163,9 +197,9 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notebooks/kiva.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/ml/data-pipelining.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -183,23 +217,6 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/main?urlpath=tree/book/notebooks/kiva.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
         </div>
 
         <!-- Table of contents -->
@@ -211,38 +228,15 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#problem">
-   PROBLEM:
+  <a class="reference internal nav-link" href="#u-what-is-data-pipelining-u">
+   <u>
+    <em>
+     <strong>
+      What is Data Pipelining?
+     </strong>
+    </em>
+   </u>
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#context">
-     Context
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-statement">
-     Problem statement
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#personal-disclaimer">
-     Personal disclaimer
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solution">
-   SOLUTION:
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#python-packages-functions">
-     Python Packages &amp; Functions
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -254,7 +248,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Kiva Project (adapted from https://bit.ly/2J7G9f8)</h1>
+                <h1>Welcome to Data Pipelining!</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -265,38 +259,15 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#problem">
-   PROBLEM:
+  <a class="reference internal nav-link" href="#u-what-is-data-pipelining-u">
+   <u>
+    <em>
+     <strong>
+      What is Data Pipelining?
+     </strong>
+    </em>
+   </u>
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#context">
-     Context
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problem-statement">
-     Problem statement
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#personal-disclaimer">
-     Personal disclaimer
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solution">
-   SOLUTION:
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#python-packages-functions">
-     Python Packages &amp; Functions
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -307,44 +278,24 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="kiva-project-adapted-from-https-bit-ly-2j7g9f8">
-<h1>Kiva Project (adapted from <a class="reference external" href="https://bit.ly/2J7G9f8">https://bit.ly/2J7G9f8</a>)<a class="headerlink" href="#kiva-project-adapted-from-https-bit-ly-2j7g9f8" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="problem">
-<h2>PROBLEM:<a class="headerlink" href="#problem" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="context">
-<h3>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="http://Kiva.org">Kiva.org</a> is an online crowdfunding platform to extend financial services to poor and financially excluded people around the world. Kiva lenders have provided over $1 billion dollars in loans to over 2 million people.</p>
-<p>In order to set investment priorities, help inform lenders, and understand their target communities, knowing the level of poverty of each borrower is critical. However, this requires inference based on a limited set of information for each borrower.</p>
-<p>Submissions in this challenge will take the form of Python data analysis.</p>
-<p>Kiva has provided a dataset of loans issued over the 2014-2018 time period, and participants are invited to use this data as well as source external public datasets to help Kiva build models for assessing borrower welfare levels. With a stronger understanding of their borrowers and their poverty levels, Kiva will be able to better assess and maximize the impact of their work.</p>
-</div>
-<div class="section" id="problem-statement">
-<h3>Problem statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h3>
-<p>For the locations in which Kiva has active loans, the objective is to pair Kiva’s data with additional data sources to estimate the welfare level of borrowers in specific regions, based on shared economic and demographic characteristics.</p>
-<p>A good solution would connect the features of each loan or product to one of several poverty mapping datasets, which indicate the average level of welfare in a region on as granular a level as possible. Many datasets indicate the poverty rate in a given area, with varying levels of granularity. Kiva would like to be able to disaggregate these regional averages by gender, sector, or borrowing behavior in order to estimate a Kiva borrower’s level of welfare using all of the relevant information about them. Strong submissions will attempt to map vaguely described locations to more accurate geocodes.</p>
-</div>
-<div class="section" id="personal-disclaimer">
-<h3>Personal disclaimer<a class="headerlink" href="#personal-disclaimer" title="Permalink to this headline">¶</a></h3>
-<p>From a research perspective, the results obtained are never going to be a full representation of the realities that borrowers experience. It is meant to spark a discussion around how we can identify the welfare level of borrowers and improve them where we can.</p>
-</div>
-</div>
-<div class="section" id="solution">
-<h2>SOLUTION:<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="python-packages-functions">
-<h3>Python Packages &amp; Functions<a class="headerlink" href="#python-packages-functions" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Packages</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">mdates</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="welcome-to-data-pipelining">
+<span id="dp"></span><h1>Welcome to Data Pipelining!<a class="headerlink" href="#welcome-to-data-pipelining" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="u-what-is-data-pipelining-u">
+<h2><u><em><strong>What is Data Pipelining?</strong></em></u><a class="headerlink" href="#u-what-is-data-pipelining-u" title="Permalink to this headline">¶</a></h2>
+<p>Have you ever had to write a tough essay?</p>
+<p>You first had to refer to your handwritten (or digital) notes, right?</p>
+<p>You then probably had to go online and get a couple articles to read as well as the recommended textbooks from your teacher, right?</p>
+<p>After that, you were able to make shorthand notes to read based on these resources, right?</p>
+<p>What if I told you that you did data pipelining without knowing?</p>
+<p>Data pipelining is the process of</p>
+<ol class="simple">
+<li><p><em>Identifying</em> data from internal sources,</p></li>
+<li><p><em>Collecting</em> data from many sources very different from each other,</p></li>
+<li><p><em>Integrating</em> the data to be consistent,</p></li>
+<li><p><em>Validating</em> the data to be reliable and relevant,</p></li>
+<li><p><em>Organizing</em> the data in such a way that the right user can access the right data at the right time, and</p></li>
+<li><p><em>Securing</em> the data so that it is not tampered with and there is no unauthorized access.</p></li>
+</ol>
 </div>
 </div>
 
@@ -361,7 +312,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./notebooks"
+            path: "./ml"
         },
         predefinedOutput: true
     }
@@ -372,7 +323,21 @@ const thebe_selector_output = ".output, .cell_output"
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="computer-vision.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome to Computer Vision!</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../past-articles/past-articles.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Past Articles</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>

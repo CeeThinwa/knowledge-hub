@@ -21,7 +21,7 @@ AT THE SAME TIME.
 
 This can get very complicated, as shown in the visual below:
 
-![system](./images/system-50pct.svg)
+![system](../images/system-50pct.svg)
 
 So let's break it down.
 
@@ -31,7 +31,7 @@ So let's break it down.
 
 Impactful machine learning has to incorporate both real world perspectives and technical expertise. It can be visualized as shown below:
 
-![the environment](./images/system1-50pct.svg)
+![the environment](../images/system1-50pct.svg)
 
 Naturally, there is a need to bridge the gap between
 
@@ -53,7 +53,7 @@ Once user requirements are obtained, data storytellers translate them into techn
 
 This is visualized below:
 
-![the storytellers](./images/system2-50pct.svg)
+![the storytellers](../images/system2-50pct.svg)
 
 Data storytellers can include infographic creators, data scientists, data analysts, statisticians and BI (Business Intelligence) developers.
 
@@ -83,7 +83,7 @@ Enter data pipelines - A smooth way to
 
 This is illustrated by the pipes in the image below:
 
-![the pipelines](./images/system3-50pct.svg)
+![the pipelines](../images/system3-50pct.svg)
 
 Data pipeliners typically include IT, backend developers, machine learning engineers, data scientists and database administrators.
 
@@ -93,16 +93,16 @@ Now that the data infrastructure is in place, now we can enter into **machine le
 
 <u>**People**</u>
 
-![team structure](./images/system-people-50pct.gif)
+![team structure](../images/system-people-50pct.gif)
 
 (High res version of team visualization is <a href='https://raw.githubusercontent.com/CeeThinwa/knowledge-hub/main/book/images/system-people2-50pct.svg'>here</a>)
 
 Machine learning comprises of two types of teams:
 
 * Technical teams<br>
-![technical](./images/system-technical-people-50pct.svg)<br><br>
+![technical](../images/system-technical-people-50pct.svg)<br><br>
 * Non-technical teams<br>
-![non-technical](./images/system-nontechnical-people-50pct.svg)<br>
+![non-technical](../images/system-nontechnical-people-50pct.svg)<br>
 
 The technical team would comprise
 
@@ -186,7 +186,7 @@ R, MATLAB and Julia also have many packages dedicated to specific models or grou
 
 Natural Language Processing has the following data sources
 
-![NLP data sources](./images/system4-nlp-sources-50pct.svg)
+![NLP data sources](../images/system4-nlp-sources-50pct.svg)
 
 Text can be tricky because printed text (PDFs and scans) and/or text that is handwritten needs to be
 
@@ -199,11 +199,11 @@ Otherwise, text directly input into computer systems and stored in common text f
 
 Data for the computer with regards to NLP is shown in the visual below:
 
-![NLP technical data](./images/system4-nlp-technical-50pct.svg)
+![NLP technical data](../images/system4-nlp-technical-50pct.svg)
 
 On the other hand, data in use by humans in the system with regards to NLP is shown below:
 
-![NLP non-technical data](./images/system4-nlp-nontechnical-50pct.svg)
+![NLP non-technical data](../images/system4-nlp-nontechnical-50pct.svg)
 
 <u>**Key Challenges**</u>
 
@@ -231,7 +231,7 @@ Ethical challenges include:
 
 Computer Vision has the following data sources
 
-![CV data sources](./images/system4-cv-sources-50pct.svg)
+![CV data sources](../images/system4-cv-sources-50pct.svg)
 
 A pretty cool thing about digital images is that, due to use of common standards in storage (raw bytes, .PNG, .JPEG, .GIF, .SVG etc.), they can be visualized as is, or converted into numerical arrays.
 
@@ -239,11 +239,11 @@ Black and white photos tend to be easier to load, display and represent as array
 
 Data for the computer with regards to CV is shown in the visual below:
 
-![CV technical data](./images/system4-cv-technical-50pct.svg)
+![CV technical data](../images/system4-cv-technical-50pct.svg)
 
 On the other hand, data in use by humans in the system with regards to CV is shown below:
 
-![CV non-technical data](./images/system4-cv-nontechnical-50pct.svg)
+![CV non-technical data](../images/system4-cv-nontechnical-50pct.svg)
 
 <u>**Key Challenges**</u>
 
