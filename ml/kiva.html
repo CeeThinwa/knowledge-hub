@@ -170,7 +170,17 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../past-articles/growth.html">
-     How growth can begin for Africa’s largest employer
+     Economical article 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-articles/demand.html">
+     Economical article 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-articles/business.html">
+     Economical article 3
     </a>
    </li>
   </ul>
@@ -581,139 +591,6 @@ title="Print to PDF"
 <span class="n">loan_themes</span>  <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//data//kiva-project//loan_theme_ids.csv&#39;</span><span class="p">)</span>
 
 <span class="n">regional_lts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//data//kiva-project//loan_themes_by_region.csv&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">Input In [3],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">loan_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//data//kiva-project//kiva_loans.csv&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">location_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//data//kiva-project//kiva_mpi_region_locations.csv&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">loan_themes</span>  <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C://Users//CT//Documents//GitHub//knowledge-hub//book//data//kiva-project//loan_theme_ids.csv&#39;</span><span class="p">)</span>
-
-<span class="nn">File c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\pandas\util\_decorators.py:311,</span> in <span class="ni">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">305</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_allow_args</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">306</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">307</span>         <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">arguments</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">308</span>         <span class="ne">FutureWarning</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">309</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">310</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">311</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\pandas\io\parsers\readers.py:680,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">665</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">666</span>     <span class="n">dialect</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">667</span>     <span class="n">delimiter</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">676</span>     <span class="n">defaults</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;delimiter&quot;</span><span class="p">:</span> <span class="s2">&quot;,&quot;</span><span class="p">},</span>
-<span class="g g-Whitespace">    </span><span class="mi">677</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">678</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">680</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-
-<span class="nn">File c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\pandas\io\parsers\readers.py:575,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">572</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">574</span> <span class="c1"># Create the parser.</span>
-<span class="ne">--&gt; </span><span class="mi">575</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">577</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">578</span>     <span class="k">return</span> <span class="n">parser</span>
-
-<span class="nn">File c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\pandas\io\parsers\readers.py:934,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">931</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">933</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="ne">--&gt; </span><span class="mi">934</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
-
-<span class="nn">File c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\pandas\io\parsers\readers.py:1218,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1214</span>     <span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;rb&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1215</span> <span class="c1"># error: No overload variant of &quot;get_handle&quot; matches argument types</span>
-<span class="g g-Whitespace">   </span><span class="mi">1216</span> <span class="c1"># &quot;Union[str, PathLike[str], ReadCsvBuffer[bytes], ReadCsvBuffer[str]]&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1217</span> <span class="c1"># , &quot;str&quot;, &quot;bool&quot;, &quot;Any&quot;, &quot;Any&quot;, &quot;Any&quot;, &quot;Any&quot;, &quot;Any&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1218</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>  <span class="c1"># type: ignore[call-overload]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1219</span>     <span class="n">f</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1220</span>     <span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1221</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1222</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1223</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1224</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1225</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1226</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1227</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1228</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">   </span><span class="mi">1229</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
-
-<span class="nn">File c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\pandas\io\common.py:667,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">664</span>     <span class="n">codecs</span><span class="o">.</span><span class="n">lookup_error</span><span class="p">(</span><span class="n">errors</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">666</span> <span class="c1"># open URLs</span>
-<span class="ne">--&gt; </span><span class="mi">667</span> <span class="n">ioargs</span> <span class="o">=</span> <span class="n">_get_filepath_or_buffer</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">668</span>     <span class="n">path_or_buf</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">669</span>     <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">670</span>     <span class="n">compression</span><span class="o">=</span><span class="n">compression</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">671</span>     <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">672</span>     <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">673</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">675</span> <span class="n">handle</span> <span class="o">=</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">filepath_or_buffer</span>
-<span class="g g-Whitespace">    </span><span class="mi">676</span> <span class="n">handles</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">BaseBuffer</span><span class="p">]</span>
-
-<span class="nn">File c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\pandas\io\common.py:382,</span> in <span class="ni">_get_filepath_or_buffer</span><span class="nt">(filepath_or_buffer, encoding, compression, mode, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">379</span>     <span class="k">pass</span>
-<span class="g g-Whitespace">    </span><span class="mi">381</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">382</span>     <span class="n">file_obj</span> <span class="o">=</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">open</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">383</span>         <span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">fsspec_mode</span><span class="p">,</span> <span class="o">**</span><span class="p">(</span><span class="n">storage_options</span> <span class="ow">or</span> <span class="p">{})</span>
-<span class="g g-Whitespace">    </span><span class="mi">384</span>     <span class="p">)</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">385</span> <span class="c1"># GH 34626 Reads from Public Buckets without Credentials needs anon=True</span>
-<span class="g g-Whitespace">    </span><span class="mi">386</span> <span class="k">except</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">err_types_to_retry_with_anon</span><span class="p">):</span>
-
-<span class="nn">File c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\fsspec\core.py:141,</span> in <span class="ni">OpenFile.open</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">133</span> <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">134</span>     <span class="sd">&quot;&quot;&quot;Materialise this as a real open file without context</span>
-<span class="g g-Whitespace">    </span><span class="mi">135</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">136</span><span class="sd">     The file should be explicitly closed to avoid enclosed file</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">139</span><span class="sd">     been deleted; but a with-context is better style.</span>
-<span class="g g-Whitespace">    </span><span class="mi">140</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">141</span>     <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__enter__</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">142</span>     <span class="n">closer</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">close</span>
-<span class="g g-Whitespace">    </span><span class="mi">143</span>     <span class="n">fobjects</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fobjects</span><span class="o">.</span><span class="n">copy</span><span class="p">()[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="nn">File c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\fsspec\core.py:104,</span> in <span class="ni">OpenFile.__enter__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">101</span> <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">102</span>     <span class="n">mode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;b&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">104</span>     <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">106</span>     <span class="bp">self</span><span class="o">.</span><span class="n">fobjects</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">108</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">compression</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="nn">File c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\fsspec\spec.py:1034,</span> in <span class="ni">AbstractFileSystem.open</span><span class="nt">(self, path, mode, block_size, cache_options, compression, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1032</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1033</span>     <span class="n">ac</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;autocommit&quot;</span><span class="p">,</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_intrans</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1034</span>     <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1035</span>         <span class="n">path</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1036</span>         <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1037</span>         <span class="n">block_size</span><span class="o">=</span><span class="n">block_size</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1038</span>         <span class="n">autocommit</span><span class="o">=</span><span class="n">ac</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1039</span>         <span class="n">cache_options</span><span class="o">=</span><span class="n">cache_options</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1040</span>         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1041</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1042</span>     <span class="k">if</span> <span class="n">compression</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1043</span>         <span class="kn">from</span> <span class="nn">fsspec.compression</span> <span class="kn">import</span> <span class="n">compr</span>
-
-<span class="nn">File c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\fsspec\implementations\local.py:162,</span> in <span class="ni">LocalFileSystem._open</span><span class="nt">(self, path, mode, block_size, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">160</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">auto_mkdir</span> <span class="ow">and</span> <span class="s2">&quot;w&quot;</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">161</span>     <span class="bp">self</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">162</span> <span class="k">return</span> <span class="n">LocalFileOpener</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\fsspec\implementations\local.py:260,</span> in <span class="ni">LocalFileOpener.__init__</span><span class="nt">(self, path, mode, autocommit, fs, compression, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">258</span> <span class="bp">self</span><span class="o">.</span><span class="n">compression</span> <span class="o">=</span> <span class="n">get_compression</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">compression</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">259</span> <span class="bp">self</span><span class="o">.</span><span class="n">blocksize</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">DEFAULT_BUFFER_SIZE</span>
-<span class="ne">--&gt; </span><span class="mi">260</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open</span><span class="p">()</span>
-
-<span class="nn">File c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages\fsspec\implementations\local.py:265,</span> in <span class="ni">LocalFileOpener._open</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">263</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">f</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="o">.</span><span class="n">closed</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">264</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">autocommit</span> <span class="ow">or</span> <span class="s2">&quot;w&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">265</span>         <span class="bp">self</span><span class="o">.</span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">266</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">compression</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">267</span>             <span class="n">compress</span> <span class="o">=</span> <span class="n">compr</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">compression</span><span class="p">]</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;C:/Users/CT/Documents/GitHub/knowledge-hub/book/data/kiva-project/kiva_loans.csv&#39;
 </pre></div>
 </div>
 </div>
@@ -1223,10 +1100,10 @@ regional_lts shape: (15736, 21)
     </tr>
     <tr>
       <th>top</th>
-      <td>Bombali, Sierra Leone</td>
+      <td>Badakhshan, Afghanistan</td>
       <td>NGA</td>
       <td>Nigeria</td>
-      <td>Eastern</td>
+      <td>Central</td>
       <td>Sub-Saharan Africa</td>
       <td>(1000.0, 1000.0)</td>
     </tr>
@@ -1241,7 +1118,10 @@ regional_lts shape: (15736, 21)
     </tr>
   </tbody>
 </table>
-</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: loan_themes 
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: loan_themes 
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1574,7 +1454,10 @@ regional_lts shape: (15736, 21)
     </tr>
   </tbody>
 </table>
-</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: PCE_data 
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: PCE_data 
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1669,27 +1552,27 @@ regional_lts shape: (15736, 21)
     </tr>
     <tr>
       <th>top</th>
-      <td>Portugal</td>
+      <td>East Asia and Pacific</td>
       <td>358.28</td>
-      <td>694.83</td>
-      <td>4,162.15</td>
-      <td>1,022.73</td>
-      <td>734.25</td>
-      <td>12,299.20</td>
-      <td>782.56</td>
-      <td>577.19</td>
-      <td>3,813.85</td>
+      <td>376.28</td>
+      <td>391.98</td>
+      <td>366.59</td>
+      <td>359.69</td>
+      <td>358.46</td>
+      <td>343.77</td>
+      <td>364.11</td>
+      <td>386.75</td>
       <td>...</td>
-      <td>1,890.92</td>
-      <td>1,257.63</td>
-      <td>2,851.80</td>
-      <td>563.96</td>
-      <td>9,436.84</td>
-      <td>39,584.00</td>
-      <td>19,181.30</td>
-      <td>9,555.73</td>
-      <td>2,877.38</td>
-      <td>1,413.68</td>
+      <td>7,168.46</td>
+      <td>6,887.91</td>
+      <td>6,766.62</td>
+      <td>6,988.29</td>
+      <td>7,035.26</td>
+      <td>7,013.70</td>
+      <td>7,098.35</td>
+      <td>7,113.80</td>
+      <td>7,152.70</td>
+      <td>923.25</td>
     </tr>
     <tr>
       <th>freq</th>
@@ -1813,27 +1696,27 @@ regional_lts shape: (15736, 21)
     </tr>
     <tr>
       <th>top</th>
-      <td>Portugal</td>
+      <td>East Asia and Pacific</td>
       <td>358.28</td>
-      <td>694.83</td>
-      <td>4,162.15</td>
-      <td>1,022.73</td>
-      <td>734.25</td>
-      <td>12,299.20</td>
-      <td>782.56</td>
-      <td>577.19</td>
-      <td>3,813.85</td>
+      <td>376.28</td>
+      <td>391.98</td>
+      <td>366.59</td>
+      <td>359.69</td>
+      <td>358.46</td>
+      <td>343.77</td>
+      <td>364.11</td>
+      <td>386.75</td>
       <td>...</td>
-      <td>1,890.92</td>
-      <td>1,257.63</td>
-      <td>2,851.80</td>
-      <td>563.96</td>
-      <td>9,436.84</td>
-      <td>39,584.00</td>
-      <td>19,181.30</td>
-      <td>9,555.73</td>
-      <td>2,877.38</td>
-      <td>1,413.68</td>
+      <td>7,168.46</td>
+      <td>6,887.91</td>
+      <td>6,766.62</td>
+      <td>6,988.29</td>
+      <td>7,035.26</td>
+      <td>7,013.70</td>
+      <td>7,098.35</td>
+      <td>7,113.80</td>
+      <td>7,152.70</td>
+      <td>923.25</td>
     </tr>
     <tr>
       <th>freq</th>
@@ -3588,11 +3471,14 @@ The shape of tab8 after merge:  (70, 11)
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(671205, 26)
-Number of null values in the &quot;region&quot; column:  56800
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of null values in the &quot;region&quot; column:  56800
 Number of null values in the &quot;country_code&quot; column:  8
 Number of null values in the &quot;country&quot; column:  0
-
-N/B:  558379 number of loan records have regions that are not covered in both datasets.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>N/B:  558379 number of loan records have regions that are not covered in both datasets.
       80765 number of loan records have countries that are not covered in both datasets.
 </pre></div>
 </div>
