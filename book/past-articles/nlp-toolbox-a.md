@@ -131,3 +131,41 @@ answers. However, if you are in the world of tech, you know that new concepts, i
 — this means that in a day or a couple of weeks, what you crammed for that meeting may be irrelevant by the time you are
 ready to present.
 
+You need to understand key underlying concepts, so that your knowledge can stand the test of time and these concepts can
+be applied and/or combined in new ways. [Use of meta-tools](https://medium.com/accelerated-intelligence/this-is-exactly-how-you-should-train-yourself-to-be-smarter-infographic-86d0d42ad41c)
+can help people to understand technical concepts and apply them in the real world.
+
+Scaffolding is a [learning theory initially conceived by Vygotsky](https://science-education-research.com/teaching-science/constructivist-pedagogy/scaffolding-learning/) where
+
+* a learner uses **structured support** provided by a teacher or more advanced student
+* which is used to learn a **challenging concept**, slightly above their level of understanding
+* until the student no longer needs the support, enabling the teacher/more advanced student to **fade away**
+
+It is important to note that
+
+> Just like scaffolding can be provided by a teacher to make the learning process faster, the learner can create for
+> themselves and others their own scaffolding.
+
+As part of my Delta Analytics fellowship, I had to complete a multilingual NLP project (which I had never done before)
+and present my work in a short amount of time — I had to have tools that could help me understand the NLP concepts that 
+I was struggling with and at the same time structure my project. Even with an incredibly helpful coach, I had to figure
+out stuff for myself.
+
+I had no choice; I had to create my own mental scaffolding.
+
+My scaffolding was ***the NLP toolbox***, which I created to help myself and others seeking to understand and implement
+an NLP project — end-to-end. After all, understanding and implementing NLP projects is crucial to their success.
+
+:::{admonition}
+:class: tip
+
+The NLP toolbox is a collection of concepts, tools and ideas available for building applications that can handle real-world
+challenges around understanding content from all over the world.
+
+It can be used for any NLP task such as sentiment analysis, translation, transcription, audio synthesis etc.
+
+:::
+
+****
+
+This metaphorical toolbox, is what we will be unpacking in the remaining part of the series. Stay tuned for the next post!
