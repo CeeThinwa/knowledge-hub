@@ -156,7 +156,7 @@ I had no choice; I had to create my own mental scaffolding.
 My scaffolding was ***the NLP toolbox***, which I created to help myself and others seeking to understand and implement
 an NLP project — end-to-end. After all, understanding and implementing NLP projects is crucial to their success.
 
-:::{admonition}
+:::{admonition} ---
 :class: tip
 
 The NLP toolbox is a collection of concepts, tools and ideas available for building applications that can handle real-world
