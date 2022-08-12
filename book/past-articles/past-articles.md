@@ -9,6 +9,6 @@
 
 **Articles on experiences in machine learning and data science**
 
-* []()
+* [Why you should contribute to open-source as a data scientist](contribute.md)
 * []()
 * []()
