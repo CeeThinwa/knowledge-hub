@@ -1,4 +1,6 @@
-# How growth can begin for Africa's largest employer
+# Economical article 1
+
+## How growth can begin for Africa's largest employer
 
 **Publisher**: [*Medium*](https://medium.com/@ceethinwa/how-growth-begins-d259b2c83c1a) <br>
 **Publishing Date**: *Apr 17, 2019*
