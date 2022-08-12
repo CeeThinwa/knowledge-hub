@@ -41,7 +41,7 @@ There are therefore 4 stages in the research process where we can apply the NLP 
 
 Imagine dealing with a whole bunch of bouncy beach balls like these ones that have to be put in a net for storage:
 
-![bouncy beach balls](../images/beach-balls-1.svg)<br>
+![bouncy beach balls](../images/beach-balls.svg)<br>
 *All the bouncy beach balls that you have to catch.*
 
 That’s how it can feel sometimes identifying a problem that can be solved through NLP. We have to consider these 5 elements and combine them well:
@@ -171,3 +171,15 @@ The abstract that I submitted for my project:
 
 The first paragraph described *real-world* attributes of the problem, while the second paragraph described *technical*
 attributes of the problem.
+
+Problem in the bag!
+
+![bag of balls](../images/bag-of-balls.svg)
+
+****
+
+If you enjoyed this article, you will be sure to love
+[the introduction to this series](https://medium.com/@ceethinwa/delivering-success-in-natural-language-processing-projects-part-one-40c4775cf6a9).
+Enjoy!
+
+Join me on the next article where we dig into our metaphorical toolbox once more.
