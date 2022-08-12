@@ -1,9 +1,9 @@
 # How growth can begin for Africa's largest employer
 
-**Publisher**: *Medium*<br>
+**Publisher**: [*Medium*](https://medium.com/@ceethinwa/how-growth-begins-d259b2c83c1a) <br>
 **Publishing Date**: *Apr 17, 2019*
 
-![growth](./images/growth.jpeg)<br>       
+![growth](../images/growth.jpeg) <br>       
 *Artisans hard at work in Kenya (Courtesy of [Standard Media Group](https://www.standardmedia.co.ke/images/tuesday/mlixqxsbelatc5bc5938ab7dbe.jpg))*
 
 In a moment of reflection, I chose to start this blog, with the hope that I can share insights that I have learned in the rough-and-tumble world of Africa's
