@@ -1,4 +1,6 @@
-# Increasing Demand in an Emerging Economy
+# Economical article 2
+
+## Increasing Demand in an Emerging Economy
 
 **Publisher**: [*DataDrivenInvestor on Medium*](https://medium.datadriveninvestor.com/increasing-demand-in-an-emerging-economy-7bfc89c62606) <br>
 **Publishing Date**: *May 30, 2019*
