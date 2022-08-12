@@ -12,8 +12,8 @@
 > 
 > According to
 >[the latest IMF statistics](https://www.imf.org/external/datamapper/datasets/WEO/1), GDP 
->per capita is US$ 5,420 and the real GDP annual growth rate is 4.4% in the developing world. Now let’s imagine your 
->annual contribution to GDP is US$2,400.
+>per capita is US \$ 5,420 and the real GDP annual growth rate is 4.4% in the developing world. Now let’s imagine your 
+>annual contribution to GDP is US \$2,400.
 >
 >What are some practical ways for someone to start a business that can grow GDP contribution in revenue to above average?
 >Find out how!
@@ -71,7 +71,7 @@ and your business needs funds that can cushion it against hard times. Build an i
 personal income has grown with business income and they are no longer completely dependent on each other; your personal
 income is money made awake and your investment income is money made asleep.
 
-## Track 2: Employment
+### Track 2: Employment
 
 On the other hand, if employment is the path that you seek, below are a few helpful tips.
 
