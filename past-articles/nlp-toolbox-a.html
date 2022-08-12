@@ -1,0 +1,677 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>ML/Data Science article 2 &#8212; My Knowledge Hub</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ML/Data Science article 3" href="nlp-toolbox-b.html" />
+    <link rel="prev" title="ML/Data Science article 1" href="contribute.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My Knowledge Hub</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Hello 👋
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/blending_the_4.html">
+   Real world machine learning
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ml/data-storytelling.html">
+   Welcome to Data Storytelling!
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/data-storytelling-past-projects.html">
+     Past data stories
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/kiva.html">
+     Kiva Project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/nlp.html">
+   Welcome to Natural Language Processing!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/computer-vision.html">
+   Welcome to Computer Vision!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/data-pipelining.html">
+   Welcome to Data Pipelining!
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="past-articles.html">
+   Past Articles
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="growth.html">
+     Economical article 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="demand.html">
+     Economical article 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="business.html">
+     Economical article 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalGDP.html">
+     Economical article 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="contribute.html">
+     ML/Data Science article 1
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     ML/Data Science article 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nlp-toolbox-b.html">
+     ML/Data Science article 3
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/past-articles/nlp-toolbox-a.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#delivering-success-in-natural-language-processing-projects-part-one">
+   Delivering Success in Natural Language Processing Projects: Part One
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#authors-note">
+     Author’s note
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-simplified-background-on-natural-language-processing-nlp">
+     A Simplified Background on Natural Language Processing (NLP)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-concept-of-artificial-intelligence-ai">
+       The concept of Artificial Intelligence (AI)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-concept-of-machine-learning-ml">
+       The concept of Machine Learning (ML)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-concept-of-natural-language-processing-nlp">
+       The concept of Natural Language Processing (NLP)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#relating-ai-ml-and-nlp">
+       Relating AI, ML and NLP
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mental-scaffolding">
+       Mental Scaffolding
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>ML/Data Science article 2</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#delivering-success-in-natural-language-processing-projects-part-one">
+   Delivering Success in Natural Language Processing Projects: Part One
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#authors-note">
+     Author’s note
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-simplified-background-on-natural-language-processing-nlp">
+     A Simplified Background on Natural Language Processing (NLP)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-concept-of-artificial-intelligence-ai">
+       The concept of Artificial Intelligence (AI)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-concept-of-machine-learning-ml">
+       The concept of Machine Learning (ML)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-concept-of-natural-language-processing-nlp">
+       The concept of Natural Language Processing (NLP)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#relating-ai-ml-and-nlp">
+       Relating AI, ML and NLP
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mental-scaffolding">
+       Mental Scaffolding
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="ml-data-science-article-2">
+<h1>ML/Data Science article 2<a class="headerlink" href="#ml-data-science-article-2" title="Permalink to this headline">#</a></h1>
+<section id="delivering-success-in-natural-language-processing-projects-part-one">
+<h2>Delivering Success in Natural Language Processing Projects: Part One<a class="headerlink" href="#delivering-success-in-natural-language-processing-projects-part-one" title="Permalink to this headline">#</a></h2>
+<p><strong>Publisher</strong>: <a class="reference external" href="https://medium.com/&#64;ceethinwa/delivering-success-in-natural-language-processing-projects-part-one-40c4775cf6a9"><em>Medium</em></a> <br>
+<strong>Publishing Date</strong>: <em>Mar 11, 2022</em></p>
+<p><img alt="nlp chatbot" src="../_images/nlp-chatbot.svg" /><br>
+<em>A common application of NLP — chat-bots.</em></p>
+<blockquote>
+<div><p><em>This is the beginning of a four-part series where I aim to demystify Natural Language Processing (NLP) through a key
+learning tool that I would call the NLP toolbox. Enjoy!</em></p>
+</div></blockquote>
+<section id="authors-note">
+<h3>Author’s note<a class="headerlink" href="#authors-note" title="Permalink to this headline">#</a></h3>
+<p><strong>What problem does this series aim to solve?</strong></p>
+<p>Artificial Intelligence and machine learning have grown in prominence between the late 20th and early 21st century.
+However, though algorithms are increasingly controlling our day-to-day lives, they are created and managed only by a
+very privileged few.</p>
+<p>Some of these algorithms are not even understood by their own creators because they operate in a black box i.e. they know
+the input and output but they do not know how the parameters are estimated, the statistical validity of those estimates
+and how the mathematical model is being optimized. Just try interpreting a model with a billion parameters that change constantly!</p>
+<p>It is therefore important to have at least a surface level understanding of algorithms and their use in technical projects
+in order for</p>
+<ul class="simple">
+<li><p>communities affected by the technology to have a say,</p></li>
+<li><p>technical teams to systematically plan for and manage these projects, and</p></li>
+<li><p>business leaders to have visibility of project progress and project effects on stakeholders.</p></li>
+</ul>
+<p>Understanding machine learning concepts in general can be improved by leveraging tools that ease learning. These learning
+aids can allow non-technical audiences to</p>
+<ul class="simple">
+<li><p>learn machine learning — in particular, NLP — much faster and gain deeper insights as a result</p></li>
+<li><p>evaluate technical aspects around modelling</p></li>
+<li><p>raise any ethical concerns around modelling</p></li>
+<li><p>assess model performance.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="a-simplified-background-on-natural-language-processing-nlp">
+<h3>A Simplified Background on Natural Language Processing (NLP)<a class="headerlink" href="#a-simplified-background-on-natural-language-processing-nlp" title="Permalink to this headline">#</a></h3>
+<p>At this point, it is helpful to define some key concepts and show how they relate.</p>
+<section id="the-concept-of-artificial-intelligence-ai">
+<h4>The concept of Artificial Intelligence (AI)<a class="headerlink" href="#the-concept-of-artificial-intelligence-ai" title="Permalink to this headline">#</a></h4>
+<p>What is AI?</p>
+<blockquote>
+<div><p>Artificial Intelligence, simply put, is the quest to make machines achieve general intelligence, where these machines can</p>
+<ol class="simple">
+<li><p>receive data in varying size and complexity,</p></li>
+<li><p>process it into generalized information and</p></li>
+<li><p>use this information to create ideas and act without human assistance.</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="the-concept-of-machine-learning-ml">
+<h4>The concept of Machine Learning (ML)<a class="headerlink" href="#the-concept-of-machine-learning-ml" title="Permalink to this headline">#</a></h4>
+<p>What is ML?</p>
+<blockquote>
+<div><p>Machine learning is a subset of artificial intelligence that focuses on the processing of data into information.
+There are two ways that machine learning produces information:</p>
+<ol class="simple">
+<li><p>A human creates a pattern and the model evaluates how well the data fits to the pattern based on statistical inference</p></li>
+<li><p>The model creates the pattern and the model and human evaluate how well the data fits into the pattern</p></li>
+</ol>
+<p><strong>Approach 1: Bayesian/Frequentist Statistical Modelling</strong></p>
+<p>These types of models can have</p>
+<ul class="simple">
+<li><p>static estimated parameters when using an unchanging fixed dataset, or</p></li>
+<li><p>dynamic estimated parameters.</p></li>
+</ul>
+<p>For models with dynamic estimated parameters, an objective/loss function is used that minimizes the error in the model.
+In this case the variables/features stay fixed, but the observations/instances change over time, altering the data
+distribution in the process.</p>
+<p>These types of machine learning models can be great in that they can be interpreted by people. However, they do not do
+well on unstructured data and may be limited by the researcher’s choice of variables and research objectives — they have
+to attempt different variable combinations to get statistically valid results that also satisfy research objectives.</p>
+<p><strong>Approach 2: Deep Learning</strong></p>
+<p>These types of models have only dynamic estimated parameters, in part, because the model itself selects variables
+(inputs into a paticular neuron), and also experiments with different combinations of these variables to get optimal
+estimated parameters.</p>
+<p>The only key criteria that the human can control are the hyper-parameters that include the</p>
+<ol class="simple">
+<li><p><strong>activation function</strong> — gives the first set of estimated parameters which are usually normalized and it tends to be non-linear,</p></li>
+<li><p><strong>loss function</strong>,</p></li>
+<li><p><strong>model selection metric</strong> — i.e. we say that the model has succeeded in its task and it can stop training when a certain threshold of the model selection metric is used,</p></li>
+<li><p>desired <strong>dimensions of the output</strong></p></li>
+<li><p><strong>number of epochs</strong> — the number of times the model will go over the data in order to identify the patterns.</p></li>
+</ol>
+<p>A great benefit of this approach is that this model type is able to handle large amounts of unstructured data very well.
+However, because the variables and the parameter estimation method is unknown, interpreting how it obtained its results
+becomes very challenging.</p>
+<p><strong>N/B:</strong></p>
+<p>Natural Language Processing is an application of Deep Learning, alongside Computer Vision — think of Computer Vision
+as the “eyes” of the computer and Natural Language Processing as the “ears and mouth” of the computer. Both applications
+specialize in unstructured data, which is increasing in size as more and more people communicate on many digital channels
+today.</p>
+</div></blockquote>
+</section>
+<section id="the-concept-of-natural-language-processing-nlp">
+<h4>The concept of Natural Language Processing (NLP)<a class="headerlink" href="#the-concept-of-natural-language-processing-nlp" title="Permalink to this headline">#</a></h4>
+<p>What is NLP?</p>
+<blockquote>
+<div><p>Natural Language Processing is a branch of Machine Learning concerned with teaching computers how to recognize patterns
+in communications data generated by humans and/or use patterns learned to generate responses for human audiences.</p>
+</div></blockquote>
+</section>
+<section id="relating-ai-ml-and-nlp">
+<h4>Relating AI, ML and NLP<a class="headerlink" href="#relating-ai-ml-and-nlp" title="Permalink to this headline">#</a></h4>
+<p>The relationship between the 3 concepts can be visualized as shown:</p>
+<p><img alt="Relationship between AI, ML and NLP" src="../_images/ai-ml-nlp.svg" /> <br>
+<em>A visual representation of how AI, ML and NLP are related.</em></p>
+</section>
+<hr class="docutils" />
+<section id="mental-scaffolding">
+<h4>Mental Scaffolding<a class="headerlink" href="#mental-scaffolding" title="Permalink to this headline">#</a></h4>
+<p>First things first:</p>
+<blockquote>
+<div><p>We are unique people learning in a dynamic world.</p>
+</div></blockquote>
+<p>It is no secret that the path to learning is not the same for everyone. It can be incredibly challenging for some and
+quite straightforward and smooth for others.</p>
+<p>Quick hacks can be great when you want to cram key information before an important meeting where you have to have all the
+answers. However, if you are in the world of tech, you know that new concepts, ideas and tools are being created rapidly
+— this means that in a day or a couple of weeks, what you crammed for that meeting may be irrelevant by the time you are
+ready to present.</p>
+<p>You need to understand key underlying concepts, so that your knowledge can stand the test of time and these concepts can
+be applied and/or combined in new ways. <a class="reference external" href="https://medium.com/accelerated-intelligence/this-is-exactly-how-you-should-train-yourself-to-be-smarter-infographic-86d0d42ad41c">Use of meta-tools</a>
+can help people to understand technical concepts and apply them in the real world.</p>
+<p>Scaffolding is a <a class="reference external" href="https://science-education-research.com/teaching-science/constructivist-pedagogy/scaffolding-learning/">learning theory initially conceived by Vygotsky</a> where</p>
+<ul class="simple">
+<li><p>a learner uses <strong>structured support</strong> provided by a teacher or more advanced student</p></li>
+<li><p>which is used to learn a <strong>challenging concept</strong>, slightly above their level of understanding</p></li>
+<li><p>until the student no longer needs the support, enabling the teacher/more advanced student to <strong>fade away</strong></p></li>
+</ul>
+<p>It is important to note that</p>
+<blockquote>
+<div><p>Just like scaffolding can be provided by a teacher to make the learning process faster, the learner can create for
+themselves and others their own scaffolding.</p>
+</div></blockquote>
+<p>As part of my Delta Analytics fellowship, I had to complete a multilingual NLP project (which I had never done before)
+and present my work in a short amount of time — I had to have tools that could help me understand the NLP concepts that
+I was struggling with and at the same time structure my project. Even with an incredibly helpful coach, I had to figure
+out stuff for myself.</p>
+<p>I had no choice; I had to create my own mental scaffolding.</p>
+<p>My scaffolding was <em><strong>the NLP toolbox</strong></em>, which I created to help myself and others seeking to understand and implement
+an NLP project — end-to-end. After all, understanding and implementing NLP projects is crucial to their success.</p>
+<div class="tip admonition">
+<p class="admonition-title">—</p>
+<p>The NLP toolbox is a collection of concepts, tools and ideas available for building applications that can handle real-world
+challenges around understanding content from all over the world.</p>
+<p>It can be used for any NLP task such as sentiment analysis, translation, transcription, audio synthesis etc.</p>
+</div>
+<hr class="docutils" />
+<p>This metaphorical toolbox, is what we will be unpacking in the remaining part of the series. Stay tuned for the next post!</p>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./past-articles"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="contribute.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">ML/Data Science article 1</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="nlp-toolbox-b.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">ML/Data Science article 3</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Cynthia Thinwa<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
