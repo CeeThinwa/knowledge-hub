@@ -71,7 +71,7 @@ and your business needs funds that can cushion it against hard times. Build an i
 personal income has grown with business income and they are no longer completely dependent on each other; your personal
 income is money made awake and your investment income is money made asleep.
 
-## Track 2: Employment
+### Track 2: Employment
 
 On the other hand, if employment is the path that you seek, below are a few helpful tips.
 
