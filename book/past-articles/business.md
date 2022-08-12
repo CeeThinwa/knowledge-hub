@@ -2,7 +2,7 @@
 
 ## Pushing past Ground Zero: a Q&A
 
-**Publisher**: *Medium*<br>
+**Publisher**: [*Medium*](https://medium.com/@ceethinwa/pushing-past-ground-zero-a-q-a-550608df87e4) <br>
 **Publishing Date**: *Jul 31, 2019*
 
 ![business](../images/business.jpeg)
