@@ -5,8 +5,7 @@
 **Publisher**: *Medium*<br>
 **Publishing Date**: *Jul 31, 2019*
 
-<img src="https://github.com/CeeThinwa/past-articles/blob/main/images/1%20vsjOMw3YkSDv9zCvtJVd-g.jpeg?raw=true"
-       alt="Article 1 header" width="25%" />
+![business](../images/business.jpeg)
 
 > **A brief prologue**
 > 
