@@ -12,8 +12,8 @@
 > 
 > According to
 >[the latest IMF statistics](https://www.imf.org/external/datamapper/datasets/WEO/1), GDP 
->per capita is US\$ 5,420 and the real GDP annual growth rate is 4.4% in the developing world. Now let’s imagine your 
->annual contribution to GDP is US\$2,400.
+>per capita is US \$ 5,420 and the real GDP annual growth rate is 4.4% in the developing world. Now let’s imagine your 
+>annual contribution to GDP is US \$2,400.
 >
 >What are some practical ways for someone to start a business that can grow GDP contribution in revenue to above average?
 >Find out how!
