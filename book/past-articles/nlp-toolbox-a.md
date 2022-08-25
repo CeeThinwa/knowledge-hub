@@ -8,7 +8,7 @@
 ![nlp chatbot](../images/nlp-chatbot.svg)<br>
 *A common application of NLP — chat-bots.*
 
-> *This is the beginning of a four-part series where I aim to demystify Natural Language Processing (NLP) through a key
+> *This is the beginning of a five-part series where I aim to demystify Natural Language Processing (NLP) through a key
 > learning tool that I would call the NLP toolbox. Enjoy!*
 
 ### Author’s note
