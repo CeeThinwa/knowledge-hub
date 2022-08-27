@@ -6,3 +6,4 @@
 /book/_build/
 .idea/workspace.xml
 .gitattributes
+book/past-articles/.ipynb_checkpoints/
