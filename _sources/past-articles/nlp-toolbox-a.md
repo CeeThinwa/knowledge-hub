@@ -5,10 +5,10 @@
 **Publisher**: [*Medium*](https://medium.com/@ceethinwa/delivering-success-in-natural-language-processing-projects-part-one-40c4775cf6a9) <br>
 **Publishing Date**: *Mar 11, 2022*
 
-![chatbot](../images/nlp-chatbot.svg) <br>
+![nlp chatbot](../images/nlp-chatbot.svg) <br>
 *A common application of NLP — chat-bots.*
 
-> *This is the beginning of a four-part series where I aim to demystify Natural Language Processing (NLP) through a key
+> *This is the beginning of a five-part series where I aim to demystify Natural Language Processing (NLP) through a key
 > learning tool that I would call the NLP toolbox. Enjoy!*
 
 ### Author’s note

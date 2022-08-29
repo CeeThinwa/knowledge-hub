@@ -1,0 +1,890 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>ML/Data Science article 3 &#8212; My Knowledge Hub</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="ML/Data Science article 3" href="nlp-toolbox-b.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My Knowledge Hub</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Hello 👋
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/blending_the_4.html">
+   Real world machine learning
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ml/data-storytelling.html">
+   Welcome to Data Storytelling!
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/data-storytelling-past-projects.html">
+     Past data stories
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/kiva.html">
+     Kiva Project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/nlp.html">
+   Welcome to Natural Language Processing!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/computer-vision.html">
+   Welcome to Computer Vision!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/data-pipelining.html">
+   Welcome to Data Pipelining!
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="past-articles.html">
+   Past Articles
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="growth.html">
+     Economical article 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="demand.html">
+     Economical article 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="business.html">
+     Economical article 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalGDP.html">
+     Economical article 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="contribute.html">
+     ML/Data Science article 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nlp-toolbox-a.html">
+     ML/Data Science article 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nlp-toolbox-b.html">
+     ML/Data Science article 3
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     ML/Data Science article 3
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/main?urlpath=tree/book/past-articles/nlp-toolbox-c.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/past-articles/nlp-toolbox-c.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#delivering-success-in-natural-language-processing-projects-part-two">
+   Delivering Success in Natural Language Processing Projects: Part Two
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-exploration">
+     Data Exploration
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exploratory-data-analysis-for-text">
+       <strong>
+        Exploratory Data Analysis for Text
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exploratory-data-analysis-for-audio">
+       <strong>
+        Exploratory Data Analysis for Audio
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>ML/Data Science article 3</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#delivering-success-in-natural-language-processing-projects-part-two">
+   Delivering Success in Natural Language Processing Projects: Part Two
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-exploration">
+     Data Exploration
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exploratory-data-analysis-for-text">
+       <strong>
+        Exploratory Data Analysis for Text
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exploratory-data-analysis-for-audio">
+       <strong>
+        Exploratory Data Analysis for Audio
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install pydub
+<span class="o">!</span>pip install wave
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pydub in c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages (0.25.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: wave in c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages (0.0.2)
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="ml-data-science-article-3">
+<h1>ML/Data Science article 3<a class="headerlink" href="#ml-data-science-article-3" title="Permalink to this headline">#</a></h1>
+<section id="delivering-success-in-natural-language-processing-projects-part-two">
+<h2>Delivering Success in Natural Language Processing Projects: Part Two<a class="headerlink" href="#delivering-success-in-natural-language-processing-projects-part-two" title="Permalink to this headline">#</a></h2>
+<p><strong>Publisher</strong>: <em>2 articles on Medium -</em> <a class="reference external" href="https://medium.com/&#64;ceethinwa/delivering-success-in-natural-language-processing-projects-part-three-79e6e604ddf9"><em>here</em></a> <em>and</em> <a class="reference external" href="https://medium.com/&#64;ceethinwa/delivering-success-in-natural-language-processing-projects-part-three-contd-18fe4fb7ad6d"><em>here</em></a> <br>
+<strong>Publishing Dates</strong>: <em>Aug 24, 2022 and Aug 25, 2022</em></p>
+<p><img alt="nlp chatbot" src="../_images/magnifying-glass.svg" /> <br>
+<em>Discovery begins!</em></p>
+<p><em>This is the second post of a five-part series where I aim to demystify Natural Language Processing (NLP) through a key
+learning tool that I would call</em> <strong>the NLP toolbox</strong>. <em>You can access the first article
+<a class="reference external" href="https://medium.com/&#64;ceethinwa/delivering-success-in-natural-language-processing-projects-part-one-40c4775cf6a9">here</a>.</em></p>
+<p>A quick recap:</p>
+<ul class="simple">
+<li><p>The NLP toolbox is a framework designed to strike the delicate balance between taking the time to deeply study a phenomenon and rapidly skimming through relevant work</p></li>
+<li><p>There are 4 stages in the research process where we can apply the NLP toolbox: <em><strong>Problem Definition</strong></em>, <em><strong>Data Exploration</strong></em>, <em><strong>Feature Engineering</strong></em>, and <em><strong>Model Fitting and Evaluation</strong></em></p></li>
+<li><p>Consider <em><strong>Pain</strong></em>, <em><strong>Accessibility</strong></em>, <em><strong>Specificity</strong></em>, <em><strong>Interest</strong></em> and <em><strong>Location and Population</strong></em> when crafting an NLP problem</p></li>
+<li><p>Consider the real-world and NLP data technical domains to identify if the problem you are interested in is worth researching</p></li>
+<li><p>Craft an abstract (mine was about 120 words) that captures the real-world and technical aspects of the problem and the proposed solution to give the big picture</p></li>
+</ul>
+<p><strong>Remember to avoid using a hammer as a tool for everything!</strong></p>
+<blockquote>
+<div><p>Not all problems can be or should be solved by NLP solutions.</p>
+</div></blockquote>
+<hr class="docutils" />
+<section id="data-exploration">
+<h3>Data Exploration<a class="headerlink" href="#data-exploration" title="Permalink to this headline">#</a></h3>
+<p>NLP data is essentially non-visual communications data — it is</p>
+<ul class="simple">
+<li><p>Sound waves</p></li>
+<li><p>Text files</p></li>
+</ul>
+<p>Before entering into all the technical ways that we can explore these data types, we first get from the NLP toolbox the tool below:
+Laughing mouth with LIP (Language Ideas Personas)
+<img alt="LIP framework" src="../_images/LIP-framework.svg" /><br>
+<em>The LIP framework</em></p>
+<ul class="simple">
+<li><p><strong>Language</strong>: The audio or text file will need to be tagged, identifying the language(s), in which the text was written or the voice (recorded in audio) was spoken in</p></li>
+<li><p><strong>Ideas</strong>: these represent the themes or topics which the text or audio was based on and/or repeated throughout the text/audio</p></li>
+<li><p><strong>Personas</strong>: these are the people and/or organizations associated with the given audio or text.</p></li>
+</ul>
+<p>Based on this framework, the following questions need to be answered:</p>
+<p><img alt="NLP exploration questions" src="../_images/nlp-exploration-questions.svg" /><br>
+<em>3 types of NLP data exploration questions</em></p>
+<p>Based on the problem that I was working on in my Delta Analytics teaching fellowship, analyzing the <code class="docutils literal notranslate"><span class="pre">#KOT</span></code> Twitter dataset using <strong>LIP</strong> gave the following results:</p>
+<p>Language</p>
+<blockquote>
+<div><p>75.8% of #KOT tweets were tagged by Twitter as English</p>
+<p>Some of the tweets were multilingual e.g. “<em>I don’t if you have that friend mwenye huwa mnachat na yeye IG, FB na watsapp at the same time na kwa hzo base zote mnaongea story different #KOT</em>” (English, Kiswahili, Sheng slang)</p>
+</div></blockquote>
+<p>Ideas</p>
+<blockquote>
+<div><p>Topics are commonly represented on Twitter by hashtags. The most popular hashtags used together with #KOT were:</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">#kenya</span></code> (used 3074 times) — a patriotic hashtag</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#loyals</span></code> (used 3050 times) — a Twitter-specific hastag inviting people to follow each other</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#nairobi</span></code> (used 1196 times) — a city hashtag</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#ikokazike</span></code> (used 1016 times) — a career hashtag used by HR and jobseekers in Kenya (it means “There is work KE (Kenya)” in English)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#bbinonsense</span></code> (used 989 times) — a political hashtag used by Kenyans opposed to the <a class="reference external" href="https://www.muyiconsulting.com/insight/bbi-what-exactly-kenyas-building-bridges-initiative">BBI (Building Bridges Initiative)</a></p></li>
+</ol>
+</div></blockquote>
+<p>Personas</p>
+<blockquote>
+<div><p>The 10 most mentioned ‘persons’ over the past year on Twitter were</p>
+<ul class="simple">
+<li><p>political institutions such as <code class="docutils literal notranslate"><span class="pre">&#64;statehousekenya</span></code> (mentioned 278 times), <code class="docutils literal notranslate"><span class="pre">&#64;dcikenya</span></code> (mentioned 150 times) and <code class="docutils literal notranslate"><span class="pre">&#64;nassemblyke</span></code> (mentioned 139 times),</p></li>
+<li><p>a betting firm, <code class="docutils literal notranslate"><span class="pre">&#64;safebetske</span></code> (mentioned 233 times),</p></li>
+<li><p>politicians such as <code class="docutils literal notranslate"><span class="pre">&#64;railaodinga</span></code> (the leader of Kenyan opposition parties, mentioned 205 times) and <code class="docutils literal notranslate"><span class="pre">&#64;williamsruto</span></code> (the current deputy vice president, mentioned 144 times) as well as</p></li>
+<li><p>media houses such as <code class="docutils literal notranslate"><span class="pre">&#64;citizentvkenya</span></code> (mentioned 203 times), <code class="docutils literal notranslate"><span class="pre">&#64;ntvkenya</span></code> (mentioned 162 times) and <code class="docutils literal notranslate"><span class="pre">&#64;classic105kenya</span></code> (mentioned 154 times) and</p></li>
+<li><p>an inspiration account, <code class="docutils literal notranslate"><span class="pre">&#64;dodzweit</span></code> (A reverend who posts inspirational and at times Christian content, mentioned 197 times)</p></li>
+</ul>
+<p>A possible explanation for this phenomenon is that 2022 will be an election year, and the two political leaders are running against each other and campaigning online.</p>
+<p>However,</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;dodzweit</span></code> was mentioned only by the church s/he pastors, <code class="docutils literal notranslate"><span class="pre">&#64;cotchurchhq</span></code>, primarily in short summaries of his/her talks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;safebetske</span></code> was mentioned only by a forex trader, <code class="docutils literal notranslate"><span class="pre">&#64;theforexguyke</span></code>, primarily in retweets.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>We need to keep these questions top of mind even as we get into the more technical ways we will explore text data and audio data.</strong></p>
+<section id="exploratory-data-analysis-for-text">
+<h4><strong>Exploratory Data Analysis for Text</strong><a class="headerlink" href="#exploratory-data-analysis-for-text" title="Permalink to this headline">#</a></h4>
+<p>There are various techniques used to break down text and analyze it. A good number of techniques popular in data science tend to be applied on high-resource languages (languages that are in many freely available texts). To avoid this trap, we will keep it simple and apply them in a manner intuitive as possible in any language.</p>
+<p>For a computer to “understand” text, it has to be represented as numbers. The process of representing text as numbers is called <strong>encoding</strong>.</p>
+<p>Text is primarily represented in numerical forms as categorical data. Suppose we want to capture the meaning of an English sentence, “<em>Hello Mary!</em>”</p>
+<p>What if we want to identify <em>Hello</em>?</p>
+<p><img alt="Selecting “Hello” from the same phrase written in Arabic, Chinese and Swahili" src="../_images/hello-written-differently.svg" /><br>
+<em>All the ways to say “Hello”.</em></p>
+<p>As you can see, these 3 languages couldn’t be further apart in terms of script; “<em>Hello</em>” is the first word when written in Chinese and Swahili, but the last word in Arabic.</p>
+<p>If we express this information as a matrix of binary categories, we get</p>
+<p><img alt="1 phrase in 3 languages represented in matrix form." src="../_images/1-phase-in-3-matrices.svg" /><br>
+<em>All three matrices mean the same.</em></p>
+<p>with all 3 matrices representing the same information, “<em>Hello Maria</em>”; because the “<em>!</em>” did not carry the message (it only emphasizes tone), it was omitted from the matrices.</p>
+<p>This is the foundation for much of the data analysis and visualization of text.</p>
+<ul class="simple">
+<li><p>Text can be broken down into <span class="math notranslate nohighlight">\(x\)</span> documents.</p></li>
+<li><p>A document can be broken down into <span class="math notranslate nohighlight">\(y\)</span> paragraphs.</p></li>
+<li><p>A paragraph can be broken down into <span class="math notranslate nohighlight">\(z\)</span> phrases.</p></li>
+<li><p>A phrase can be broken down into <span class="math notranslate nohighlight">\(n\)</span> words.</p></li>
+</ul>
+<p>In frequentist statistics, categorical variables should be represented as</p>
+<ul class="simple">
+<li><p>reference category = 0</p></li>
+<li><p>category2 = 1 when true, 0 when false</p></li>
+<li><p>category3 = 1 when true, 0 when false</p></li>
+</ul>
+<p>etc.</p>
+<p>This will help draw the following comparisons during analysis:</p>
+<ul class="simple">
+<li><p>comparing category 2 with the reference</p></li>
+<li><p>comparing category 3 with the reference</p></li>
+</ul>
+<p>etc.</p>
+<p>When we look at machine learning, this principle is applied by creating dummy variables (<strong>one-hot encoding</strong>) of keywords of interest where</p>
+<ul class="simple">
+<li><p>any other word = 0</p></li>
+<li><p>keyword 1 = 1 when keyword 1 appears in the text, 0 when it doesn’t</p></li>
+<li><p>keyword 2 = 1 when keyword 2 appears in the text, 0 when it doesn’t</p></li>
+</ul>
+<p>etc.</p>
+<p>This approach assumes the position of a word in a phrase or sentence has no special meaning, only the word itself. This way of converting text into numbers is called the <a class="reference external" href="https://en.wikipedia.org/wiki/Bag-of-words_model"><strong>bag of words model</strong></a> (BOW).</p>
+<p>BOW is a very common way to analyze monolingual data and as long as selected keywords are representative of the languages in the text, even multilingual data can be analyzed using this approach.</p>
+<p>However, a weakness of this approach is that a dictionary of filler words (also called <a class="reference external" href="https://en.wikipedia.org/wiki/Stop_word"><strong>stop words</strong></a>) must be constructed to strip the text of these words; also short forms must be handled in a uniform way to keep meaning of the root word through <a class="reference external" href="https://en.wikipedia.org/wiki/Stemming"><strong>stemming</strong></a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Lemmatisation"><strong>lemmatization</strong></a>. The text must also be manually labelled; therefore, this approach does not scale well when complex vocabulary and number of words increase.</p>
+<p>Regarding the measures of central tendency, we can count the number of times a given category appears and get the “<strong>mode</strong>”. Using <em>Python</em> libraries like <code class="docutils literal notranslate"><span class="pre">Spacy</span></code> and <code class="docutils literal notranslate"><span class="pre">NLTK</span></code> and <em>R</em> libraries like <code class="docutils literal notranslate"><span class="pre">wordcloud</span></code>, <code class="docutils literal notranslate"><span class="pre">rtweet</span></code> and <code class="docutils literal notranslate"><span class="pre">tidytext</span></code> (among others), we can get the frequency of words in a given text and visualize them in the form of a <strong>wordcloud</strong>, where the more frequent a word is, the bigger it is like so:</p>
+<p><img alt="#KOT wordcloud" src="https://github.com/CeeThinwa/Delta-Analytics-2021-CT-Project/blob/main/viz1.PNG?raw=true" /><br>
+<em>Visualization of most common hashtags in my #KOT dataset.</em></p>
+<p>In frequentist statistics, when we relate two categories with one another, they form a <a class="reference external" href="https://en.wikipedia.org/wiki/Contingency_table"><strong>contingency table</strong></a>, which can give useful information as is. A challenge with words in a text is that there are too many categories to compare, making this form of visualization not very helpful.</p>
+<p>To compensate, words are grouped in <a class="reference external" href="https://deepai.org/machine-learning-glossary-and-terms/n-gram"><strong>n-grams</strong></a> and/or phrases linked together with special punctuation, reducing dimensionality. We can then get the frequency of occurrence of these patterns and report findings like so:</p>
+<p><img alt="My Little Scraper code" src="../_images/text-analysis-code.png" /><br>
+<em>This Python code snippet is from: <a class="reference external" href="https://github.com/CeeThinwa/MyLittleScraper/blob/master/EDA-Jan2020.ipynb">https://github.com/CeeThinwa/MyLittleScraper/blob/master/EDA-Jan2020.ipynb</a></em></p>
+<p>or visualize the data as follows:</p>
+<p><img alt="#KOT word fequency bar chart" src="../_images/word-frequency-visual.png" /><br>
+<em>This R code snippet is from: <a class="reference external" href="https://github.com/CeeThinwa/Delta-Analytics-2021-CT-Project/blob/main/KOT%20EDA.ipynb">https://github.com/CeeThinwa/Delta-Analytics-2021-CT-Project/blob/main/KOT EDA.ipynb</a></em></p>
+</section>
+<section id="exploratory-data-analysis-for-audio">
+<h4><strong>Exploratory Data Analysis for Audio</strong><a class="headerlink" href="#exploratory-data-analysis-for-audio" title="Permalink to this headline">#</a></h4>
+<p>Audio tends to be trickier to explore because it is more complex than text. You can’t represent it in easily interpretable numbers like text. As a result, many times, it is easier to transcribe (converting audio to text manually using a human transcriber) audio, then analyze it as text.</p>
+<p>However, there are steps being taken to analyze audio, particularly speech sounds. In speech, the smallest unit of analysis is the <strong>phoneme</strong>; a word is a combination of one or more phonemes.</p>
+<p>To visualize sound, it is important to understand the following basic concepts:</p>
+<ul>
+<li><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>One or more phonemes are contained in a **sound signal**
+</pre></div>
+</div>
+</li>
+<li><p>A sound signal is represented in a computer as a <strong>sample</strong> — a measurement of the <strong>amplitude</strong> (<a class="reference external" href="https://www.fxsound.com/blog/what-is-amplitude">how loud your sound is, based on gain and volume</a>) of the sound at fixed time intervals; the number of samples per second is called the <strong>sample rate</strong></p></li>
+<li><p>A sound signal repeats, forming a <strong>waveform</strong> in the process; the <strong>frequency</strong> is the number of waves made by a sound signal in 1 second — the measurement unit of frequency is called the Hertz (Hz)</p></li>
+<li><p>Many sound signals at different frequencies are registered by a computer as a <strong>spectrum</strong> — a composite signal representing the real world that is the sum of available frequencies. There are 2 key types of frequencies: the <strong>fundamental frequency</strong> (the one with the lowest Hz) and <strong>harmonics</strong> (whole number multiples of the fundamental frequency).</p></li>
+</ul>
+<p>Suppose we want to analyze a particular audio (<a class="reference external" href="https://ceethinwa.github.io/resources/aud/Abstract.mp3">listen here</a>). The first step is to convert this file from <code class="docutils literal notranslate"><span class="pre">.mp3</span></code> to <code class="docutils literal notranslate"><span class="pre">.wav</span></code> to because the former format includes compression and it is more complex. The <a class="reference external" href="https://www.geeksforgeeks.org/convert-mp3-to-wav-using-python/">code</a> to do so is here:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    In your Linux command line, run the following commands first:</span>
+<span class="sd">    sudo apt-get update</span>
+<span class="sd">    sudo apt-get install ffmpeg</span>
+<span class="sd">    sudo apt-get install frei0r-plugins</span>
+<span class="sd">    Once this is done, run the Python commands below:</span>
+<span class="sd">    </span>
+<span class="sd">    In Windows environment for the ffmpeg package:</span>
+<span class="sd">    1. First download ffmpeg from here:</span>
+<span class="sd">        https://ffmpeg.org/download.html and select the download from gyan.dev option</span>
+<span class="sd">    2. Install using the following reference:</span>
+<span class="sd">        https://www.geeksforgeeks.org/how-to-install-ffmpeg-on-windows/</span>
+<span class="sd">    3. Install it outside of your project virtual environment to avoid this issue:</span>
+<span class="sd">        https://stackoverflow.com/questions/71344220/pydub-installation-problem-modulenotfounderror-no-module-named-pydub</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># import required modules</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="kn">from</span> <span class="nn">pydub</span> <span class="kn">import</span> <span class="n">AudioSegment</span>
+  
+<span class="c1"># assign files</span>
+<span class="n">input_file</span> <span class="o">=</span> <span class="s2">&quot;C://Users//CT//Documents//GitHub//ceethinwa.github.io//resources//aud//Abstract.mp3&quot;</span>
+<span class="n">output_file</span> <span class="o">=</span> <span class="s2">&quot;C://Users//CT//Documents//GitHub//ceethinwa.github.io//resources//aud//resources_aud_Abstract.wav&quot;</span>
+
+<span class="c1"># convert mp3 file to wav file</span>
+<span class="n">sound</span> <span class="o">=</span> <span class="n">AudioSegment</span><span class="o">.</span><span class="n">from_mp3</span><span class="p">(</span><span class="n">input_file</span><span class="p">)</span>
+<span class="n">sound</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;wav&quot;</span><span class="p">)</span>
+
+<span class="c1">## Original gist: https://gist.github.com/CeeThinwa/03b8d164c82d7d32b5379befefeff75a#file-audio-converter-py</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;_io.BufferedRandom name=&#39;C://Users//CT//Documents//GitHub//ceethinwa.github.io//resources//aud//resources_aud_Abstract.wav&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>In Windows environment for the frei0r plugins:
+    1. First download the cmake software here: https://cmake.org/download/
+    2. Install pkg-config for Cmake by following these instructions: http://ftp.acc.umu.se/pub/gnome/binaries/win64/dependencies/        
+    3. Get the frei0r plugins from here: https://files.dyne.org/frei0r/releases/ and open cmd as Administrator
+    4. Unpack the tar.gz file and save content to root directory by running: tar -xvzf C:\Users\CT\Downloads\frei0r-plugins-1.8.0.tar.gz -C C:\
+    5. Rename unpacked folder to just frei0r-plugins
+    4. Change to frei0r-plugins by running: C:\frei0r-plugins
+    6. Based on installation instructions (https://files.dyne.org/frei0r/INSTALL.txt), run: cmake .
+</pre></div>
+</div>
+<p>Due to the difficulty installing <code class="docutils literal notranslate"><span class="pre">frei0r</span> <span class="pre">plugins</span></code>, an alternate library to <code class="docutils literal notranslate"><span class="pre">scipy</span></code> was needed to read the file in Windows - <code class="docutils literal notranslate"><span class="pre">wave</span></code> was used instead.</p>
+<p>The waveform and <a class="reference external" href="https://medium.com/swlh/visualising-speech-74137f0b793b">code</a> used to generate it appear below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Original gist: https://gist.github.com/CeeThinwa/9a073bd3dcbba4785e83724de74834d5#file-waveform-visualizer-py</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># Import necessary packages</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">wave</span>
+
+<span class="c1"># Open .wav audio file</span>
+<span class="n">wav</span> <span class="o">=</span> <span class="n">wave</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="n">wav</span><span class="o">.</span><span class="n">getframerate</span><span class="p">()</span> <span class="c1"># sample rate = fs</span>
+<span class="n">signal_wave</span> <span class="o">=</span> <span class="n">wav</span><span class="o">.</span><span class="n">readframes</span><span class="p">(</span><span class="n">wav</span><span class="o">.</span><span class="n">getnframes</span><span class="p">())</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">signal_wave</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">)</span> <span class="c1"># data = x, a 1 dimensional array of n samples * n channels</span>
+
+<span class="c1"># Determine the number of channels</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;This audio has </span><span class="si">{</span><span class="n">wav</span><span class="o">.</span><span class="n">getnchannels</span><span class="p">()</span><span class="si">}</span><span class="s2"> channels, </span><span class="si">{</span><span class="n">wav</span><span class="o">.</span><span class="n">getnframes</span><span class="p">()</span><span class="si">}</span><span class="s2"> samples and it took </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">wav</span><span class="o">.</span><span class="n">getnframes</span><span class="p">()</span><span class="o">/</span><span class="n">fs</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2"> seconds.&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Determine amplitude (y) and its limit(ya); x represents time in seconds</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">ya</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">absolute</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+<span class="c1"># Plot the waveform</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#7E81C4&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (seconds)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Amplitude&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="n">ya</span><span class="p">,</span> <span class="n">ya</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This audio has 2 channels, 7299131 samples and it took 165.51 seconds. 
+</pre></div>
+</div>
+<img alt="../_images/nlp-toolbox-c_5_1.png" src="../_images/nlp-toolbox-c_5_1.png" />
+</div>
+</div>
+<p>As we can see, this appears to be a complex audio; what if there is more than one waveform in there?</p>
+<p>To find out, we need to learn more about the audio. Based on the code above, the <code class="docutils literal notranslate"><span class="pre">.wav</span></code> file was <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.io.wavfile.read.html">split by the Scipy package</a> into 2 elements:</p>
+<ol class="simple">
+<li><p>The <strong>sample rate</strong> (an integer) — in this case, the audio had a sample rate of <code class="docutils literal notranslate"><span class="pre">44100</span></code> samples per second (indicating CD quality)</p></li>
+<li><p>The data (a Numpy n-dimensional array, representing samples as rows and the number of channels as columns) — in this case, the audio had <code class="docutils literal notranslate"><span class="pre">7299131</span></code> samples and <code class="docutils literal notranslate"><span class="pre">2</span></code> number of channels (2 channels indicate that it is stereo sound)</p></li>
+</ol>
+<p>When we separate the waveforms into 2, we get the following plots:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Original gist: https://gist.github.com/CeeThinwa/2a65afc1a96eb0077a3d5e49e7d419a9#file-waveform-visualizer-for-stereo-py</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">l_channel</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">r_channel</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="c1"># Determine amplitude (y) and its limit(ya); x represents time in seconds</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">l_channel</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">l_channel</span><span class="p">))</span>
+<span class="n">ya</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">absolute</span><span class="p">(</span><span class="n">l_channel</span><span class="p">))</span>
+
+<span class="c1"># Plot the waveform for the left channel</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">l_channel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#7E81C4&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Left Channel&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (seconds)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Amplitude&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="n">ya</span><span class="p">,</span> <span class="n">ya</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Determine amplitude (y) and its limit(ya); x represents time in seconds</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">r_channel</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">r_channel</span><span class="p">))</span>
+<span class="n">ya</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">absolute</span><span class="p">(</span><span class="n">r_channel</span><span class="p">))</span>
+
+<span class="c1"># Plot the waveform for the right channel</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">r_channel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#7E81C4&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Right Channel&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (seconds)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Amplitude&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="n">ya</span><span class="p">,</span> <span class="n">ya</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/nlp-toolbox-c_7_0.png" src="../_images/nlp-toolbox-c_7_0.png" />
+<img alt="../_images/nlp-toolbox-c_7_1.png" src="../_images/nlp-toolbox-c_7_1.png" />
+</div>
+</div>
+<p>These channels appear to look more or less the same. Could visualizing the different waveforms like so:</p>
+<p><img alt="FFT-Time-Frequency-View" src="https://upload.wikimedia.org/wikipedia/commons/6/61/FFT-Time-Frequency-View.png" /><br>
+<em>Source: <a class="reference external" href="https://commons.wikimedia.org/wiki/File:FFT-Time-Frequency-View.png">FFT-Time-Frequency-View.png — Wikimedia Commons</a></em></p>
+<p>can help capture more detail about the audio?</p>
+<p>This type of visualization is called a <strong>Spectrogram</strong>. It plots the different frequency bands over time.</p>
+<p>The code and visualizations for our stereo files are as shown:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">https://gist.github.com/CeeThinwa/82f891e0cd387a934b383967c089eb8d#file-spectrograms-py</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># Plot the spectrogram for the left channel</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">specgram</span><span class="p">(</span><span class="n">l_channel</span><span class="p">,</span> <span class="n">Fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=-</span><span class="mi">20</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Left Channel&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency (Hz)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">l_channel</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Plot the spectrogram for the right channel</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">specgram</span><span class="p">(</span><span class="n">r_channel</span><span class="p">,</span> <span class="n">Fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=-</span><span class="mi">20</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Right Channel&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency (Hz)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">r_channel</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/nlp-toolbox-c_9_0.png" src="../_images/nlp-toolbox-c_9_0.png" />
+<img alt="../_images/nlp-toolbox-c_9_1.png" src="../_images/nlp-toolbox-c_9_1.png" />
+</div>
+</div>
+<p>Spectrograms are incredibly important, because they form the features that are fed into deep learning algorithms.</p>
+<hr class="docutils" />
+<p>Further reading resources:</p>
+<ol class="simple">
+<li><p><strong>Article 1</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://dair.ai/Exploratory_Data_Analysis_for_Text_Data/">Exploratory Data Analysis for Text Data</a></p></li>
+<li><p><a class="reference external" href="https://www.analyticsvidhya.com/blog/2020/04/beginners-guide-exploratory-data-analysis-text-data/%27">A Beginner’s Guide to Exploratory Data Analysis (EDA) on Text Data (Amazon Case Study)</a></p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/nlp-part-3-exploratory-data-analysis-of-text-data-1caa8ab3f79d">Exploratory Data Analysis of Text Data: employee reviews</a></p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/a-complete-exploratory-data-analysis-and-visualization-for-text-data-29fb1b96fb6a">A Complete Exploratory Data Analysis and Visualization for Text Data</a></p></li>
+<li><p><a class="reference external" href="https://www.scribbr.com/statistics/chi-square-tests/">Chi-Square (Χ²) Tests | Types, Formula &amp; Examples</a></p></li>
+<li><p><a class="reference external" href="https://statisticsbyjim.com/basics/contingency-table/">Contingency Table: Definition, Examples &amp; Interpreting</a></p></li>
+<li><p><a class="reference external" href="https://github.com/CeeThinwa/MyLittleScraper/">My Little Scraper</a></p></li>
+</ul>
+</li>
+<li><p><strong>Article 2</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://learnpython.com/blog/plot-waveform-in-python/">How to visualize sound in Python</a></p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/audio-deep-learning-made-simple-part-1-state-of-the-art-techniques-da1d3dff2504">Audio Deep Learning Made Simple (Part 1): State-of-the-Art Techniques</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=pO-MSFfwIjM">Delta Analytics ML Lectures: NLP For Spoken Amharic</a></p></li>
+</ul>
+</li>
+</ol>
+<p><em>If you enjoyed this article, you will be sure to love the <a class="reference external" href="https://medium.com/&#64;ceethinwa/delivering-success-in-natural-language-processing-projects-part-one-40c4775cf6a9">introduction to this series</a>. Enjoy!</em></p>
+<p><em>Join me on the next article where we dig into our metaphorical toolbox once more.</em></p>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./past-articles"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="nlp-toolbox-b.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">ML/Data Science article 3</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Cynthia Thinwa<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
