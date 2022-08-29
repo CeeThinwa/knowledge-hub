@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>ML/Data Science article 3 &#8212; My Knowledge Hub</title>
+    <title>ML/Data Science article 4 &#8212; My Knowledge Hub</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -206,7 +206,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     ML/Data Science article 3
+     ML/Data Science article 4
     </a>
    </li>
   </ul>
@@ -405,7 +405,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>ML/Data Science article 3</h1>
+                <h1>ML/Data Science article 4</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -453,24 +453,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install pydub
-<span class="o">!</span>pip install wave
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pydub in c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages (0.25.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: wave in c:\users\ct\documents\github\knowledge-hub\venv\lib\site-packages (0.0.2)
-</pre></div>
-</div>
-</div>
-</div>
-<section class="tex2jax_ignore mathjax_ignore" id="ml-data-science-article-3">
-<h1>ML/Data Science article 3<a class="headerlink" href="#ml-data-science-article-3" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="ml-data-science-article-4">
+<h1>ML/Data Science article 4<a class="headerlink" href="#ml-data-science-article-4" title="Permalink to this headline">#</a></h1>
 <section id="delivering-success-in-natural-language-processing-projects-part-two">
 <h2>Delivering Success in Natural Language Processing Projects: Part Two<a class="headerlink" href="#delivering-success-in-natural-language-processing-projects-part-two" title="Permalink to this headline">#</a></h2>
 <p><strong>Publisher</strong>: <em>2 articles on Medium -</em> <a class="reference external" href="https://medium.com/&#64;ceethinwa/delivering-success-in-natural-language-processing-projects-part-three-79e6e604ddf9"><em>here</em></a> <em>and</em> <a class="reference external" href="https://medium.com/&#64;ceethinwa/delivering-success-in-natural-language-processing-projects-part-three-contd-18fe4fb7ad6d"><em>here</em></a> <br>
@@ -500,9 +484,8 @@ learning tool that I would call</em> <strong>the NLP toolbox</strong>. <em>You c
 <li><p>Sound waves</p></li>
 <li><p>Text files</p></li>
 </ul>
-<p>Before entering into all the technical ways that we can explore these data types, we first get from the NLP toolbox the tool below:
-Laughing mouth with LIP (Language Ideas Personas)
-<img alt="LIP framework" src="../_images/LIP-framework.svg" /><br>
+<p>Before entering into all the technical ways that we can explore these data types, we first get from the NLP toolbox the tool below:</p>
+<p><img alt="Laughing mouth with LIP (Language Ideas Personas)" src="../_images/LIP-framework.svg" /><br>
 <em>The LIP framework</em></p>
 <ul class="simple">
 <li><p><strong>Language</strong>: The audio or text file will need to be tagged, identifying the language(s), in which the text was written or the voice (recorded in audio) was spoken in</p></li>
@@ -559,7 +542,7 @@ Laughing mouth with LIP (Language Ideas Personas)
 <p>If we express this information as a matrix of binary categories, we get</p>
 <p><img alt="1 phrase in 3 languages represented in matrix form." src="../_images/1-phase-in-3-matrices.svg" /><br>
 <em>All three matrices mean the same.</em></p>
-<p>with all 3 matrices representing the same information, “<em>Hello Maria</em>”; because the “<em>!</em>” did not carry the message (it only emphasizes tone), it was omitted from the matrices.</p>
+<p>with all 3 matrices representing the same information, “<em>Hello Maria</em>”; because the “!” did not carry the message (it only emphasizes tone), it was omitted from the matrices.</p>
 <p>This is the foundation for much of the data analysis and visualization of text.</p>
 <ul class="simple">
 <li><p>Text can be broken down into <span class="math notranslate nohighlight">\(x\)</span> documents.</p></li>
@@ -606,11 +589,8 @@ Laughing mouth with LIP (Language Ideas Personas)
 <p>Audio tends to be trickier to explore because it is more complex than text. You can’t represent it in easily interpretable numbers like text. As a result, many times, it is easier to transcribe (converting audio to text manually using a human transcriber) audio, then analyze it as text.</p>
 <p>However, there are steps being taken to analyze audio, particularly speech sounds. In speech, the smallest unit of analysis is the <strong>phoneme</strong>; a word is a combination of one or more phonemes.</p>
 <p>To visualize sound, it is important to understand the following basic concepts:</p>
-<ul>
-<li><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>One or more phonemes are contained in a **sound signal**
-</pre></div>
-</div>
-</li>
+<ul class="simple">
+<li><p>One or more phonemes are contained in a <strong>sound signal</strong></p></li>
 <li><p>A sound signal is represented in a computer as a <strong>sample</strong> — a measurement of the <strong>amplitude</strong> (<a class="reference external" href="https://www.fxsound.com/blog/what-is-amplitude">how loud your sound is, based on gain and volume</a>) of the sound at fixed time intervals; the number of samples per second is called the <strong>sample rate</strong></p></li>
 <li><p>A sound signal repeats, forming a <strong>waveform</strong> in the process; the <strong>frequency</strong> is the number of waves made by a sound signal in 1 second — the measurement unit of frequency is called the Hertz (Hz)</p></li>
 <li><p>Many sound signals at different frequencies are registered by a computer as a <strong>spectrum</strong> — a composite signal representing the real world that is the sum of available frequencies. There are 2 key types of frequencies: the <strong>fundamental frequency</strong> (the one with the lowest Hz) and <strong>harmonics</strong> (whole number multiples of the fundamental frequency).</p></li>
@@ -707,7 +687,7 @@ Laughing mouth with LIP (Language Ideas Personas)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This audio has 2 channels, 7299131 samples and it took 165.51 seconds. 
 </pre></div>
 </div>
-<img alt="../_images/nlp-toolbox-c_5_1.png" src="../_images/nlp-toolbox-c_5_1.png" />
+<img alt="../_images/nlp-toolbox-c_4_1.png" src="../_images/nlp-toolbox-c_4_1.png" />
 </div>
 </div>
 <p>As we can see, this appears to be a complex audio; what if there is more than one waveform in there?</p>
@@ -755,8 +735,8 @@ Laughing mouth with LIP (Language Ideas Personas)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/nlp-toolbox-c_7_0.png" src="../_images/nlp-toolbox-c_7_0.png" />
-<img alt="../_images/nlp-toolbox-c_7_1.png" src="../_images/nlp-toolbox-c_7_1.png" />
+<img alt="../_images/nlp-toolbox-c_6_0.png" src="../_images/nlp-toolbox-c_6_0.png" />
+<img alt="../_images/nlp-toolbox-c_6_1.png" src="../_images/nlp-toolbox-c_6_1.png" />
 </div>
 </div>
 <p>These channels appear to look more or less the same. Could visualizing the different waveforms like so:</p>
@@ -794,8 +774,8 @@ Laughing mouth with LIP (Language Ideas Personas)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/nlp-toolbox-c_9_0.png" src="../_images/nlp-toolbox-c_9_0.png" />
-<img alt="../_images/nlp-toolbox-c_9_1.png" src="../_images/nlp-toolbox-c_9_1.png" />
+<img alt="../_images/nlp-toolbox-c_8_0.png" src="../_images/nlp-toolbox-c_8_0.png" />
+<img alt="../_images/nlp-toolbox-c_8_1.png" src="../_images/nlp-toolbox-c_8_1.png" />
 </div>
 </div>
 <p>Spectrograms are incredibly important, because they form the features that are fed into deep learning algorithms.</p>
