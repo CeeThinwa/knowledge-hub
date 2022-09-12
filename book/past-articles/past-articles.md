@@ -13,4 +13,5 @@
 * Delivering Success in Natural Language Processing Projects
   1. [Delivering Success in Natural Language Processing Projects: Part One](nlp-toolbox-a.md)
   2. [Delivering Success in Natural Language Processing Projects: Part Two](nlp-toolbox-b.md)
-  2. [Delivering Success in Natural Language Processing Projects: Part Three](nlp-toolbox-c.md)
+  3. [Delivering Success in Natural Language Processing Projects: Part Three](nlp-toolbox-c.md)
+  4. [Delivering Success in Natural Language Processing Projects: Part Four](nlp-toolbox-d.md)
