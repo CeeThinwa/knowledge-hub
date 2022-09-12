@@ -46,7 +46,7 @@ Due to the fact that feature engineering is cyclical, it should ideally be in th
 
 Depending on your NLP task and data type, feature engineering greatly varies.
 
-----
+<br>
 
 #### **Data Cleaning**
 
@@ -91,4 +91,18 @@ Programmatic encoding models include:
 * Use of *Transformers* (pre-trained and validated deep learning models) such as BERT; learn more about transformers in general [here](https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04)
 
 Further data examining similarity between specific vectors can be used to evaluate the effectiveness of this type of unsupervised encoding as shown [here](https://medium.com/analytics-vidhya/best-nlp-algorithms-to-get-document-similarity-a5559244b23b) and [here](https://gab41.lab41.org/doc2vec-to-assess-semantic-similarity-in-source-code-667acb3e62d7).
+
+<br>
+
+#### **Domain knowledge**
+
+Before you feed hidden and opaque features into your model of choice, it is best to collect domain knowledge in the problem space that you are operating in. There are two kinds of domain knowledge needed to adequately perform feature engineering:
+
+* **Technical domain knowledge**: This involves machine learning research done by computer scientists and general information available on the internet from data professionals on what ML techniques are best for audio files of different types. [This article](https://towardsdatascience.com/visualizing-audio-data-and-performing-feature-extraction-e1a489046000) seeks to demonstrate how to extract features relevant for music classification while [this article](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/FeatureEngineeringInCD-DNN-ASRU2011-pub.pdf) compares different feature engineering methods used in transcription.
+* **Contextual domain knowledge**: This involves getting specific peculiarities of the culture the music and/or language is in, such as different accents, culturally-specific vocabulary, or typical instrumental arrangements (for music audios). This is typically provided by a Subject Matter Expert (SWE)— this could be a person who lives/works in the context that the audio was generated in (e.g. a doctor being a SWE for a hospital’s emergency response calls) or an academic studying the audio generated (e.g. a linguistics professor specialized in West African languages being a SWE for Ghanaian and Nigerian pidgin news audio). In the absence of a SWE, resources generated from and about the culture under study could give context.
+
+>> One thing is clear — we need to have more than one type of encoded data, be it audio or text; the data has be be represented in manually encoded and programmatically encoded forms to account for both forms of domain knowledge.
+
+<br>
+
 
