@@ -14,3 +14,34 @@ What a ride! We got to explore both types of NLP data and visualize them in the 
 
 ----
 
+### Feature Engineering
+
+> So, what is Feature Engineering?
+
+**Feature Engineering** is a *process* of *transforming* the data to make it *easier* for the computer to "understand" and produce *relevant* results during modelling.
+
+It consists of various elements as shown:
+
+![feature enginnering flowchart](../images/feature-enginnering.svg) <br>
+*Feature Engineering visualized.*
+
+Feature Engineering in NLP, as you can imagine, tends to be very difficult to understand and apply because
+
+* data cleaning,
+* domain knowledge,
+* data pipelining,
+* data validation and
+* data relevance
+
+are also broad. Furthermore, it is a repeated process because both
+
+1. Concept drift — when the project goals change for the particular NLP project, and
+2. Data drift — when the distribution of categories in NLP data changes
+
+happen.
+
+[Learn more about concept and data drift [here](https://medium.com/mlearning-ai/concept-drift-data-drift-and-machine-learning-monitoring-how-to-keep-your-model-accurate-66f3c91c7888).]
+
+Due to the fact that feature engineering is cyclical, it should ideally be in the form of a data pipeline of some sort that is monitored, with model outputs identifying areas of improvement for the pipeline over time.
+
+Depending on your NLP task and data type, feature engineering greatly varies.
