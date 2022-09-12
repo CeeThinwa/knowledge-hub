@@ -1,6 +1,6 @@
-# ML/Data Science article 4
+# ML/Data Science article 5
 
-## Delivering Success in Natural Language Processing Projects: Part Two
+## Delivering Success in Natural Language Processing Projects: Part Four
 
 **Publisher**: [*Medium*](https://medium.com/@ceethinwa/delivering-success-in-natural-language-processing-projects-part-four-405e8d5a407a) <br>
 **Publishing Date**: *Sep 12, 2022*
