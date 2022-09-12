@@ -9,7 +9,7 @@
 *The metaphorical toolbox in all its glory...*
 
 *This is the second post of a five-part series where I aim to demystify Natural Language Processing (NLP) through a key 
-learning tool that I would call* **the NLP toolbox**. *You can access the first article
+learning tool that I would call* **the NLP toolbox**. *You can access the previous article
 [here](https://medium.com/@ceethinwa/delivering-success-in-natural-language-processing-projects-part-one-40c4775cf6a9).*
 
 A quick recap:
@@ -178,8 +178,4 @@ Problem in the bag!
 
 ****
 
-If you enjoyed this article, you will be sure to love
-[the introduction to this series](https://medium.com/@ceethinwa/delivering-success-in-natural-language-processing-projects-part-one-40c4775cf6a9).
-Enjoy!
-
-Join me on the next article where we dig into our metaphorical toolbox once more.
+Join me on the [next article](https://medium.com/@ceethinwa/delivering-success-in-natural-language-processing-projects-part-three-79e6e604ddf9) where we dig into our metaphorical toolbox once more.
