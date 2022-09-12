@@ -22,7 +22,7 @@ What a ride! We got to explore both types of NLP data and visualize them in the 
 
 It consists of various elements as shown:
 
-![feature enginnering flowchart](../images/feature-enginnering.svg) <br>
+![feature engineering flowchart](../images/feature-engineering.svg) <br>
 *Feature Engineering visualized.*
 
 Feature Engineering in NLP, as you can imagine, tends to be very difficult to understand and apply because
