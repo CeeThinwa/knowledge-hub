@@ -45,3 +45,35 @@ happen.
 Due to the fact that feature engineering is cyclical, it should ideally be in the form of a data pipeline of some sort that is monitored, with model outputs identifying areas of improvement for the pipeline over time.
 
 Depending on your NLP task and data type, feature engineering greatly varies.
+
+----
+
+#### **Data Cleaning**
+
+##### **Data Cleaning for Audio**
+
+As highlighted earlier, feature engineering audio typically tends to involve the data encoded in the form of spectrograms, ready for modelling.
+
+Remember the visualizations below?
+
+![left channel](../images/left.png) <br>
+![right channel](../images/right.png)
+
+These were spectrograms of [this audio](https://ceethinwa.github.io/resources/aud/Abstract.mp3). Based on the visualization, we get an important insight: The sound was mixed to be identical for both left and right channels. Assuming there are a couple of audio files, spectrograms for only the left channel could be selected for modelling and feature engineering would be complete.
+
+> However, using only spectrograms would create hidden features, making resulting models **uninterpretable** and **unexplainable**.
+
+An alternative to spectrograms is to transcribe the audio, converting it to text data. Each audio would be represented as text transcripts as well, split by particular timestamps. At the moment, transcripts in English can be easily generated, with humans speaking the language reviewing the file to ensure accuracy and meaning are kept. However, for many low-resource languages, accessing audio — let alone transcribed audio — is difficult.
+
+It is recommended to have more than one form of encoded audio data e.g. representing the same data as both a metadata table and spectrogram, which can each have an ID label linking the two.
+
+[*Librosa*](https://librosa.org/doc/main/feature.html) is a popular Python package used to identify spectral and rhythm features from any audio represented.
+
+##### **Data Cleaning for Text**
+
+Cleaning text data involves encoding it and removing unnecessary symbols — exactly what was done during data exploration. Text data can be encoded in two ways:
+
+* Manually and
+* Programmatically.
+
+
