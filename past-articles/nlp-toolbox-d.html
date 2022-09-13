@@ -1,0 +1,789 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>ML/Data Science article 5 &#8212; My Knowledge Hub</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="ML/Data Science article 4" href="nlp-toolbox-c.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My Knowledge Hub</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Hello 👋
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/blending_the_4.html">
+   Real world machine learning
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ml/data-storytelling.html">
+   Welcome to Data Storytelling!
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/data-storytelling-past-projects.html">
+     Past data stories
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/kiva.html">
+     Kiva Project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/nlp.html">
+   Welcome to Natural Language Processing!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/computer-vision.html">
+   Welcome to Computer Vision!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/data-pipelining.html">
+   Welcome to Data Pipelining!
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="past-articles.html">
+   Past Articles
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="growth.html">
+     Economical article 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="demand.html">
+     Economical article 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="business.html">
+     Economical article 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalGDP.html">
+     Economical article 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="contribute.html">
+     ML/Data Science article 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nlp-toolbox-a.html">
+     ML/Data Science article 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nlp-toolbox-b.html">
+     ML/Data Science article 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nlp-toolbox-c.html">
+     ML/Data Science article 4
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     ML/Data Science article 5
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/past-articles/nlp-toolbox-d.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#delivering-success-in-natural-language-processing-projects-part-four">
+   Delivering Success in Natural Language Processing Projects: Part Four
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#feature-engineering">
+     Feature Engineering
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-cleaning">
+       <strong>
+        Data Cleaning
+       </strong>
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#data-cleaning-for-audio">
+         <strong>
+          Data Cleaning for Audio
+         </strong>
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#data-cleaning-for-text">
+         <strong>
+          Data Cleaning for Text
+         </strong>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#domain-knowledge">
+       <strong>
+        Domain Knowledge
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-pipelining">
+       <strong>
+        Data Pipelining
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-validation">
+       <strong>
+        Data Validation
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-relevance">
+       <strong>
+        Data Relevance
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#how-does-feature-engineering-look-like-in-a-real-world-project">
+       <strong>
+        How does feature engineering look like in a real-world project?
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>ML/Data Science article 5</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#delivering-success-in-natural-language-processing-projects-part-four">
+   Delivering Success in Natural Language Processing Projects: Part Four
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#feature-engineering">
+     Feature Engineering
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-cleaning">
+       <strong>
+        Data Cleaning
+       </strong>
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#data-cleaning-for-audio">
+         <strong>
+          Data Cleaning for Audio
+         </strong>
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#data-cleaning-for-text">
+         <strong>
+          Data Cleaning for Text
+         </strong>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#domain-knowledge">
+       <strong>
+        Domain Knowledge
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-pipelining">
+       <strong>
+        Data Pipelining
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-validation">
+       <strong>
+        Data Validation
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-relevance">
+       <strong>
+        Data Relevance
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#how-does-feature-engineering-look-like-in-a-real-world-project">
+       <strong>
+        How does feature engineering look like in a real-world project?
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="ml-data-science-article-5">
+<h1>ML/Data Science article 5<a class="headerlink" href="#ml-data-science-article-5" title="Permalink to this headline">#</a></h1>
+<section id="delivering-success-in-natural-language-processing-projects-part-four">
+<h2>Delivering Success in Natural Language Processing Projects: Part Four<a class="headerlink" href="#delivering-success-in-natural-language-processing-projects-part-four" title="Permalink to this headline">#</a></h2>
+<p><strong>Publisher</strong>: <a class="reference external" href="https://medium.com/&#64;ceethinwa/delivering-success-in-natural-language-processing-projects-part-four-405e8d5a407a"><em>Medium</em></a> <br>
+<strong>Publishing Date</strong>: <em>Sep 12, 2022</em></p>
+<p><em>This is the fourth post of a five-part series where I aim to demystify Natural Language Processing (NLP) through a key learning tool that I would call the <strong>NLP toolbox</strong>. You can access the previous article <a class="reference external" href="https://medium.com/&#64;ceethinwa/delivering-success-in-natural-language-processing-projects-part-three-79e6e604ddf9">here</a>.</em></p>
+<p>What a ride! We got to explore both types of NLP data and visualize them in the previous section. Before we move any further, based on the last three parts, it’s clear to see that:</p>
+<ol class="simple">
+<li><p><strong>Problem Identification</strong> is a <em>process</em> of recognizing <em>valuable</em> problems that are <em>hard</em> for most people but <em>easy</em> to solve when <em>technology</em> and <em>creativity</em> are combined.</p></li>
+<li><p><strong>Data Exploration</strong> is a <em>process</em> of <em>analyzing</em> the data to find <em>patterns</em> within it and <em>summarize</em> key characteristics of the data.</p></li>
+</ol>
+<hr class="docutils" />
+<section id="feature-engineering">
+<h3>Feature Engineering<a class="headerlink" href="#feature-engineering" title="Permalink to this headline">#</a></h3>
+<blockquote>
+<div><p>So, what is Feature Engineering?</p>
+</div></blockquote>
+<p><strong>Feature Engineering</strong> is a <em>process</em> of <em>transforming</em> the data to make it <em>easier</em> for the computer to “understand” and produce <em>relevant</em> results during modelling.</p>
+<p>It consists of various elements as shown:</p>
+<p><img alt="feature engineering flowchart" src="../_images/feature-engineering.svg" /> <br>
+<em>Feature Engineering visualized.</em></p>
+<p>Feature Engineering in NLP, as you can imagine, tends to be very difficult to understand and apply because</p>
+<ul class="simple">
+<li><p>data cleaning,</p></li>
+<li><p>domain knowledge,</p></li>
+<li><p>data pipelining,</p></li>
+<li><p>data validation and</p></li>
+<li><p>data relevance</p></li>
+</ul>
+<p>are also broad. Furthermore, it is a repeated process because both</p>
+<ol class="simple">
+<li><p>Concept drift — when the project goals change for the particular NLP project, and</p></li>
+<li><p>Data drift — when the distribution of categories in NLP data changes</p></li>
+</ol>
+<p>happen.</p>
+<p>[Learn more about concept and data drift <a class="reference external" href="https://medium.com/mlearning-ai/concept-drift-data-drift-and-machine-learning-monitoring-how-to-keep-your-model-accurate-66f3c91c7888">here</a>.]</p>
+<p>Due to the fact that feature engineering is cyclical, it should ideally be in the form of a data pipeline of some sort that is monitored, with model outputs identifying areas of improvement for the pipeline over time.</p>
+<p>Depending on your NLP task and data type, feature engineering greatly varies.</p>
+<br>
+<section id="data-cleaning">
+<h4><strong>Data Cleaning</strong><a class="headerlink" href="#data-cleaning" title="Permalink to this headline">#</a></h4>
+<section id="data-cleaning-for-audio">
+<h5><strong>Data Cleaning for Audio</strong><a class="headerlink" href="#data-cleaning-for-audio" title="Permalink to this headline">#</a></h5>
+<p>As highlighted earlier, feature engineering audio typically tends to involve the data encoded in the form of spectrograms, ready for modelling.</p>
+<p>Remember the visualizations below?</p>
+<p><img alt="left channel" src="../_images/left.png" /> <br>
+<img alt="right channel" src="../_images/right.png" /></p>
+<p>These were spectrograms of <a class="reference external" href="https://ceethinwa.github.io/resources/aud/Abstract.mp3">this audio</a>. Based on the visualization, we get an important insight: The sound was mixed to be identical for both left and right channels. Assuming there are a couple of audio files, spectrograms for only the left channel could be selected for modelling and feature engineering would be complete.</p>
+<blockquote>
+<div><p>However, using only spectrograms would create hidden features, making resulting models <strong>uninterpretable</strong> and <strong>unexplainable</strong>.</p>
+</div></blockquote>
+<p>An alternative to spectrograms is to transcribe the audio, converting it to text data. Each audio would be represented as text transcripts as well, split by particular timestamps. At the moment, transcripts in English can be easily generated, with humans speaking the language reviewing the file to ensure accuracy and meaning are kept. However, for many low-resource languages, accessing audio — let alone transcribed audio — is difficult.</p>
+<p>It is recommended to have more than one form of encoded audio data e.g. representing the same data as both a metadata table and spectrogram, which can each have an ID label linking the two.</p>
+<p><a class="reference external" href="https://pypi.org/project/librosa/"><em>Librosa</em></a> is a popular Python package used to identify spectral and rhythm features from any audio represented.</p>
+</section>
+<section id="data-cleaning-for-text">
+<h5><strong>Data Cleaning for Text</strong><a class="headerlink" href="#data-cleaning-for-text" title="Permalink to this headline">#</a></h5>
+<p>Cleaning text data involves encoding it and removing unnecessary symbols — exactly what was done during data exploration. Text data can be encoded in two ways:</p>
+<ul class="simple">
+<li><p>Manually and</p></li>
+<li><p>Programmatically.</p></li>
+</ul>
+<p>If encoded manually, it can be encoded in such a way that key words or phrases are kept i.e. one-hot encoding. Findings from data exploration and available domain knowledge would inform feature selection. This would typical result in direct feature extraction (if original dataset was text) or a metadata table (if original dataset was audio).</p>
+<p>A benefit of manual encoding is that it gives human oversight to model input and it facilitates interpretability. However, the data annotation process can be quite tedious, and it tends to be poorly-paid work, relative to other aspects of feature engineering, such as feature selection and pipeline building.</p>
+<p>Programmatic encoding can be very helpful in identifying hidden features that a human being may not have typically thought of, and it involves use of unsupervised machine learning models. However, we run into the same problem of model interpretability.</p>
+<p>Programmatic encoding models include:</p>
+<ul class="simple">
+<li><p><em>TF-IDF</em> (Term frequency-inverse document frequency) model — learn more about it <a class="reference external" href="https://www.geeksforgeeks.org/tf-idf-model-for-page-ranking/">here</a></p></li>
+<li><p><em>PV-DM</em> (Distributed Memory Model of Paragraph Vectors) model — learn more about it <a class="reference external" href="https://cs.stanford.edu/~quocle/paragraph_vector.pdf">here</a>; it is implemented in a Python package, <a class="reference external" href="https://pypi.org/project/gensim/">Gensim</a></p></li>
+<li><p><em>PV-DBOW</em> (Distributed Bag of Words model of Paragraph Vectors) model — learn more about it in the same article describing PV-DM; it is also implemented in Gensim</p></li>
+<li><p><em>LDA</em> (Latent Dirichlet Allocation) model — learn more about it <a class="reference external" href="https://www.geeksforgeeks.org/latent-dirichlet-allocation/">here</a>; it is implemented in a Python package, <a class="reference external" href="https://pypi.org/project/pyLDAvis/">pyLDAvis</a></p></li>
+<li><p>Use of <em>Transformers</em> (pre-trained and validated deep learning models) such as BERT; learn more about transformers in general <a class="reference external" href="https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04">here</a></p></li>
+</ul>
+<p>Further data examining similarity between specific vectors can be used to evaluate the effectiveness of this type of unsupervised encoding as shown <a class="reference external" href="https://medium.com/analytics-vidhya/best-nlp-algorithms-to-get-document-similarity-a5559244b23b">here</a> and <a class="reference external" href="https://gab41.lab41.org/doc2vec-to-assess-semantic-similarity-in-source-code-667acb3e62d7">here</a>.</p>
+<br>
+</section>
+</section>
+<section id="domain-knowledge">
+<h4><strong>Domain Knowledge</strong><a class="headerlink" href="#domain-knowledge" title="Permalink to this headline">#</a></h4>
+<p>Before you feed hidden and opaque features into your model of choice, it is best to collect domain knowledge in the problem space that you are operating in. There are two kinds of domain knowledge needed to adequately perform feature engineering:</p>
+<ul class="simple">
+<li><p><strong>Technical domain knowledge</strong>: This involves machine learning research done by computer scientists and general information available on the internet from data professionals on what ML techniques are best for audio files of different types. <a class="reference external" href="https://towardsdatascience.com/visualizing-audio-data-and-performing-feature-extraction-e1a489046000">This article</a> seeks to demonstrate how to extract features relevant for music classification while <a class="reference external" href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/FeatureEngineeringInCD-DNN-ASRU2011-pub.pdf">this article</a> compares different feature engineering methods used in transcription.</p></li>
+<li><p><strong>Contextual domain knowledge</strong>: This involves getting specific peculiarities of the culture the music and/or language is in, such as different accents, culturally-specific vocabulary, or typical instrumental arrangements (for music audios). This is typically provided by a Subject Matter Expert (SWE)— this could be a person who lives/works in the context that the audio was generated in (e.g. a doctor being a SWE for a hospital’s emergency response calls) or an academic studying the audio generated (e.g. a linguistics professor specialized in West African languages being a SWE for Ghanaian and Nigerian pidgin news audio). In the absence of a SWE, resources generated from and about the culture under study could give context.</p></li>
+</ul>
+<blockquote>
+<div><blockquote>
+<div><p>One thing is clear — we need to have more than one type of encoded data, be it audio or text; the data has be be represented in manually encoded and programmatically encoded forms to account for both forms of domain knowledge.</p>
+</div></blockquote>
+</div></blockquote>
+<br>
+</section>
+<section id="data-pipelining">
+<h4><strong>Data Pipelining</strong><a class="headerlink" href="#data-pipelining" title="Permalink to this headline">#</a></h4>
+<p>Data pipelining involves all the activities that ensure data from multiple, relevant sources is ingested, cleaned and transformed in a systematic way. A good data pipeline consists of:</p>
+<ul class="simple">
+<li><p><strong>Documentation</strong> of data sources, steps in data transformation and how various dataflows are orchestrated; this is helpful when down the road, the data pipeline needs to be maintained and the data engineer needs to understand the context of a particular transformation step. This can be as simple as keeping an Excel file or Jupyter notebook, or as complex as automated alerts operating in serverless environments.</p></li>
+<li><p><strong>Version control</strong> of the code that makes up the pipeline itself, documentation and data storage; this keeps various copies of the data at each transformation step separated from each other (allowing for rollback to earlier versions), tracks changes to data input and output, and it prevents raw data from being converted into features by accident. It can be as simple as having 2 folders: raw and transformed connected by code and notes in a Jupyter notebook — or as complex as a series of event alerts from a PubSub service in a cloud environment, with backup done via git integration.</p></li>
+<li><p><strong>Scalable data storage</strong> helps avoid the problems that come with underutilized or minimal storage and also accounts for rapid growth of data over time. Currently, the most scalable place for data storage is in a cloud environment, where you only pay for the server space that you use, and technologies have evolved from rigid SQL, to more flexible noSQL databases, to object stores (that can store complex data like images, audio and video), to data warehouses that contain a mix of the aforementioned technologies. As this is relatively new, it can be prohibitively expensive for an individual — hence most devices currently (computers, smartphones, watches) rely on relatively static storage.</p></li>
+<li><p><strong>Simplified, yet flexible data flows</strong> — as data grows and the pipelines under maintenance increase, it is important to have a pipeline that can be adjusted based on the situation at hand. Many tech giants who rely on sophisticated data storage and data flow solutions, are under increased data regulation, even as their data increases exponentially — this has forced them to make sure that their data pipelines can be accessed by people with the relevant credentials for purposes of satisfying IT auditors and government regulators. Balancing simplicity with flexibility can be incredibly difficult, but both are indispensable.</p></li>
+</ul>
+<p>Data pipelines can vary widely, depending on the task at hand, but if we can follow these 4 principles, it becomes easier to build NLP solutions that are solid, even as the data and environment change.</p>
+<br>
+</section>
+<section id="data-validation">
+<h4><strong>Data Validation</strong><a class="headerlink" href="#data-validation" title="Permalink to this headline">#</a></h4>
+<p>Data validation is incredibly important, as this is where data is checked for any consistencies over time, throughout the pipeline. If raw data is not validated and it heads straight into the modelling stage, wrong machine learning features can lead to spurious or dubious results. There are a number of statistical inference tools that can be used for quantitative data; however, NLP data is mostly qualitative in nature. This can makes it difficult to apply statistical inference techniques.</p>
+<p>Data validation takes into account:</p>
+<ul class="simple">
+<li><p>The problem statement</p></li>
+<li><p>Discoveries made during data exploration</p></li>
+<li><p>Both forms of domain knowledge</p></li>
+<li><p>Characteristics of transcribed audio/text in light of linguistic principles like social linguistics, diacritics, morphology, phonology, dialects etc.</p></li>
+</ul>
+<p>The above result in a set of assumptions about the data that need to be tested.</p>
+<p>Human review tends to be one of the best (though expensive) ways of testing data assumptions, through a person physically examining either a convenience sample or a random sample. Exploratory data analysis findings of the whole dataset can also yield some useful insights on whether assumptions are valid or not.</p>
+<p>Data validation needs to be an ongoing concern, because it ensures that the data being encoded does not have logical errors and all variables have appropriate data types (e.g. numbers are stored as <code class="docutils literal notranslate"><span class="pre">integer</span></code> or <code class="docutils literal notranslate"><span class="pre">float</span></code> data types, not <code class="docutils literal notranslate"><span class="pre">string</span></code> (text) data type).</p>
+<br>
+</section>
+<section id="data-relevance">
+<h4><strong>Data Relevance</strong><a class="headerlink" href="#data-relevance" title="Permalink to this headline">#</a></h4>
+<p>This involves circling back to project goals and objectives, relevant stakeholders and past work both from industry and academia to connect theory and actual reality.</p>
+<p>To establish relevance, the project plan (be it highly summarized or using project management best principles) should be clear on three key aspects:</p>
+<ul class="simple">
+<li><p>Project goals and objectives</p></li>
+<li><p>The generalizable results from the project</p></li>
+<li><p>The use cases of the resulting NLP solution</p></li>
+</ul>
+<p>It is against these 3 criteria that we measure selected features and data against.</p>
+<br>
+</section>
+<section id="how-does-feature-engineering-look-like-in-a-real-world-project">
+<h4><strong>How does feature engineering look like in a real-world project?</strong><a class="headerlink" href="#how-does-feature-engineering-look-like-in-a-real-world-project" title="Permalink to this headline">#</a></h4>
+<p>Before beginning feature engineering for my <a class="reference external" href="http://www.deltanalytics.org/global-teaching-fellows.html">Delta Analytics teaching fellowship</a> project, I considered and checked for both concept and model drift in the corpus under study — in this case, it was a collection of tweets.</p>
+<p>Initially I wanted to focus on Kiswahili and/ Sheng words in tweets to determine sentiment; however, when I saw</p>
+<ul class="simple">
+<li><p>there were fewer Kiswahili and Sheng words than expected</p></li>
+<li><p>there were other people writing about Kenyan issues in languages other than those (yet tagged by Twitter as “English” tweets),</p></li>
+</ul>
+<p>I had to make my NLP solution more language agnostic and also control for those few non-English words that do indicate sentiment appearing all over the place. Thus <strong>concept drift</strong> took place.</p>
+<p>In the same NLP project, the tweets were harvested for a time period of 1 year. As people age, their opinions and sentiment about a particular issue may vary, leading to changes in the proportion of positive and negative sentiment. Furthermore, many slangs (such as Sheng) also vary over time — Sheng words <em>mamanzi</em> (used in 2001) and <em>mayens</em> (used in 2019) mean the same thing: ladies. Fortunately, as my data was only for a year, I could say that I was relatively safe from <strong>data drift</strong> at the time — however, I had to control for it when creating my NLP solution by ensuring that vectorization occurred anytime the corpus changed.</p>
+<p>My project considered all the discussed aspects of feature engineering as follows:</p>
+<p><strong>Data Cleaning</strong></p>
+<blockquote>
+<div><p>I represented the text data</p>
+<ul class="simple">
+<li><p>in a table (containing meta-data based on one-hot encoded key words indicating sentiment in English, Kiswahili and Sheng) and also</p></li>
+<li><p>as a matrix of vectors produced by the PV-DM model.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Domain Knowledge</strong></p>
+<blockquote>
+<div><p>I relied a lot more on contextual domain knowledge than technical knowledge; it helped that I was from the community under study (Kenya) and I also understood basic NLP technical knowledge.</p>
+<p>Because my corpus was multilingual, it meant that my solution had to be language and time agnostic. I only selected the tweets tagged ‘en’, even though I knew and saw in my sample that they contained more than one language and used short forms.</p>
+</div></blockquote>
+<p><strong>Data Pipelining</strong></p>
+<blockquote>
+<div><p>The pipeline I was building was for demonstration purposes — my solution was not in production. Due to time constraints, I chose to run everything locally and have my data pipelining be as simple as possible, even if it was at the expense of flexibility.</p>
+<p>I used <a class="reference external" href="https://www.tweepy.org/">Tweepy</a> to get a snapshot of #KOT tweets; as a result, I did only one round of batch processing; this approach is unfortunately not scalable if other data sources or languages were used.</p>
+<p>My documentation and pipeline code was in one place — a Jupyter notebook. There were 2 programming languages in use: R and Python, this gave me visualization and data exploration flexibility.</p>
+</div></blockquote>
+<p><strong>Data Validation</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>An assumption of the dataset based on literature review assumed that the dataset would be political in nature. Of the top 10 mentioned personas (In Twitter they have the &#64; handle), 3 were government agencies and 2 were prospective presidential candidates; therefore, this assumption is true.</p></li>
+<li><p>An assumption of this project was that Kenyans are multilingual, hence there would be a lot of code-switching. To some extent, this is true, as some tweets tagged by Twitter as being English turned out to have Kinyarwanda (indicating #KOT is used also by Rwandese) and some tweets did have more than one language.</p></li>
+<li><p>Another assumption of the dataset was that Twitter is used by Kenyans to engage in political debate, hence it was expected that users would have generated many tweets. However, it was found that most users tweeted only once, even as they partook in different conversations; for the most part, most tweets in a particular day were only 100 or below.</p></li>
+<li><p>An assumption was that there would be a lot of sentiment within the tweets under study. After manual feature engineering, only 4,038 out of 27,504 (the tweets tagged as English) had any sentiment — it was 97.03% positive. There were also fewer Kiswahili words that indicated sentiment, compared to English ones. This indicates that the dataset was highly imbalanced both from a language and sentiment point of view.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Data Relevance</strong></p>
+<blockquote>
+<div><p>The generalizable results expected from this project were: <strong>a systematic way of handling code switching for application in other cultures and languages</strong>.</p>
+<p>The project goals for this project were</p>
+<ol class="simple">
+<li><p><strong>manage any code-switching</strong> in the dataset,</p></li>
+<li><p><strong>preserve context</strong> within the corpus and</p></li>
+<li><p><strong>determine if sentiment is positive or negative</strong> within the corpus.</p></li>
+</ol>
+<p>There were 3 use cases for this solution for the following industries in Kenya:</p>
+<ol class="simple">
+<li><p><strong>Media</strong>,</p></li>
+<li><p><strong>SME businesses</strong> and</p></li>
+<li><p><strong>Social Impact organizations</strong>.</p></li>
+</ol>
+<p>Based on data validation results</p>
+<ol class="simple">
+<li><p>the data did indicate political opinion meaning that it was relevant,</p></li>
+<li><p>vectorization of the corpus using only vocabulary within the corpus preserved context and made the code-switched and multilingual data a new “language” to learn and</p></li>
+<li><p>one-hot encoding helped determine sentiment within the text in the languages of interest — English, Kiswahili and Sheng.</p></li>
+</ol>
+<p>Generalized results were ensured by retraining the vectorizing algorithm if any words or tweets were added or removed from the corpus.</p>
+</div></blockquote>
+<p>The resulting features after this entire process were:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">user_id</span></code> : Identifies a specific user of a Twitter account</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conversation_id</span></code> : Identifies a specific conversation in Twitter</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">is_positive</span></code> : Identifies if the number of positive words &gt; 0</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">is_negative</span></code> : Identifies if the number of negative words &gt; 0</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">score</span></code> : Is the difference between the number of positive and number of negative words</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tweet_vector</span></code> : a 32-length vector encoding each tweet leading to a 27504 by 32 two-dimensional array</p></li>
+</ul>
+<p>Thus, data was represented in two forms.</p>
+<hr class="docutils" />
+<p>In conclusion, these five aspects of feature engineering bleed into each other and need to be done more than once even in a single cycle. This makes feature engineering a recurring and flexible process.</p>
+<p>If you enjoyed this article, you will be sure to love <a class="reference external" href="https://medium.com/&#64;ceethinwa/delivering-success-in-natural-language-processing-projects-part-one-40c4775cf6a9">the introduction to this series</a>. Enjoy!</p>
+<p>Join me on the next article where we dig into our metaphorical toolbox once more.</p>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./past-articles"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="nlp-toolbox-c.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">ML/Data Science article 4</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Cynthia Thinwa<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

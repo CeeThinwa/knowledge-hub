@@ -168,4 +168,4 @@ It can be used for any NLP task such as sentiment analysis, translation, transcr
 
 ****
 
-This metaphorical toolbox, is what we will be unpacking in the remaining part of the series. Stay tuned for the next post!
+This metaphorical toolbox, is what we will be unpacking in the remaining part of the series. Read the next post [here](https://medium.com/@ceethinwa/delivering-success-in-natural-language-processing-projects-part-two-897e616bc8e2)!
