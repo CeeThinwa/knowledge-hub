@@ -235,4 +235,4 @@ In conclusion, these five aspects of feature engineering bleed into each other a
 
 If you enjoyed this article, you will be sure to love [the introduction to this series](https://medium.com/@ceethinwa/delivering-success-in-natural-language-processing-projects-part-one-40c4775cf6a9). Enjoy!
 
-Join me on the next article where we dig into our metaphorical toolbox once more.
+Join me on the [next article](https://medium.com/@ceethinwa/delivering-success-in-natural-language-processing-projects-part-five-55e9da952323) where we dig into our metaphorical toolbox once more.
