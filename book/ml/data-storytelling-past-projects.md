@@ -140,5 +140,10 @@ Listen to the project abstract below:
   Your browser does not support the audio tag.
 </audio> 
 
+In the video below, I also discuss the NLP toolbox which was used to create this
+solution at Lanfrica:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5y8-_c9Qkhc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 :::
 
