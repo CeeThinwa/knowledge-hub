@@ -133,6 +133,10 @@ My solution was presented in the form of a talk (which you can watch below), a
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2TUK9QytzFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<br>
+
+<br>
+
 Listen to the project abstract below:
 
 <audio controls>
@@ -140,10 +144,12 @@ Listen to the project abstract below:
   Your browser does not support the audio tag.
 </audio> 
 
-I also discussed the NLP toolbox which was used to create this
-solution at Lanfrica:
+<br>
 
 <br>
+
+I also discussed the NLP toolbox which was used to create this
+solution at Lanfrica:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5y8-_c9Qkhc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
