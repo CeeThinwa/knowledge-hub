@@ -1,0 +1,721 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>ML/Data Science article 6 &#8212; My Knowledge Hub</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="ML/Data Science article 5" href="nlp-toolbox-d.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My Knowledge Hub</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Hello 👋
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/blending_the_4.html">
+   Real world machine learning
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ml/data-storytelling.html">
+   Welcome to Data Storytelling!
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/data-storytelling-past-projects.html">
+     Past data stories
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/kiva.html">
+     Kiva Project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/nlp.html">
+   Welcome to Natural Language Processing!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/computer-vision.html">
+   Welcome to Computer Vision!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/data-pipelining.html">
+   Welcome to Data Pipelining!
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="past-articles.html">
+   Past Articles
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="growth.html">
+     Economical article 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="demand.html">
+     Economical article 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="business.html">
+     Economical article 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalGDP.html">
+     Economical article 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="contribute.html">
+     ML/Data Science article 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nlp-toolbox-a.html">
+     ML/Data Science article 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nlp-toolbox-b.html">
+     ML/Data Science article 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nlp-toolbox-c.html">
+     ML/Data Science article 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nlp-toolbox-d.html">
+     ML/Data Science article 5
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     ML/Data Science article 6
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/past-articles/nlp-toolbox-e.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#delivering-success-in-natural-language-processing-projects-part-five">
+   Delivering Success in Natural Language Processing Projects: Part Five
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelling">
+     Modelling
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#algorithms">
+       Algorithms
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#corpus">
+       Corpus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#insights">
+       Insights
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#metrics">
+       Metrics
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#how-would-modelling-look-like-in-a-real-world-project">
+       How would Modelling look like in a real-world project?
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>ML/Data Science article 6</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#delivering-success-in-natural-language-processing-projects-part-five">
+   Delivering Success in Natural Language Processing Projects: Part Five
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelling">
+     Modelling
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#algorithms">
+       Algorithms
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#corpus">
+       Corpus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#insights">
+       Insights
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#metrics">
+       Metrics
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#how-would-modelling-look-like-in-a-real-world-project">
+       How would Modelling look like in a real-world project?
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="ml-data-science-article-6">
+<h1>ML/Data Science article 6<a class="headerlink" href="#ml-data-science-article-6" title="Permalink to this headline">#</a></h1>
+<section id="delivering-success-in-natural-language-processing-projects-part-five">
+<h2>Delivering Success in Natural Language Processing Projects: Part Five<a class="headerlink" href="#delivering-success-in-natural-language-processing-projects-part-five" title="Permalink to this headline">#</a></h2>
+<p><strong>Publisher</strong>: <a class="reference external" href="https://medium.com/&#64;ceethinwa/delivering-success-in-natural-language-processing-projects-part-five-55e9da952323"><em>Medium</em></a> <br>
+<strong>Publishing Date</strong>: <em>Oct 20, 2022</em></p>
+<p><em>This is the final post of a five-part series where I aim to demystify Natural Language Processing (NLP) through a key learning tool that I would call <strong>the NLP toolbox</strong>. You can access the previous article <a class="reference external" href="https://medium.com/&#64;ceethinwa/delivering-success-in-natural-language-processing-projects-part-four-405e8d5a407a">here</a>.</em></p>
+<p>Up till now, we have covered 3 key sections of the NLP toolbox:</p>
+<ul class="simple">
+<li><p>Tools for the problem</p></li>
+<li><p>Tools for the data</p></li>
+<li><p>Tools for the features</p></li>
+</ul>
+<p>Now, let’s look at the final section: <strong>Tools for the model</strong>.</p>
+<hr class="docutils" />
+<section id="modelling">
+<h3>Modelling<a class="headerlink" href="#modelling" title="Permalink to this headline">#</a></h3>
+<p>Simply put, <strong>modelling</strong> is a <em>process</em> of <em>training</em> the computer to look for <em>patterns</em> in data and <em>testing</em> how well the model <em>predicted</em> patterns in new data and <em>solved</em> the real-world problem.</p>
+<p>From this, we see 4 qualities of a good model:</p>
+<ol class="simple">
+<li><p>The model repeatedly runs because <em>modelling</em> is a cycle</p></li>
+<li><p>The model is well-trained on diverse, objective-oriented data because <em>modelling involves training</em></p></li>
+<li><p>The model is great at spotting patterns and handling a variety of edge cases because <em>modelling involves vigorously tested pattern-spotting ability</em></p></li>
+<li><p>The model actually solves the problem in the real world (performing better than random chance) because <em>modelling is a solution</em></p></li>
+</ol>
+<p>With this perspective in mind, the model actually can be visualized as follows:
+<img alt="real-world modelling flowchart" src="../_images/real-world-modelling.svg" /> <br>
+<em>What the model actually requires to be a success.</em></p>
+<p>This results in</p>
+<ol class="simple">
+<li><p>The person for whom the model is built for — the target user — only cares about their <strong>questions being answered with relevant answers</strong> in the real world (the front of the app)</p></li>
+<li><p>The team that maintains the model only focuses on the <strong>quality of the modelling data</strong> (through data validation and data relevance checks) and <strong>tracking errors and interpreting results as the product is in use</strong></p></li>
+<li><p>The team that maintains the IT infrastructure focuses on <strong>secure and timely delivery of the data to the modelling team</strong> and <strong>secure and timely delivery of modelling results to the end user</strong></p></li>
+</ol>
+<p>With that big picture in mind, the model becomes just as much about about the process and people as the actual model itself, like so:</p>
+<p>With this perspective in mind, the model actually can be visualized as follows:
+<img alt="nlp model" src="../_images/system-nlp-model.svg" /> <br>
+<em>The NLP system accounting for all stakeholders.</em></p>
+<p>There are 4 key tools addressing the model as visualized earlier:</p>
+<ol class="simple">
+<li><p>Algorithms</p></li>
+<li><p>Corpus (audio and/or text)</p></li>
+<li><p>Insights</p></li>
+<li><p>Metrics</p></li>
+</ol>
+<section id="algorithms">
+<h4>Algorithms<a class="headerlink" href="#algorithms" title="Permalink to this headline">#</a></h4>
+<p>They are instrumental in so many sub-tasks in the final model that it is impossible to list them all. As said in the
+previous article, there are a number of deep learning models such as</p>
+<ul class="simple">
+<li><p>TF-IDF</p></li>
+<li><p>LDA</p></li>
+<li><p>PV-DM</p></li>
+<li><p>PV-DBOW</p></li>
+<li><p>BERT etc.</p></li>
+</ul>
+<p>There are also a couple of models based on statistics like</p>
+<ul class="simple">
+<li><p>Logistic Regression (great when the dependent variable is a categorical variable)</p></li>
+<li><p>Poisson Regression (great when features are count data and the variance and mean are almost identical)</p></li>
+<li><p>Negative Binomial Regression (also great when features are count data and the variance and mean greatly differ)</p></li>
+</ul>
+<p>As also discussed previously, it is advisable to combine programmatic and manual data cleaning — this implies that you
+will have more than one model and you may need to combine both deep learning and statistical models to get optimal
+<em>performance</em> and <em>interpretability/explainability</em> in the final composite model.</p>
+</section>
+<section id="corpus">
+<h4>Corpus<a class="headerlink" href="#corpus" title="Permalink to this headline">#</a></h4>
+<p>When it comes to the corpus, all the things discussed on data exploration and feature engineering apply. Just to recap
+some relevant points,</p>
+<ul class="simple">
+<li><p>Ensure data quality by establishing processes to constantly ensure data provenance and lineage through data versioning</p></li>
+<li><p>Automate the data flow with good data pipelines</p></li>
+<li><p>Consistently perform data augmentation e.g. refreshing the model every time the data changes to feed new data into the training dataset and produce relevant results</p></li>
+<li><p>Consider data sources and data feeding into the modelling module — a batch loading of data will require a very different IT infrastructure from a model involving stream loading of data</p></li>
+<li><p>Have SMEs sit with the modelling team to ensure that data is obtained with user consent, it preserves user privacy and it is relevant to the non-technical end user and non-technical team within the organization</p></li>
+</ul>
+<p>Also, split all data that is coming into the system randomly into a training dataset, a testing dataset and a validation
+dataset.</p>
+</section>
+<section id="insights">
+<h4>Insights<a class="headerlink" href="#insights" title="Permalink to this headline">#</a></h4>
+<p>It can be very easy when designing a NLP system to focus only on metrics; however insights for the non-technical
+organizational team and end user must also be given serious consideration.</p>
+<p>Some inspiration for insights include:</p>
+<ul class="simple">
+<li><p>What are some unexpected results during modelling?</p></li>
+<li><p>What are the ramifications of the model findings for real-world stakeholders?</p></li>
+<li><p>What is the data story telling the relevant stakeholders?</p></li>
+<li><p>If the audience is technical, what use cases would work for this type of NLP solution?</p></li>
+<li><p>How much money would deploying this model in the real-world generate or save? (If in the business world)</p></li>
+<li><p>How many people, households and communities would be impacted if this model enters the real world? (If in the NGO world)</p></li>
+</ul>
+</section>
+<section id="metrics">
+<h4>Metrics<a class="headerlink" href="#metrics" title="Permalink to this headline">#</a></h4>
+<p>When evaluating the performance of your models of choice,</p>
+<ul class="simple">
+<li><p><strong>For deep learning models:</strong> utilize <a class="reference external" href="https://christophm.github.io/interpretable-ml-book/shap.html">SHAP values</a> to inform hyperparameter tuning, also testing different models on the same task to identify the type of model that would do well on a particular task</p></li>
+<li><p><strong>For statistical models:</strong> utilize hypothesis tests and also test different models, each with a different combination of independent variables to identify the most statistically feasible model</p></li>
+</ul>
+<p>Hypothesis tests in particular can check for all sorts of things including:</p>
+<ol class="simple">
+<li><p>Cointegration of the model (if using hybrid models such as <a class="reference external" href="https://www.oreilly.com/library/view/structural-equation-modeling/9781118356302/c03anchor-1.html">MIMIC</a> and/or your data is a panel of time series data)</p></li>
+<li><p>Heterogeneity within a particular numerical variable split based on given categories</p></li>
+<li><p>Statistical significance of the model parameters</p></li>
+<li><p>Statistical significance of the model</p></li>
+</ol>
+<p>A statistically feasible model is one that</p>
+<ul class="simple">
+<li><p>passes the <em>statistical significance of the model</em> test</p></li>
+<li><p>has the lowest score on a particular goodness of fit statistics (these include Bayesian Information Criterion, Akaike Information Criterion, R squared, Root Mean Squared Error etc.)</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Error visualization, bench-marking against baseline dataset+results, human review ratings — go hand in hand with</strong>
+<strong>these more “traditional” ways of evaluating model performance.</strong></p>
+</div></blockquote>
+<p><strong>Evaluating Supervised Machine Learning</strong></p>
+<p>When there is labelled data available and the task is classification of 2 categories, error analysis for can be done where
+there is systematic tracking of various metrics such as:</p>
+<ol class="simple">
+<li><p>The number of false positives</p></li>
+<li><p>The number of false negatives</p></li>
+<li><p>The number of true positives</p></li>
+<li><p>The number of true negatives</p></li>
+<li><p>The accuracy</p></li>
+<li><p>The precision</p></li>
+<li><p>The recall</p></li>
+<li><p>The F1 score etc.</p></li>
+</ol>
+<p>However, in many cases, the categorical label will have more than one category; in this case, multi-class classification
+algorithms such as</p>
+<ul class="simple">
+<li><p>XG Boost</p></li>
+<li><p>CatBoost</p></li>
+<li><p>K-means</p></li>
+<li><p>Support Vector Machines etc.</p></li>
+</ul>
+<p>can be helpful, having mainly two methods of evaluation:</p>
+<ol class="simple">
+<li><p>Human review “marking” model results</p></li>
+<li><p>Use of SHAP values, accuracy and/or precision (more numerical types of metrics)</p></li>
+</ol>
+<p><strong>Evaluating Unsupervised Machine Learning</strong></p>
+<p>In this case, we need more sophisticated error analysis that is predominantly end user focused. Human review and user behaviour would “label” the data and results would be evaluated on</p>
+<ul class="simple">
+<li><p>Fairness</p></li>
+<li><p>Human vs. algorithm accuracy</p></li>
+<li><p>User consent</p></li>
+<li><p>Organizational project objectives etc.</p></li>
+</ul>
+</section>
+<section id="how-would-modelling-look-like-in-a-real-world-project">
+<h4>How would Modelling look like in a real-world project?<a class="headerlink" href="#how-would-modelling-look-like-in-a-real-world-project" title="Permalink to this headline">#</a></h4>
+<p>When selective models for my <a class="reference external" href="http://www.deltanalytics.org/global-teaching-fellows.html">Delta Analytics teaching fellowship</a>
+project, I knew that they had to solve 3 key tasks:</p>
+<ul class="simple">
+<li><p><strong>Vocabulary building</strong> — as mentioned in the previous article, the tweets definitely had more than one language; sometimes someone would misspell an English word for emphasis</p></li>
+<li><p><strong>Programmatic encoding</strong> of the dataset to represent it in a different form from the manually encoded, labelled data ()</p></li>
+<li><p><strong>Data labelling</strong> — 4,038 tweets with sentiment were labelled based on manually engineered features; these labels would need to help label the remaining part of the dataset.</p></li>
+</ul>
+<p>Based on these tasks,</p>
+<ul class="simple">
+<li><p><strong>PM-DM</strong> (Doc2Vec algorithm in Gensim) could be used for vocabulary building and programmatic encoding</p></li>
+<li><p><strong>K-Means</strong> could be used for programmatic data encoding and unsupervised data labelling</p></li>
+<li><p><strong>XG Boost</strong> could be used for supervised data labelling</p></li>
+</ul>
+<p>There were 3 composite models being evaluated:</p>
+<p><img alt="model 1" src="../_images/model-1.png" /> <br>
+<em>Model one: Using only 1 form of the data (programmatically encoded) with PV-DM and K-Means algorithms, completely unsupervised.</em></p>
+<p><img alt="model 2" src="../_images/model-2.png" /> <br>
+<em>Model two: Using only 1 form of the data (manually encoded) with PV-DM and K-Means algorithms, completely unsupervised.</em></p>
+<p><img alt="model 3" src="../_images/model-3.png" /> <br>
+<em>Model three: Using 2 forms of the data (manually and programmatically encoded) with XG Boost, PV-DM and K-Means algorithms, partially supervised.</em></p>
+<p>How were the results evaluated?</p>
+<ul class="simple">
+<li><p>XG Boost was executed in a stratified manner, where sections of the model were trained and tested, with the accuracy result being used to evaluate the performance of the model; it’s accuracy in classifying 3 classes of sentiment (positive, negative and neutral) was 62.70% by the 10th data batch.</p></li>
+<li><p>Human review of the first 10 tweets was done for each composite model.</p></li>
+</ul>
+<p>The human evaluation results were as follows:
+<img alt="human vs. machine labels" src="../_images/human-vs-machine.svg" /> <br>
+<em>Human labels as the benchmark, compared to machine labelling results.</em></p>
+<p>Based on the results, a summary table was created, with the third model being selected, like so:
+<img alt="summary table" src="../_images/summary-table.PNG" /> <br>
+<em>Summary table: it shows Model 3 labels sentiment best.</em></p>
+<p>Some of the modelling insights were as follows:</p>
+<ul class="simple">
+<li><p>Adverts used popular hashtags not as intended</p></li>
+<li><p>Few Swahili and Sheng encoded words were found in the dataset</p></li>
+<li><p>The sentiment of most tweets was neutral</p></li>
+<li><p>Each time the models are re-run, the groupings for 2/3 approaches change except the sample classifications in the third approach, even after setting a random seed</p></li>
+</ul>
+<p>3 use cases were identified for this solution in local media houses, NGOs and businesses.</p>
+<hr class="docutils" />
+<p><strong>Further Resources</strong></p>
+<p><a class="reference external" href="https://medium.com/wicds/avoiding-machine-learning-pitfalls-from-a-practitioners-perspective-4a3c7bca1e32">Avoiding Machine Learning Pitfalls : From a practitioner’s perspective — Part 1 | by Abinaya Mahendiran | WiCDS | Medium</a></p>
+<p><a class="reference external" href="https://medium.com/wicds/avoiding-machine-learning-pitfalls-from-a-practitioners-perspective-part-2-9438e8375123">Avoiding Machine Learning Pitfalls : From a practitioner’s perspective — Part 2 | by Abinaya Mahendiran | WiCDS | Jul, 2022 | Medium</a></p>
+<p><a class="reference external" href="https://medium.com/wicds/avoiding-machine-learning-pitfalls-from-a-practitioners-perspective-part-3-8493a5ec05f3">Avoiding Machine Learning Pitfalls: From a practitioner’s perspective — Part 3 | by Abinaya Mahendiran | WiCDS | Jul, 2022 | Medium</a></p>
+<p><em>If you enjoyed this article, you will be sure to love <a class="reference external" href="https://medium.com/&#64;ceethinwa/delivering-success-in-natural-language-processing-projects-part-one-40c4775cf6a9">the introduction to this series</a>. Enjoy!</em></p>
+<p><em>As we come to the end of this series, feel free to let me know in the comments below, any takeaways you got from the series and add your perspective — I look forward to learning from you!</em></p>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./past-articles"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="nlp-toolbox-d.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">ML/Data Science article 5</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Cynthia Thinwa<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
