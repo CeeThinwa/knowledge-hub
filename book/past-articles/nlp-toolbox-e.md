@@ -202,3 +202,25 @@ Based on the results, a summary table was created, with the third model being se
 ![summary table](../images/summary-table.PNG) <br>
 *Summary table: it shows Model 3 labels sentiment best.*
 
+Some of the modelling insights were as follows:
+
+* Adverts used popular hashtags not as intended
+* Few Swahili and Sheng encoded words were found in the dataset
+* The sentiment of most tweets was neutral
+* Each time the models are re-run, the groupings for 2/3 approaches change except the sample classifications in the third approach, even after setting a random seed
+
+3 use cases were identified for this solution in local media houses, NGOs and businesses.
+
+----
+
+**Further Resources**
+
+[Avoiding Machine Learning Pitfalls : From a practitioner’s perspective — Part 1 | by Abinaya Mahendiran | WiCDS | Medium](https://medium.com/wicds/avoiding-machine-learning-pitfalls-from-a-practitioners-perspective-4a3c7bca1e32)
+
+[Avoiding Machine Learning Pitfalls : From a practitioner’s perspective — Part 2 | by Abinaya Mahendiran | WiCDS | Jul, 2022 | Medium](https://medium.com/wicds/avoiding-machine-learning-pitfalls-from-a-practitioners-perspective-part-2-9438e8375123)
+
+[Avoiding Machine Learning Pitfalls: From a practitioner’s perspective — Part 3 | by Abinaya Mahendiran | WiCDS | Jul, 2022 | Medium](https://medium.com/wicds/avoiding-machine-learning-pitfalls-from-a-practitioners-perspective-part-3-8493a5ec05f3)
+
+*If you enjoyed this article, you will be sure to love [the introduction to this series](https://medium.com/@ceethinwa/delivering-success-in-natural-language-processing-projects-part-one-40c4775cf6a9). Enjoy!*
+
+*As we come to the end of this series, feel free to let me know in the comments below, any takeaways you got from the series and add your perspective — I look forward to learning from you!*
