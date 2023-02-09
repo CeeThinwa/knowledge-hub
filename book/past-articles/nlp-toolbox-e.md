@@ -195,5 +195,6 @@ How were the results evaluated?
 * Human review of the first 10 tweets was done for each composite model.
 
 The human evaluation results were as follows:
-
+![human vs. machine labels](../images/human-vs-machine.svg) <br>
+*Human labels as the benchmark, compared to machine labelling results.*
 
