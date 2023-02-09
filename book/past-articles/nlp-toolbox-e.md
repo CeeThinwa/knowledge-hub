@@ -198,3 +198,7 @@ The human evaluation results were as follows:
 ![human vs. machine labels](../images/human-vs-machine.svg) <br>
 *Human labels as the benchmark, compared to machine labelling results.*
 
+Based on the results, a summary table was created, with the third model being selected, like so:
+![summary table](../images/summary-table.PNG) <br>
+*Summary table: it shows Model 3 labels sentiment best.*
+
