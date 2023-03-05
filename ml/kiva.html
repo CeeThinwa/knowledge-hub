@@ -611,61 +611,6 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 6&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">mdates</span>
-
-<span class="n">File</span> <span class="n">c</span><span class="p">:</span>\<span class="n">users</span>\<span class="n">ct</span>\<span class="n">documents</span>\<span class="n">github</span>\<span class="n">knowledge</span><span class="o">-</span><span class="n">hub</span>\<span class="n">venv</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">109</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">    </span><span class="mi">105</span> <span class="kn">from</span> <span class="nn">packaging.version</span> <span class="kn">import</span> <span class="n">parse</span> <span class="k">as</span> <span class="n">parse_version</span>
-<span class="g g-Whitespace">    </span><span class="mi">107</span> <span class="c1"># cbook must import matplotlib only within function</span>
-<span class="g g-Whitespace">    </span><span class="mi">108</span> <span class="c1"># definitions, so it is safe to import from it here.</span>
-<span class="ne">--&gt; </span><span class="mi">109</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">_api</span><span class="p">,</span> <span class="n">_version</span><span class="p">,</span> <span class="n">cbook</span><span class="p">,</span> <span class="n">docstring</span><span class="p">,</span> <span class="n">rcsetup</span>
-<span class="g g-Whitespace">    </span><span class="mi">110</span> <span class="kn">from</span> <span class="nn">matplotlib.cbook</span> <span class="kn">import</span> <span class="n">MatplotlibDeprecationWarning</span><span class="p">,</span> <span class="n">sanitize_sequence</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span> <span class="kn">from</span> <span class="nn">matplotlib.cbook</span> <span class="kn">import</span> <span class="n">mplDeprecation</span>  <span class="c1"># deprecated</span>
-
-<span class="n">File</span> <span class="n">c</span><span class="p">:</span>\<span class="n">users</span>\<span class="n">ct</span>\<span class="n">documents</span>\<span class="n">github</span>\<span class="n">knowledge</span><span class="o">-</span><span class="n">hub</span>\<span class="n">venv</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib</span>\<span class="n">rcsetup</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">28</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="kn">from</span> <span class="nn">matplotlib.cbook</span> <span class="kn">import</span> <span class="n">ls_mapper</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">Colormap</span><span class="p">,</span> <span class="n">is_color_like</span>
-<span class="ne">---&gt; </span><span class="mi">28</span> <span class="kn">from</span> <span class="nn">matplotlib.fontconfig_pattern</span> <span class="kn">import</span> <span class="n">parse_fontconfig_pattern</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="kn">from</span> <span class="nn">matplotlib._enums</span> <span class="kn">import</span> <span class="n">JoinStyle</span><span class="p">,</span> <span class="n">CapStyle</span>
-<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="c1"># Don&#39;t let the original cycler collide with our validating cycler</span>
-
-<span class="n">File</span> <span class="n">c</span><span class="p">:</span>\<span class="n">users</span>\<span class="n">ct</span>\<span class="n">documents</span>\<span class="n">github</span>\<span class="n">knowledge</span><span class="o">-</span><span class="n">hub</span>\<span class="n">venv</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib</span>\<span class="n">fontconfig_pattern</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">import</span> <span class="nn">re</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">---&gt; </span><span class="mi">15</span> <span class="kn">from</span> <span class="nn">pyparsing</span> <span class="kn">import</span> <span class="p">(</span><span class="n">Literal</span><span class="p">,</span> <span class="n">ZeroOrMore</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Regex</span><span class="p">,</span> <span class="n">StringEnd</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>                        <span class="n">ParseException</span><span class="p">,</span> <span class="n">Suppress</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="n">family_punc</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">\-:,&#39;</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="n">family_unescape</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">([</span><span class="si">%s</span><span class="s1">])&#39;</span> <span class="o">%</span> <span class="n">family_punc</span><span class="p">)</span><span class="o">.</span><span class="n">sub</span>
-
-<span class="n">File</span> <span class="n">c</span><span class="p">:</span>\<span class="n">users</span>\<span class="n">ct</span>\<span class="n">documents</span>\<span class="n">github</span>\<span class="n">knowledge</span><span class="o">-</span><span class="n">hub</span>\<span class="n">venv</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">pyparsing</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">140</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">    </span><span class="mi">138</span> <span class="kn">from</span> <span class="nn">.exceptions</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="g g-Whitespace">    </span><span class="mi">139</span> <span class="kn">from</span> <span class="nn">.actions</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="ne">--&gt; </span><span class="mi">140</span> <span class="kn">from</span> <span class="nn">.core</span> <span class="kn">import</span> <span class="n">__diag__</span><span class="p">,</span> <span class="n">__compat__</span>
-<span class="g g-Whitespace">    </span><span class="mi">141</span> <span class="kn">from</span> <span class="nn">.results</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="g g-Whitespace">    </span><span class="mi">142</span> <span class="kn">from</span> <span class="nn">.core</span> <span class="kn">import</span> <span class="o">*</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1007,</span> in <span class="ni">_find_and_load</span><span class="nt">(name, import_)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:986,</span> in <span class="ni">_find_and_load_unlocked</span><span class="nt">(name, import_)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:680,</span> in <span class="ni">_load_unlocked</span><span class="nt">(spec)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:786,</span> in <span class="ni">exec_module</span><span class="nt">(self, module)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:881,</span> in <span class="ni">get_code</span><span class="nt">(self, fullname)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:980,</span> in <span class="ni">get_data</span><span class="nt">(self, path)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="data">
@@ -1190,10 +1135,10 @@ regional_lts shape: (15736, 21)
     </tr>
     <tr>
       <th>top</th>
-      <td>Bombali, Sierra Leone</td>
+      <td>Badakhshan, Afghanistan</td>
       <td>NGA</td>
       <td>Nigeria</td>
-      <td>Eastern</td>
+      <td>Central</td>
       <td>Sub-Saharan Africa</td>
       <td>(1000.0, 1000.0)</td>
     </tr>
@@ -1208,7 +1153,10 @@ regional_lts shape: (15736, 21)
     </tr>
   </tbody>
 </table>
-</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: loan_themes 
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: loan_themes 
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1541,7 +1489,10 @@ regional_lts shape: (15736, 21)
     </tr>
   </tbody>
 </table>
-</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: PCE_data 
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: PCE_data 
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1636,27 +1587,27 @@ regional_lts shape: (15736, 21)
     </tr>
     <tr>
       <th>top</th>
-      <td>Portugal</td>
+      <td>East Asia and Pacific</td>
       <td>358.28</td>
-      <td>694.83</td>
-      <td>4,162.15</td>
-      <td>1,022.73</td>
-      <td>734.25</td>
-      <td>12,299.20</td>
-      <td>782.56</td>
-      <td>577.19</td>
-      <td>3,813.85</td>
+      <td>376.28</td>
+      <td>391.98</td>
+      <td>366.59</td>
+      <td>359.69</td>
+      <td>358.46</td>
+      <td>343.77</td>
+      <td>364.11</td>
+      <td>386.75</td>
       <td>...</td>
-      <td>1,890.92</td>
-      <td>1,257.63</td>
-      <td>2,851.80</td>
-      <td>563.96</td>
-      <td>9,436.84</td>
-      <td>39,584.00</td>
-      <td>19,181.30</td>
-      <td>9,555.73</td>
-      <td>2,877.38</td>
-      <td>1,413.68</td>
+      <td>7,168.46</td>
+      <td>6,887.91</td>
+      <td>6,766.62</td>
+      <td>6,988.29</td>
+      <td>7,035.26</td>
+      <td>7,013.70</td>
+      <td>7,098.35</td>
+      <td>7,113.80</td>
+      <td>7,152.70</td>
+      <td>923.25</td>
     </tr>
     <tr>
       <th>freq</th>
@@ -1780,27 +1731,27 @@ regional_lts shape: (15736, 21)
     </tr>
     <tr>
       <th>top</th>
-      <td>Portugal</td>
+      <td>East Asia and Pacific</td>
       <td>358.28</td>
-      <td>694.83</td>
-      <td>4,162.15</td>
-      <td>1,022.73</td>
-      <td>734.25</td>
-      <td>12,299.20</td>
-      <td>782.56</td>
-      <td>577.19</td>
-      <td>3,813.85</td>
+      <td>376.28</td>
+      <td>391.98</td>
+      <td>366.59</td>
+      <td>359.69</td>
+      <td>358.46</td>
+      <td>343.77</td>
+      <td>364.11</td>
+      <td>386.75</td>
       <td>...</td>
-      <td>1,890.92</td>
-      <td>1,257.63</td>
-      <td>2,851.80</td>
-      <td>563.96</td>
-      <td>9,436.84</td>
-      <td>39,584.00</td>
-      <td>19,181.30</td>
-      <td>9,555.73</td>
-      <td>2,877.38</td>
-      <td>1,413.68</td>
+      <td>7,168.46</td>
+      <td>6,887.91</td>
+      <td>6,766.62</td>
+      <td>6,988.29</td>
+      <td>7,035.26</td>
+      <td>7,013.70</td>
+      <td>7,098.35</td>
+      <td>7,113.80</td>
+      <td>7,152.70</td>
+      <td>923.25</td>
     </tr>
     <tr>
       <th>freq</th>
@@ -3557,10 +3508,14 @@ The shape of tab8 after merge:  (70, 11)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(671205, 26)
 Number of null values in the &quot;region&quot; column:  56800
 Number of null values in the &quot;country_code&quot; column:  8
-Number of null values in the &quot;country&quot; column:  0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of null values in the &quot;country&quot; column:  0
 
 N/B:  558379 number of loan records have regions that are not covered in both datasets.
-      80765 number of loan records have countries that are not covered in both datasets.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      80765 number of loan records have countries that are not covered in both datasets.
 </pre></div>
 </div>
 </div>

@@ -608,11 +608,11 @@ algorithms such as</p>
 </section>
 <section id="how-would-modelling-look-like-in-a-real-world-project">
 <h4>How would Modelling look like in a real-world project?<a class="headerlink" href="#how-would-modelling-look-like-in-a-real-world-project" title="Permalink to this headline">#</a></h4>
-<p>When selective models for my <a class="reference external" href="http://www.deltanalytics.org/global-teaching-fellows.html">Delta Analytics teaching fellowship</a>
+<p>When selecting models for my <a class="reference external" href="http://www.deltanalytics.org/global-teaching-fellows.html">Delta Analytics teaching fellowship</a>
 project, I knew that they had to solve 3 key tasks:</p>
 <ul class="simple">
-<li><p><strong>Vocabulary building</strong> — as mentioned in the previous article, the tweets definitely had more than one language; sometimes someone would misspell an English word for emphasis</p></li>
-<li><p><strong>Programmatic encoding</strong> of the dataset to represent it in a different form from the manually encoded, labelled data ()</p></li>
+<li><p><strong>Vocabulary building</strong> — as mentioned in the previous article, the tweets definitely had more than one language - sometimes someone would misspell an English word for emphasis</p></li>
+<li><p><strong>Programmatic encoding</strong> of the dataset to represent it in a different form from the manually encoded, labelled data</p></li>
 <li><p><strong>Data labelling</strong> — 4,038 tweets with sentiment were labelled based on manually engineered features; these labels would need to help label the remaining part of the dataset.</p></li>
 </ul>
 <p>Based on these tasks,</p>
@@ -624,10 +624,13 @@ project, I knew that they had to solve 3 key tasks:</p>
 <p>There were 3 composite models being evaluated:</p>
 <p><img alt="model 1" src="../_images/model-1.png" /> <br>
 <em>Model one: Using only 1 form of the data (programmatically encoded) with PV-DM and K-Means algorithms, completely unsupervised.</em></p>
+<br>
 <p><img alt="model 2" src="../_images/model-2.png" /> <br>
 <em>Model two: Using only 1 form of the data (manually encoded) with PV-DM and K-Means algorithms, completely unsupervised.</em></p>
+<br>
 <p><img alt="model 3" src="../_images/model-3.png" /> <br>
 <em>Model three: Using 2 forms of the data (manually and programmatically encoded) with XG Boost, PV-DM and K-Means algorithms, partially supervised.</em></p>
+<br>
 <p>How were the results evaluated?</p>
 <ul class="simple">
 <li><p>XG Boost was executed in a stratified manner, where sections of the model were trained and tested, with the accuracy result being used to evaluate the performance of the model; it’s accuracy in classifying 3 classes of sentiment (positive, negative and neutral) was 62.70% by the 10th data batch.</p></li>

@@ -165,11 +165,11 @@ In this case, we need more sophisticated error analysis that is predominantly en
 
 #### How would Modelling look like in a real-world project?
 
-When selective models for my [Delta Analytics teaching fellowship](http://www.deltanalytics.org/global-teaching-fellows.html) 
+When selecting models for my [Delta Analytics teaching fellowship](http://www.deltanalytics.org/global-teaching-fellows.html) 
 project, I knew that they had to solve 3 key tasks:
 
-* **Vocabulary building** — as mentioned in the previous article, the tweets definitely had more than one language; sometimes someone would misspell an English word for emphasis
-* **Programmatic encoding** of the dataset to represent it in a different form from the manually encoded, labelled data ()
+* **Vocabulary building** — as mentioned in the previous article, the tweets definitely had more than one language - sometimes someone would misspell an English word for emphasis
+* **Programmatic encoding** of the dataset to represent it in a different form from the manually encoded, labelled data
 * **Data labelling** — 4,038 tweets with sentiment were labelled based on manually engineered features; these labels would need to help label the remaining part of the dataset.
 
 Based on these tasks,
@@ -183,11 +183,17 @@ There were 3 composite models being evaluated:
 ![model 1](../images/model-1.png) <br>
 *Model one: Using only 1 form of the data (programmatically encoded) with PV-DM and K-Means algorithms, completely unsupervised.*
 
+<br>
+
 ![model 2](../images/model-2.png) <br>
 *Model two: Using only 1 form of the data (manually encoded) with PV-DM and K-Means algorithms, completely unsupervised.*
 
+<br>
+
 ![model 3](../images/model-3.png) <br>
 *Model three: Using 2 forms of the data (manually and programmatically encoded) with XG Boost, PV-DM and K-Means algorithms, partially supervised.*
+
+<br>
 
 How were the results evaluated?
 

@@ -223,7 +223,9 @@ Ethical challenges include:
 
 * **Fake avatars on social media** - they can also be used in social engineering scams, where NLP and CV models are used to create a realistic looking person with the aim of fooling people into believing that they are dealing with a real human being on the other side of a chat.
 
-* **Hate speech** - on social media chats and on phone SMS, nefarious people can use NLP to spread hate speech and/or disinformation; they can also impersonate legitimate institutions and spam millions of unsuspecting customers in order to obtain login credentials and other sensitive information. 
+* **Hate speech** - on social media chats and on phone SMS, nefarious people can use NLP to spread hate speech and/or disinformation. 
+
+* **Social engineering** - on email and on phone SMS, nefarious people can use NLP to impersonate legitimate institutions and spam millions of unsuspecting customers in order to obtain login credentials and other sensitive information. 
 
 #### <u>Computer Vision (CV)</u>
 
@@ -255,7 +257,7 @@ Ethical challenges include:
 
 * **Surveillance** - computer vision models in the wrong hands can facilitate unlawful, unethical and unauthorized surveillance of people by the powers that be.
 
-* **Lack of diversity** - many photos that are fed into computer vision models todaymay not have enough diverse examples for the computer to learn from. Also, a computer trained on both lighter and darker people, may still struggle to recognize people if it is put in an area with predominantly light people only, and/or disabled people, and/or people with drastic body modifications.
+* **Lack of diversity** - many photos that are fed into computer vision models today may not have enough diverse examples for the computer to learn from. Also, a computer trained on both lighter and darker people, may still struggle to recognize people if it is put in an area with predominantly light people only, and/or disabled people, and/or people with drastic body modifications.
 
 * **Deepfakes** - computer vision models, particularly GANs (Generative Adversarial Networks), can be used to produce realistic looking photos and/or videos of real life people in the public eye with the main purpose of spreading propaganda and/or disinformation. Check one out in action below:
 
