@@ -257,7 +257,7 @@ Ethical challenges include:
 
 * **Surveillance** - computer vision models in the wrong hands can facilitate unlawful, unethical and unauthorized surveillance of people by the powers that be.
 
-* **Lack of diversity** - many photos that are fed into computer vision models todaymay not have enough diverse examples for the computer to learn from. Also, a computer trained on both lighter and darker people, may still struggle to recognize people if it is put in an area with predominantly light people only, and/or disabled people, and/or people with drastic body modifications.
+* **Lack of diversity** - many photos that are fed into computer vision models today may not have enough diverse examples for the computer to learn from. Also, a computer trained on both lighter and darker people, may still struggle to recognize people if it is put in an area with predominantly light people only, and/or disabled people, and/or people with drastic body modifications.
 
 * **Deepfakes** - computer vision models, particularly GANs (Generative Adversarial Networks), can be used to produce realistic looking photos and/or videos of real life people in the public eye with the main purpose of spreading propaganda and/or disinformation. Check one out in action below:
 
