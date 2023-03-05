@@ -223,7 +223,9 @@ Ethical challenges include:
 
 * **Fake avatars on social media** - they can also be used in social engineering scams, where NLP and CV models are used to create a realistic looking person with the aim of fooling people into believing that they are dealing with a real human being on the other side of a chat.
 
-* **Hate speech** - on social media chats and on phone SMS, nefarious people can use NLP to spread hate speech and/or disinformation; they can also impersonate legitimate institutions and spam millions of unsuspecting customers in order to obtain login credentials and other sensitive information. 
+* **Hate speech** - on social media chats and on phone SMS, nefarious people can use NLP to spread hate speech and/or disinformation. 
+
+* **Social engineering** - on email and on phone SMS, nefarious people can use NLP to impersonate legitimate institutions and spam millions of unsuspecting customers in order to obtain login credentials and other sensitive information. 
 
 #### <u>Computer Vision (CV)</u>
 
