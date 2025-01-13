@@ -24,3 +24,6 @@ chapters:
     - file: past-articles/nlp-toolbox-c
     - file: past-articles/nlp-toolbox-d
     - file: past-articles/nlp-toolbox-e
+- file: past-posts/past-posts
+  sections:
+    - file: past-posts/jan-2025
