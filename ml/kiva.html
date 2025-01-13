@@ -220,6 +220,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../past-posts/past-posts.html">
+   Past Posts
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-posts/jan-2025.html">
+     January 2025 posts
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
@@ -608,6 +625,11 @@ title="Print to PDF"
 
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">mdates</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matplotlib is building the font cache; this may take a moment.
 </pre></div>
 </div>
 </div>
@@ -1489,10 +1511,7 @@ regional_lts shape: (15736, 21)
     </tr>
   </tbody>
 </table>
-</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: PCE_data 
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SUMMARY STATISTICS WITHOUT AGGREGATION: PCE_data 
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -3508,11 +3527,10 @@ The shape of tab8 after merge:  (70, 11)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(671205, 26)
 Number of null values in the &quot;region&quot; column:  56800
 Number of null values in the &quot;country_code&quot; column:  8
+Number of null values in the &quot;country&quot; column:  0
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of null values in the &quot;country&quot; column:  0
-
-N/B:  558379 number of loan records have regions that are not covered in both datasets.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>N/B:  558379 number of loan records have regions that are not covered in both datasets.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      80765 number of loan records have countries that are not covered in both datasets.
